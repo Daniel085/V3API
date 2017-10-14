@@ -54,11 +54,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -181,11 +177,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -225,11 +217,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
