@@ -10,12 +10,12 @@
     }
   },
   "host": "apis.voicebase.com",
-  "basePath": "/v3/profile",
+  "basePath": "/v3",
   "securityDefinitions": {
     "auth": {
       "type": "oauth2",
       "flow": "implicit",
-      "authorizationUrl": "https://apis.voicebase.com/v3/profile",
+      "authorizationUrl": "https://apis.voicebase.com/v3",
       "scopes": {}
     }
   },
@@ -29,7 +29,1449 @@
     "application/json"
   ],
   "paths": {
-    "/keys": {
+    "/media": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media&query={{query}}",
+        "tags": [
+          "/media collection"
+        ],
+        "operationId": "/media&query={{query}}",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "externalId",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "extendedFilter",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "onOrAfterDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "onOrBeforeDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/media?query={{query}}&externalId={{externalId}}&before={{before}}&after={{after}}&extendedFilter={{extendedFilter}}&onOrAfterDate={{onOrAfterDate}}&onOrBeforeDate={{onOrBeforeDate}}&sortOrder={{sortOrder}}&limit={{limit}}",
+              "headers": {
+                "Accept": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/media&query={{query}}",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "/media - Upload a media file for transcription",
+        "tags": [
+          "/media collection"
+        ],
+        "operationId": "/media - Upload a media file for transcription",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "mediaUrl",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "(optional) used to specify a remote media URL 'http://my-server.com/my-media.mp3'"
+          },
+          {
+            "name": "configuration",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "(Required) JSON object or file specifying the configuration VoiceBase should use when processing your media file."
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1media  upload a media file for transcriptionresponse"
+            },
+            "examples": {
+              "application/json": {
+                "_links": {
+                  "self": {
+                    "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6"
+                  },
+                  "progress": {
+                    "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/progress"
+                  },
+                  "metadata": {
+                    "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/metadata"
+                  }
+                },
+                "formatVersion": "3.0.1",
+                "mediaId": "0b9d9c4b-c127-4b84-a00c-9202bc097ae6",
+                "status": "accepted",
+                "dateCreated": "2017-09-08T22:52:05.147Z",
+                "metadata": {},
+                "mediaContentType": "video/quicktime",
+                "length": 46608
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/media",
+              "headers": {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Accept": "application/json",
+                "Authorization": "Bearer {{bearer-token}}"
+              },
+              "body": "mediaUrl={{mediaUrl}}&configuration={\n  \"speechModel\": {\n    \"language\": \"en-US\"\n  },\n  \"prediction\": {\n    \"detectors\": [\n      {\n        \"detectorName\": \"PCI\",\n        \"redactor\": {\n          \"transcript\": {\n            \"replacement\": \"[redacted]\"\n          },\n          \"audio\": {\n            \"tone\": 270,\n            \"gain\": 0.5\n          }\n        }\n      }\n    ]\n  }\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {},
+              "body": "{\n    \"_links\": {\n        \"self\": {\n            \"href\": \"/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6\"\n        },\n        \"progress\": {\n            \"href\": \"/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/progress\"\n        },\n        \"metadata\": {\n            \"href\": \"/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/metadata\"\n        }\n    },\n    \"formatVersion\": \"3.0.1\",\n    \"mediaId\": \"0b9d9c4b-c127-4b84-a00c-9202bc097ae6\",\n    \"status\": \"accepted\",\n    \"dateCreated\": \"2017-09-08T22:52:05.147Z\",\n    \"metadata\": {},\n    \"mediaContentType\": \"video/quicktime\",\n    \"length\": 46608\n}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/media - Upload a media file for transcription",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "includeAlternateFormat",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}/progress": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/progress",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/progress",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1media~1{{mediaid}}~1progressresponse"
+            },
+            "examples": {
+              "application/json": {
+                "mediaId": "6291d2b7-ad67-465c-a23e-e2f201b65a82",
+                "jobId": "cc834531-7af0-4251-86c5-aae490343947",
+                "progress": {
+                  "finish": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
+                  "start": "b17251a3-7e16-407e-8c71-dc0266614b93",
+                  "status": "completed",
+                  "tasks": [
+                    {
+                      "taskId": "b17251a3-7e16-407e-8c71-dc0266614b93",
+                      "display": "Ingest",
+                      "phase": "ingest",
+                      "status": "finished",
+                      "dependencies": [],
+                      "dependents": [
+                        "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                        "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+                      ]
+                    },
+                    {
+                      "taskId": "737373fa-2620-47cd-bb07-4293071259ac",
+                      "display": "Transcripts",
+                      "phase": "transcripts",
+                      "status": "finished",
+                      "dependencies": [
+                        "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                        "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+                      ],
+                      "dependents": [
+                        "645bb0ce-b856-4020-bc54-995062af6bdd"
+                      ]
+                    },
+                    {
+                      "taskId": "645bb0ce-b856-4020-bc54-995062af6bdd",
+                      "display": "Transcripts",
+                      "phase": "transcripts",
+                      "status": "finished",
+                      "dependencies": [
+                        "737373fa-2620-47cd-bb07-4293071259ac"
+                      ],
+                      "dependents": [
+                        "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+                      ]
+                    },
+                    {
+                      "taskId": "92c1c0ac-94ea-4cb5-a8d1-689369d375b1",
+                      "display": "Transcripts",
+                      "phase": "transcripts",
+                      "status": "finished",
+                      "dependencies": [
+                        "645bb0ce-b856-4020-bc54-995062af6bdd"
+                      ],
+                      "dependents": [
+                        "cd35d958-1375-4313-8f88-42b5e350e5d4"
+                      ]
+                    },
+                    {
+                      "taskId": "cd35d958-1375-4313-8f88-42b5e350e5d4",
+                      "display": "Transcripts",
+                      "phase": "transcripts",
+                      "status": "finished",
+                      "dependencies": [
+                        "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+                      ],
+                      "dependents": [
+                        "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+                      ]
+                    },
+                    {
+                      "taskId": "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd",
+                      "display": "Transcripts",
+                      "phase": "transcripts",
+                      "status": "finished",
+                      "dependencies": [
+                        "cd35d958-1375-4313-8f88-42b5e350e5d4"
+                      ],
+                      "dependents": [
+                        "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+                      ]
+                    },
+                    {
+                      "taskId": "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80",
+                      "display": "Publish",
+                      "phase": "publish",
+                      "status": "finished",
+                      "dependencies": [
+                        "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+                      ],
+                      "dependents": [
+                        "318a76fd-ffe8-433b-aa6f-e24b876d9b7f"
+                      ]
+                    },
+                    {
+                      "taskId": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
+                      "display": "Publish",
+                      "phase": "publish",
+                      "status": "finished",
+                      "dependencies": [
+                        "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+                      ],
+                      "dependents": []
+                    },
+                    {
+                      "taskId": "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                      "display": "Transcripts",
+                      "phase": "transcripts",
+                      "status": "finished",
+                      "dependencies": [
+                        "b17251a3-7e16-407e-8c71-dc0266614b93"
+                      ],
+                      "dependents": [
+                        "737373fa-2620-47cd-bb07-4293071259ac"
+                      ]
+                    },
+                    {
+                      "taskId": "e19d1c17-7920-4c55-94cf-d4790485a3a6",
+                      "display": "Transcripts",
+                      "phase": "transcripts",
+                      "status": "finished",
+                      "dependencies": [
+                        "b17251a3-7e16-407e-8c71-dc0266614b93"
+                      ],
+                      "dependents": [
+                        "737373fa-2620-47cd-bb07-4293071259ac"
+                      ]
+                    }
+                  ]
+                },
+                "_links": {
+                  "self": {
+                    "href": "https://apis.voicebase.com/v3/media/6291d2b7-ad67-465c-a23e-e2f201b65a82/progress"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}/transcript": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/transcript",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/transcript",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1media~1{{mediaid}}~1transcriptresponse"
+            },
+            "examples": {
+              "application/json": {
+                "confidence": 0.13112181253112917,
+                "words": [
+                  {
+                    "p": 1,
+                    "c": 0.1,
+                    "s": 2200,
+                    "e": 2350,
+                    "w": "agent: ",
+                    "m": "turn"
+                  },
+                  {
+                    "p": 2,
+                    "c": 0.537,
+                    "s": 2200,
+                    "e": 2300,
+                    "w": "Hello"
+                  },
+                  {
+                    "p": 52,
+                    "c": 0.1,
+                    "s": 2400,
+                    "e": 2550,
+                    "w": "caller: ",
+                    "m": "turn"
+                  },
+                  {
+                    "p": 53,
+                    "c": 0.975,
+                    "s": 2400,
+                    "e": 2500,
+                    "w": "Hi"
+                  }
+                ]
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}/transcript/text": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/transcript/text",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/transcript/text",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}/transcript/webvtt": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/transcript/webvtt",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/transcript/webvtt",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}/transcript/srt": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/transcript/srt",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/transcript/srt",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}/transcript/dfxp": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/transcript/dfxp",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/transcript/dfxp",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}/streams": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/streams",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/streams",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1media~1{{mediaid}}~1streamsresponse"
+            },
+            "examples": {
+              "application/json": {
+                "streams": [
+                  {
+                    "streamName": "redacted",
+                    "streamLocation": "https://media.voicebase.com/20ccef07-a807-5ec4-7e72-9b0e96cd04be/6291d2b7-ad67-465c-a23e-e2f201b65a82.mp3"
+                  }
+                ],
+                "_links": {
+                  "self": {
+                    "href": "https://apis.voicebase.com/v3/media/6291d2b7-ad67-465c-a23e-e2f201b65a82/streams"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}/streams/original": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/streams/original",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/streams/original",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/media/{mediaId}/metadata": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/metadata",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/metadata1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "/media/{{mediaId}}/metadata",
+        "tags": [
+          "/media item"
+        ],
+        "operationId": "/media/{{mediaId}}/metadata",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "mediaId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/definition/vocabularies": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/definiton/vocabularies - List keyword spotting groups",
+        "tags": [
+          "/definition/vocabularies"
+        ],
+        "operationId": "/definiton/vocabularies - List keyword spotting groups",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/definition/vocabularies",
+              "headers": {
+                "Authorization": "Bearer {{bearer-token}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/definiton/vocabularies - List keyword spotting groups",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/definition/vocabularies/{vocabularyId}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/definiton/vocabularies/{{vocabularyId}} - Retreive a custom vocabulary",
+        "tags": [
+          "/definition/vocabularies"
+        ],
+        "operationId": "/definiton/vocabularies/{{vocabularyId}} - Retreive a custom vocabulary",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "vocabularyId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "/definiton/vocabularies/{{vocabularyId}} - Define a custom vocabulary",
+        "tags": [
+          "/definition/vocabularies"
+        ],
+        "operationId": "/definiton/vocabularies/{{vocabularyId}} - Define a custom vocabulary",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "vocabularyId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "/definiton/vocabularies/{{vocabularyId}} - Delete a custom vocabulary",
+        "tags": [
+          "/definition/vocabularies"
+        ],
+        "operationId": "/definiton/vocabularies/{{vocabularyId}} - Delete a custom vocabulary",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "vocabularyId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/definition/spotting/groups": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/definition/spotting/groups - List Phrase Spotting Groups",
+        "tags": [
+          "/definition/spotting"
+        ],
+        "operationId": "/definition/spotting/groups - List Phrase Spotting Groups",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/definition/spotting/groups",
+              "headers": {
+                "Authorization": "Bearer {{bearer-token}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/definition/spotting/groups - List Phrase Spotting Groups",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/definition/spotting/groups/{groupId}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/definiton/spotting/groups/{{groupId}} - Retreive a Phrase Spotting Group",
+        "tags": [
+          "/definition/spotting"
+        ],
+        "operationId": "/definiton/spotting/groups/{{groupId}} - Retreive a Phrase Spotting Group",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "/definition/spotting/groups/{{groupId}} - Create or Update",
+        "tags": [
+          "/definition/spotting"
+        ],
+        "operationId": "/definition/spotting/groups/{{groupId}} - Create or Update",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1definition~1spotting~1groups~1{{groupid}}  create or updaterequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/definition/spotting/groups/{testGroupId}": {
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "/definiton/spotting/groups/{{testGroupId}} - Delete a Phrase Spotting Group",
+        "tags": [
+          "/definition/spotting"
+        ],
+        "operationId": "/definiton/spotting/groups/{{testGroupId}} - Delete a Phrase Spotting Group",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "testGroupId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/definition/media/search": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "/definition/media/search - Retreive the list of extended metadata seatchable fields",
+        "tags": [
+          "/definition/media/search"
+        ],
+        "operationId": "/definition/media/search - Retreive the list of extended metadata seatchable fields",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/definition/media/search",
+              "headers": {
+                "Authorization": "Bearer {{bearer-token}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/definition/media/search - Retreive the list of extended metadata seatchable fields",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "/definiton/media/search - Define extended metadata searchable fields",
+        "tags": [
+          "/definition/media/search"
+        ],
+        "operationId": "/definiton/media/search - Define extended metadata searchable fields",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/definition/media/search",
+              "headers": {
+                "Authorization": "Bearer {{bearer-token}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/definiton/media/search - Define extended metadata searchable fields",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/profile/keys": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "/profile/keys - List API keys",
@@ -59,7 +1501,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/keys",
+              "uri": "/profile/keys",
               "headers": {
                 "Authorization": "Bearer {{bearer-token}}"
               }
@@ -109,16 +1551,12 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
               "method": "POST",
-              "uri": "/keys",
+              "uri": "/profile/keys",
               "headers": {
                 "Authorization": "Bearer {{bearer-token}}"
               }
@@ -145,7 +1583,7 @@
         }
       }
     },
-    "/keys/{keyId}": {
+    "/profile/keys/{keyId}": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "/profile/keys/{{keyId}} - Retreive details about an API key",
@@ -226,6 +1664,499 @@
           "IsMultiContentStreaming": false
         }
       }
+    }
+  },
+  "definitions": {
+    "/media  upload a media file for transcriptionresponse": {
+      "title": "/media - Upload a media file for transcriptionResponse",
+      "example": {
+        "_links": {
+          "self": {
+            "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6"
+          },
+          "progress": {
+            "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/progress"
+          },
+          "metadata": {
+            "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/metadata"
+          }
+        },
+        "formatVersion": "3.0.1",
+        "mediaId": "0b9d9c4b-c127-4b84-a00c-9202bc097ae6",
+        "status": "accepted",
+        "dateCreated": "2017-09-08T22:52:05.147Z",
+        "metadata": {},
+        "mediaContentType": "video/quicktime",
+        "length": 46608
+      },
+      "type": "object",
+      "properties": {
+        "_links": {
+          "description": "",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "formatVersion": {
+          "description": "",
+          "type": "string"
+        },
+        "mediaId": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "string"
+        },
+        "dateCreated": {
+          "description": "",
+          "type": "string"
+        },
+        "metadata": {
+          "description": "",
+          "type": "object"
+        },
+        "mediaContentType": {
+          "description": "",
+          "type": "string"
+        },
+        "length": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "_links",
+        "formatVersion",
+        "mediaId",
+        "status",
+        "dateCreated",
+        "metadata",
+        "mediaContentType",
+        "length"
+      ]
+    },
+    "/media/{{mediaid}}/progressresponse": {
+      "title": "/media/{{mediaId}}/progressResponse",
+      "example": {
+        "mediaId": "6291d2b7-ad67-465c-a23e-e2f201b65a82",
+        "jobId": "cc834531-7af0-4251-86c5-aae490343947",
+        "progress": {
+          "finish": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
+          "start": "b17251a3-7e16-407e-8c71-dc0266614b93",
+          "status": "completed",
+          "tasks": [
+            {
+              "taskId": "b17251a3-7e16-407e-8c71-dc0266614b93",
+              "display": "Ingest",
+              "phase": "ingest",
+              "status": "finished",
+              "dependencies": [],
+              "dependents": [
+                "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+              ]
+            },
+            {
+              "taskId": "737373fa-2620-47cd-bb07-4293071259ac",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+              ],
+              "dependents": [
+                "645bb0ce-b856-4020-bc54-995062af6bdd"
+              ]
+            },
+            {
+              "taskId": "645bb0ce-b856-4020-bc54-995062af6bdd",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "737373fa-2620-47cd-bb07-4293071259ac"
+              ],
+              "dependents": [
+                "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+              ]
+            },
+            {
+              "taskId": "92c1c0ac-94ea-4cb5-a8d1-689369d375b1",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "645bb0ce-b856-4020-bc54-995062af6bdd"
+              ],
+              "dependents": [
+                "cd35d958-1375-4313-8f88-42b5e350e5d4"
+              ]
+            },
+            {
+              "taskId": "cd35d958-1375-4313-8f88-42b5e350e5d4",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+              ],
+              "dependents": [
+                "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+              ]
+            },
+            {
+              "taskId": "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "cd35d958-1375-4313-8f88-42b5e350e5d4"
+              ],
+              "dependents": [
+                "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+              ]
+            },
+            {
+              "taskId": "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80",
+              "display": "Publish",
+              "phase": "publish",
+              "status": "finished",
+              "dependencies": [
+                "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+              ],
+              "dependents": [
+                "318a76fd-ffe8-433b-aa6f-e24b876d9b7f"
+              ]
+            },
+            {
+              "taskId": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
+              "display": "Publish",
+              "phase": "publish",
+              "status": "finished",
+              "dependencies": [
+                "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+              ],
+              "dependents": []
+            },
+            {
+              "taskId": "70ff6791-a318-4d78-ac55-378ee691ffb2",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "b17251a3-7e16-407e-8c71-dc0266614b93"
+              ],
+              "dependents": [
+                "737373fa-2620-47cd-bb07-4293071259ac"
+              ]
+            },
+            {
+              "taskId": "e19d1c17-7920-4c55-94cf-d4790485a3a6",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "b17251a3-7e16-407e-8c71-dc0266614b93"
+              ],
+              "dependents": [
+                "737373fa-2620-47cd-bb07-4293071259ac"
+              ]
+            }
+          ]
+        },
+        "_links": {
+          "self": {
+            "href": "https://apis.voicebase.com/v3/media/6291d2b7-ad67-465c-a23e-e2f201b65a82/progress"
+          }
+        }
+      },
+      "type": "object",
+      "properties": {
+        "mediaId": {
+          "description": "",
+          "type": "string"
+        },
+        "jobId": {
+          "description": "",
+          "type": "string"
+        },
+        "progress": {
+          "$ref": "#/definitions/Progress"
+        },
+        "_links": {
+          "description": "",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "mediaId",
+        "jobId",
+        "progress",
+        "_links"
+      ]
+    },
+    "Progress": {
+      "title": "Progress",
+      "type": "object",
+      "properties": {
+        "finish": {
+          "description": "",
+          "type": "string"
+        },
+        "start": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "string"
+        },
+        "tasks": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Task"
+          }
+        }
+      },
+      "required": [
+        "finish",
+        "start",
+        "status",
+        "tasks"
+      ]
+    },
+    "Task": {
+      "title": "Task",
+      "type": "object",
+      "properties": {
+        "taskId": {
+          "description": "",
+          "type": "string"
+        },
+        "display": {
+          "description": "",
+          "type": "string"
+        },
+        "phase": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "string"
+        },
+        "dependencies": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dependents": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "taskId",
+        "display",
+        "phase",
+        "status",
+        "dependencies",
+        "dependents"
+      ]
+    },
+    "/media/{{mediaid}}/transcriptresponse": {
+      "title": "/media/{{mediaId}}/transcriptResponse",
+      "example": {
+        "confidence": 0.13112181253112917,
+        "words": [
+          {
+            "p": 1,
+            "c": 0.1,
+            "s": 2200,
+            "e": 2350,
+            "w": "agent: ",
+            "m": "turn"
+          },
+          {
+            "p": 2,
+            "c": 0.537,
+            "s": 2200,
+            "e": 2300,
+            "w": "Hello"
+          },
+          {
+            "p": 52,
+            "c": 0.1,
+            "s": 2400,
+            "e": 2550,
+            "w": "caller: ",
+            "m": "turn"
+          },
+          {
+            "p": 53,
+            "c": 0.975,
+            "s": 2400,
+            "e": 2500,
+            "w": "Hi"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "words": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Word"
+          }
+        }
+      },
+      "required": [
+        "confidence",
+        "words"
+      ]
+    },
+    "Word": {
+      "title": "Word",
+      "type": "object",
+      "properties": {
+        "p": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "c": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "s": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "e": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "w": {
+          "description": "",
+          "type": "string"
+        },
+        "m": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p",
+        "c",
+        "s",
+        "e",
+        "w"
+      ]
+    },
+    "/media/{{mediaid}}/streamsresponse": {
+      "title": "/media/{{mediaId}}/streamsResponse",
+      "example": {
+        "streams": [
+          {
+            "streamName": "redacted",
+            "streamLocation": "https://media.voicebase.com/20ccef07-a807-5ec4-7e72-9b0e96cd04be/6291d2b7-ad67-465c-a23e-e2f201b65a82.mp3"
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://apis.voicebase.com/v3/media/6291d2b7-ad67-465c-a23e-e2f201b65a82/streams"
+          }
+        }
+      },
+      "type": "object",
+      "properties": {
+        "streams": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Stream"
+          }
+        },
+        "_links": {
+          "description": "",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "streams",
+        "_links"
+      ]
+    },
+    "Stream": {
+      "title": "Stream",
+      "type": "object",
+      "properties": {
+        "streamName": {
+          "description": "",
+          "type": "string"
+        },
+        "streamLocation": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "streamName",
+        "streamLocation"
+      ]
+    },
+    "/definition/spotting/groups/{{groupid}}  create or updaterequest": {
+      "title": "/definition/spotting/groups/{{groupId}} - Create or UpdateRequest",
+      "example": {
+        "groupName": "testGroup",
+        "keywords": [
+          "Keyword Spotting Group definition"
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "groupName": {
+          "description": "",
+          "type": "string"
+        },
+        "keywords": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "groupName",
+        "keywords"
+      ]
     }
   }
 }
