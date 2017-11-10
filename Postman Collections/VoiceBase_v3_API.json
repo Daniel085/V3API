@@ -105,7 +105,7 @@
             "description": ""
           },
           {
-            "name": "Accept",
+            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -124,7 +124,7 @@
               "method": "GET",
               "uri": "/media?query={{query}}&externalId={{externalId}}&before={{before}}&after={{after}}&extendedFilter={{extendedFilter}}&onOrAfterDate={{onOrAfterDate}}&onOrBeforeDate={{onOrBeforeDate}}&sortOrder={{sortOrder}}&limit={{limit}}",
               "headers": {
-                "Accept": "application/json"
+                "Authorization": "Bearer {{bearer-token}}"
               }
             },
             "expectedResponse": {
@@ -177,13 +177,6 @@
             "description": "(Required) JSON object or file specifying the configuration VoiceBase should use when processing your media file."
           },
           {
-            "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -201,22 +194,22 @@
               "application/json": {
                 "_links": {
                   "self": {
-                    "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6"
+                    "href": "/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499"
                   },
                   "progress": {
-                    "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/progress"
+                    "href": "/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/progress"
                   },
                   "metadata": {
-                    "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/metadata"
+                    "href": "/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/metadata"
                   }
                 },
                 "formatVersion": "3.0.1",
-                "mediaId": "0b9d9c4b-c127-4b84-a00c-9202bc097ae6",
+                "mediaId": "cfdeb667-2e7c-4d69-b5d5-dccd84d0f499",
                 "status": "accepted",
-                "dateCreated": "2017-09-08T22:52:05.147Z",
+                "dateCreated": "2017-10-13T22:35:48.346Z",
                 "metadata": {},
-                "mediaContentType": "video/quicktime",
-                "length": 46608
+                "mediaContentType": "audio/x-wav",
+                "length": 10460
               }
             }
           }
@@ -233,10 +226,9 @@
               "uri": "/media",
               "headers": {
                 "Content-Type": "application/x-www-form-urlencoded",
-                "Accept": "application/json",
                 "Authorization": "Bearer {{bearer-token}}"
               },
-              "body": "mediaUrl={{mediaUrl}}&configuration={\n  \"speechModel\": {\n    \"language\": \"en-US\"\n  },\n  \"prediction\": {\n    \"detectors\": [\n      {\n        \"detectorName\": \"PCI\",\n        \"redactor\": {\n          \"transcript\": {\n            \"replacement\": \"[redacted]\"\n          },\n          \"audio\": {\n            \"tone\": 270,\n            \"gain\": 0.5\n          }\n        }\n      }\n    ]\n  }\n}"
+              "body": "mediaUrl={{mediaUrl}}&configuration={{configuration}}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -244,8 +236,22 @@
               "x-arrayOrderedMatching": false,
               "x-arrayCheckCount": false,
               "x-matchResponseSchema": true,
-              "headers": {},
-              "body": "{\n    \"_links\": {\n        \"self\": {\n            \"href\": \"/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6\"\n        },\n        \"progress\": {\n            \"href\": \"/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/progress\"\n        },\n        \"metadata\": {\n            \"href\": \"/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/metadata\"\n        }\n    },\n    \"formatVersion\": \"3.0.1\",\n    \"mediaId\": \"0b9d9c4b-c127-4b84-a00c-9202bc097ae6\",\n    \"status\": \"accepted\",\n    \"dateCreated\": \"2017-09-08T22:52:05.147Z\",\n    \"metadata\": {},\n    \"mediaContentType\": \"video/quicktime\",\n    \"length\": 46608\n}"
+              "headers": {
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Headers": "accept, authorization, content-type",
+                "Access-Control-Allow-Methods": "DELETE, GET, HEAD, OPTIONS, POST, PUT",
+                "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json;charset=UTF-8",
+                "Date": "Fri, 13 Oct 2017 22:35:47 GMT",
+                "Server": "Apache",
+                "Set-Cookie": "SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; Secure",
+                "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                "Transfer-Encoding": "chunked",
+                "X-Application-Context": "application",
+                "X-Frame-Options": "SAMEORIGIN",
+                "X-Trace-ID": "9D82C4D6%3A970E_0A40E1F1%3A01BB_59E13FC3_FC5AC%3A1DE6"
+              },
+              "body": "{\"_links\":{\"self\":{\"href\":\"/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499\"},\"progress\":{\"href\":\"/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/progress\"},\"metadata\":{\"href\":\"/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/metadata\"}},\"formatVersion\":\"3.0.1\",\"mediaId\":\"cfdeb667-2e7c-4d69-b5d5-dccd84d0f499\",\"status\":\"accepted\",\"dateCreated\":\"2017-10-13T22:35:48.346Z\",\"metadata\":{},\"mediaContentType\":\"audio/x-wav\",\"length\":10460}"
             },
             "x-testShouldPass": true,
             "x-testEnabled": true,
@@ -297,7 +303,408 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1media~1{{mediaid}}response"
+            },
+            "examples": {
+              "application/json": {
+                "_links": {
+                  "self": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179"
+                  },
+                  "progress": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/progress"
+                  },
+                  "metadata": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/metadata"
+                  },
+                  "transcript": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript"
+                  },
+                  "text": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/text"
+                  },
+                  "srt": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/srt"
+                  },
+                  "dfxp": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/dfxp"
+                  },
+                  "webvtt": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/webvtt"
+                  },
+                  "streams": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/streams"
+                  }
+                },
+                "formatVersion": "3.0.1",
+                "mediaId": "00251dbe-c769-4a9f-bb87-b3aeb0745179",
+                "status": "finished",
+                "dateCreated": "2017-10-12T22:16:13.98Z",
+                "metadata": {},
+                "mediaContentType": "audio/x-aiff",
+                "length": 14965,
+                "transcript": {
+                  "confidence": 0.13038286891052212,
+                  "words": [
+                    {
+                      "p": 0,
+                      "c": 0.972,
+                      "s": 620,
+                      "e": 750,
+                      "w": "To"
+                    },
+                    {
+                      "p": 1,
+                      "c": 0.964,
+                      "s": 760,
+                      "e": 1020,
+                      "w": "find"
+                    },
+                    {
+                      "p": 2,
+                      "c": 0.901,
+                      "s": 1030,
+                      "e": 1080,
+                      "w": "the"
+                    },
+                    {
+                      "p": 3,
+                      "c": 0.692,
+                      "s": 1090,
+                      "e": 1390,
+                      "w": "source"
+                    },
+                    {
+                      "p": 4,
+                      "c": 0.962,
+                      "s": 1400,
+                      "e": 1470,
+                      "w": "of"
+                    },
+                    {
+                      "p": 5,
+                      "c": 0.882,
+                      "s": 1480,
+                      "e": 2000,
+                      "w": "success"
+                    },
+                    {
+                      "p": 6,
+                      "c": 0.974,
+                      "s": 2010,
+                      "e": 2150,
+                      "w": "we"
+                    },
+                    {
+                      "p": 7,
+                      "c": 0.972,
+                      "s": 2159,
+                      "e": 2469,
+                      "w": "started"
+                    },
+                    {
+                      "p": 8,
+                      "c": 0.303,
+                      "s": 2479,
+                      "e": 2600,
+                      "w": "that"
+                    },
+                    {
+                      "p": 9,
+                      "c": 0.885,
+                      "s": 2610,
+                      "e": 2969,
+                      "w": "work"
+                    },
+                    {
+                      "p": 10,
+                      "c": 0.27,
+                      "s": 3180,
+                      "e": 3310,
+                      "w": "we"
+                    },
+                    {
+                      "p": 11,
+                      "c": 0.896,
+                      "s": 3320,
+                      "e": 3539,
+                      "w": "asked"
+                    },
+                    {
+                      "p": 12,
+                      "c": 0.9,
+                      "s": 3550,
+                      "e": 3820,
+                      "w": "people"
+                    },
+                    {
+                      "p": 13,
+                      "c": 0.951,
+                      "s": 3830,
+                      "e": 3969,
+                      "w": "to"
+                    },
+                    {
+                      "p": 14,
+                      "c": 0.773,
+                      "s": 3979,
+                      "e": 4520,
+                      "w": "identify"
+                    },
+                    {
+                      "p": 15,
+                      "c": 0.955,
+                      "s": 4530,
+                      "e": 4670,
+                      "w": "who"
+                    },
+                    {
+                      "p": 16,
+                      "c": 0.929,
+                      "s": 4679,
+                      "e": 4790,
+                      "w": "they"
+                    },
+                    {
+                      "p": 17,
+                      "c": 0.863,
+                      "s": 4800,
+                      "e": 5110,
+                      "w": "thought"
+                    },
+                    {
+                      "p": 18,
+                      "c": 0.954,
+                      "s": 5119,
+                      "e": 5220,
+                      "w": "were"
+                    },
+                    {
+                      "p": 19,
+                      "c": 0.737,
+                      "s": 5230,
+                      "e": 5300,
+                      "w": "the"
+                    },
+                    {
+                      "p": 20,
+                      "c": 0.869,
+                      "s": 5310,
+                      "e": 5570,
+                      "w": "most"
+                    },
+                    {
+                      "p": 21,
+                      "c": 0.701,
+                      "s": 5580,
+                      "e": 6020,
+                      "w": "effective"
+                    },
+                    {
+                      "p": 22,
+                      "c": 0.976,
+                      "s": 6030,
+                      "e": 6560,
+                      "w": "colleagues"
+                    },
+                    {
+                      "p": 23,
+                      "c": 0.941,
+                      "s": 6570,
+                      "e": 6679,
+                      "w": "in"
+                    },
+                    {
+                      "p": 24,
+                      "c": 0.937,
+                      "s": 6690,
+                      "e": 7159,
+                      "w": "fact"
+                    },
+                    {
+                      "p": 25,
+                      "c": 0.313,
+                      "s": 7750,
+                      "e": 7940,
+                      "w": "over"
+                    },
+                    {
+                      "p": 26,
+                      "c": 0.833,
+                      "s": 7949,
+                      "e": 8009,
+                      "w": "the"
+                    },
+                    {
+                      "p": 27,
+                      "c": 0.718,
+                      "s": 8020,
+                      "e": 8290,
+                      "w": "past"
+                    },
+                    {
+                      "p": 28,
+                      "c": 0.95,
+                      "s": 8300,
+                      "e": 8790,
+                      "w": "25"
+                    },
+                    {
+                      "p": 29,
+                      "c": 0.912,
+                      "s": 8800,
+                      "e": 9090,
+                      "w": "years"
+                    },
+                    {
+                      "p": 30,
+                      "c": 0.575,
+                      "s": 9100,
+                      "e": 9280,
+                      "w": "we've"
+                    },
+                    {
+                      "p": 31,
+                      "c": 0.909,
+                      "s": 9290,
+                      "e": 9550,
+                      "w": "asked"
+                    },
+                    {
+                      "p": 32,
+                      "c": 0.97,
+                      "s": 9560,
+                      "e": 9769,
+                      "w": "over"
+                    },
+                    {
+                      "p": 33,
+                      "c": 0.95,
+                      "s": 9780,
+                      "e": 10390,
+                      "w": "201000"
+                    },
+                    {
+                      "p": 34,
+                      "c": 0.947,
+                      "s": 10399,
+                      "e": 10689,
+                      "w": "people"
+                    },
+                    {
+                      "p": 35,
+                      "c": 0.61,
+                      "s": 10700,
+                      "e": 10820,
+                      "w": "to"
+                    },
+                    {
+                      "p": 36,
+                      "c": 0.955,
+                      "s": 10830,
+                      "e": 11300,
+                      "w": "identify"
+                    },
+                    {
+                      "p": 37,
+                      "c": 0.95,
+                      "s": 11309,
+                      "e": 11420,
+                      "w": "the"
+                    },
+                    {
+                      "p": 38,
+                      "c": 0.968,
+                      "s": 11430,
+                      "e": 12019,
+                      "w": "individuals"
+                    },
+                    {
+                      "p": 39,
+                      "c": 0.929,
+                      "s": 12030,
+                      "e": 12140,
+                      "w": "and"
+                    },
+                    {
+                      "p": 40,
+                      "c": 0.63,
+                      "s": 12149,
+                      "e": 12269,
+                      "w": "their"
+                    },
+                    {
+                      "p": 41,
+                      "c": 0.967,
+                      "s": 12280,
+                      "e": 13070,
+                      "w": "organizations"
+                    },
+                    {
+                      "p": 42,
+                      "c": 0.764,
+                      "s": 13080,
+                      "e": 13229,
+                      "w": "who"
+                    },
+                    {
+                      "p": 43,
+                      "c": 0.952,
+                      "s": 13240,
+                      "e": 13399,
+                      "w": "could"
+                    },
+                    {
+                      "p": 44,
+                      "c": 0.917,
+                      "s": 13410,
+                      "e": 13649,
+                      "w": "really"
+                    },
+                    {
+                      "p": 45,
+                      "c": 0.958,
+                      "s": 13660,
+                      "e": 13870,
+                      "w": "get"
+                    },
+                    {
+                      "p": 46,
+                      "c": 0.766,
+                      "s": 13880,
+                      "e": 14130,
+                      "w": "things"
+                    },
+                    {
+                      "p": 47,
+                      "c": 0.917,
+                      "s": 14139,
+                      "e": 14410,
+                      "w": "done"
+                    },
+                    {
+                      "p": 48,
+                      "c": 0.0,
+                      "s": 14410,
+                      "e": 14410,
+                      "m": "punc",
+                      "w": "."
+                    }
+                  ],
+                  "alternateFormats": [
+                    {
+                      "format": "srt",
+                      "contentType": "text/srt",
+                      "contentEncoding": "Base64",
+                      "charset": "utf-8",
+                      "data": "MQowMDowMDowMCw2MiAtLT4gMDA6MDA6MDQsNjcKVG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZAp0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobwoKMgowMDowMDowNCw2OCAtLT4gMDA6MDA6MDksMDkKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LDEwIC0tPiAwMDowMDoxMywwNwp3ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnkKdGhlIGluZGl2aWR1YWxzIGFuZCB0aGVpciBvcmdhbml6YXRpb25zCgo0CjAwOjAwOjEzLDA4IC0tPiAwMDowMDoxNCw0MQp3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4KCg=="
+                    }
+                  ]
+                }
+              }
+            }
           }
         },
         "security": [],
@@ -566,45 +973,47 @@
             },
             "examples": {
               "application/json": {
-                "confidence": 0.13112181253112917,
-                "words": [
-                  {
-                    "p": 1,
-                    "c": 0.1,
-                    "s": 2200,
-                    "e": 2350,
-                    "w": "agent: ",
-                    "m": "turn"
-                  },
-                  {
-                    "p": 2,
-                    "c": 0.537,
-                    "s": 2200,
-                    "e": 2300,
-                    "w": "Hello"
-                  },
-                  {
-                    "p": 52,
-                    "c": 0.1,
-                    "s": 2400,
-                    "e": 2550,
-                    "w": "caller: ",
-                    "m": "turn"
-                  },
-                  {
-                    "p": 53,
-                    "c": 0.975,
-                    "s": 2400,
-                    "e": 2500,
-                    "w": "Hi"
-                  }
-                ]
+                "mediaId": "bc14632d-e81b-4673-992d-5c5fb6573fb8",
+                "status": "finished",
+                "dateCreated": "2017-06-22T19:18:49Z",
+                "mediaContentType": "audio/x-wav",
+                "length": 10031,
+                "transcript": {
+                  "words": [
+                    {
+                      "p": 1,
+                      "c": 0.1,
+                      "s": 2200,
+                      "e": 2350,
+                      "w": "agent: ",
+                      "m": "turn"
+                    },
+                    {
+                      "p": 2,
+                      "c": 0.537,
+                      "s": 2200,
+                      "e": 2300,
+                      "w": "Hello"
+                    },
+                    {
+                      "p": 52,
+                      "c": 0.1,
+                      "s": 2400,
+                      "e": 2550,
+                      "w": "caller: ",
+                      "m": "turn"
+                    },
+                    {
+                      "p": 53,
+                      "c": 0.975,
+                      "s": 2400,
+                      "e": 2500,
+                      "w": "Hi"
+                    }
+                  ]
+                }
               }
             }
-          },
-          "404": {
-            "description": "Not Found",
-            "schema": {}
           }
         },
         "security": [],
@@ -630,13 +1039,6 @@
         ],
         "parameters": [
           {
-            "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -653,7 +1055,11 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "examples": {}
           }
         },
         "security": [],
@@ -695,7 +1101,11 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "examples": {}
           }
         },
         "security": [],
@@ -737,7 +1147,11 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "examples": {}
           }
         },
         "security": [],
@@ -779,7 +1193,11 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "examples": {}
           }
         },
         "security": [],
@@ -907,6 +1325,13 @@
         ],
         "parameters": [
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -946,6 +1371,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
           {
             "name": "Authorization",
             "in": "header",
@@ -996,6 +1428,13 @@
         ],
         "parameters": [
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -1015,6 +1454,7 @@
               "method": "GET",
               "uri": "/definition/vocabularies",
               "headers": {
+                "Accept": "application/json",
                 "Authorization": "Bearer {{bearer-token}}"
               }
             },
@@ -1052,6 +1492,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
           {
             "name": "Authorization",
             "in": "header",
@@ -1093,6 +1540,13 @@
         ],
         "parameters": [
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -1132,6 +1586,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
           {
             "name": "Authorization",
             "in": "header",
@@ -1175,6 +1636,13 @@
         ],
         "parameters": [
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -1194,6 +1662,7 @@
               "method": "GET",
               "uri": "/definition/spotting/groups",
               "headers": {
+                "Accept": "application/json",
                 "Authorization": "Bearer {{bearer-token}}"
               }
             },
@@ -1231,6 +1700,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
           {
             "name": "Authorization",
             "in": "header",
@@ -1281,6 +1757,13 @@
             }
           },
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -1304,7 +1787,25 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1definition~1spotting~1groups~1{{groupid}}  create or updateresponse"
+            },
+            "examples": {
+              "application/json": {
+                "groupName": "testGroup",
+                "keywords": [
+                  "array",
+                  "of",
+                  "keywords"
+                ],
+                "_links": {
+                  "self": {
+                    "href": "https://apis.voicebase.com/v3/definition/spotting/groups/testGroup"
+                  }
+                }
+              }
+            }
           }
         },
         "security": [],
@@ -1329,6 +1830,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
           {
             "name": "Authorization",
             "in": "header",
@@ -1372,6 +1880,13 @@
         ],
         "parameters": [
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -1391,6 +1906,7 @@
               "method": "GET",
               "uri": "/definition/media/search",
               "headers": {
+                "Accept": "application/json",
                 "Authorization": "Bearer {{bearer-token}}"
               }
             },
@@ -1427,6 +1943,13 @@
         ],
         "parameters": [
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -1446,6 +1969,7 @@
               "method": "PUT",
               "uri": "/definition/media/search",
               "headers": {
+                "Accept": "application/json",
                 "Authorization": "Bearer {{bearer-token}}"
               }
             },
@@ -1484,6 +2008,13 @@
         ],
         "parameters": [
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -1503,6 +2034,7 @@
               "method": "GET",
               "uri": "/profile/keys",
               "headers": {
+                "Accept": "application/json",
                 "Authorization": "Bearer {{bearer-token}}"
               }
             },
@@ -1539,6 +2071,13 @@
         ],
         "parameters": [
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -1558,6 +2097,7 @@
               "method": "POST",
               "uri": "/profile/keys",
               "headers": {
+                "Accept": "application/json",
                 "Authorization": "Bearer {{bearer-token}}"
               }
             },
@@ -1595,6 +2135,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
           {
             "name": "Authorization",
             "in": "header",
@@ -1636,6 +2183,13 @@
         ],
         "parameters": [
           {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -1672,22 +2226,22 @@
       "example": {
         "_links": {
           "self": {
-            "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6"
+            "href": "/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499"
           },
           "progress": {
-            "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/progress"
+            "href": "/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/progress"
           },
           "metadata": {
-            "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/metadata"
+            "href": "/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/metadata"
           }
         },
         "formatVersion": "3.0.1",
-        "mediaId": "0b9d9c4b-c127-4b84-a00c-9202bc097ae6",
+        "mediaId": "cfdeb667-2e7c-4d69-b5d5-dccd84d0f499",
         "status": "accepted",
-        "dateCreated": "2017-09-08T22:52:05.147Z",
+        "dateCreated": "2017-10-13T22:35:48.346Z",
         "metadata": {},
-        "mediaContentType": "video/quicktime",
-        "length": 46608
+        "mediaContentType": "audio/x-wav",
+        "length": 10460
       },
       "type": "object",
       "properties": {
@@ -1737,6 +2291,562 @@
         "metadata",
         "mediaContentType",
         "length"
+      ]
+    },
+    "/media/{{mediaid}}response": {
+      "title": "/media/{{mediaId}}Response",
+      "example": {
+        "_links": {
+          "self": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179"
+          },
+          "progress": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/progress"
+          },
+          "metadata": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/metadata"
+          },
+          "transcript": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript"
+          },
+          "text": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/text"
+          },
+          "srt": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/srt"
+          },
+          "dfxp": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/dfxp"
+          },
+          "webvtt": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/webvtt"
+          },
+          "streams": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/streams"
+          }
+        },
+        "formatVersion": "3.0.1",
+        "mediaId": "00251dbe-c769-4a9f-bb87-b3aeb0745179",
+        "status": "finished",
+        "dateCreated": "2017-10-12T22:16:13.98Z",
+        "metadata": {},
+        "mediaContentType": "audio/x-aiff",
+        "length": 14965,
+        "transcript": {
+          "confidence": 0.13038286891052212,
+          "words": [
+            {
+              "p": 0,
+              "c": 0.972,
+              "s": 620,
+              "e": 750,
+              "w": "To"
+            },
+            {
+              "p": 1,
+              "c": 0.964,
+              "s": 760,
+              "e": 1020,
+              "w": "find"
+            },
+            {
+              "p": 2,
+              "c": 0.901,
+              "s": 1030,
+              "e": 1080,
+              "w": "the"
+            },
+            {
+              "p": 3,
+              "c": 0.692,
+              "s": 1090,
+              "e": 1390,
+              "w": "source"
+            },
+            {
+              "p": 4,
+              "c": 0.962,
+              "s": 1400,
+              "e": 1470,
+              "w": "of"
+            },
+            {
+              "p": 5,
+              "c": 0.882,
+              "s": 1480,
+              "e": 2000,
+              "w": "success"
+            },
+            {
+              "p": 6,
+              "c": 0.974,
+              "s": 2010,
+              "e": 2150,
+              "w": "we"
+            },
+            {
+              "p": 7,
+              "c": 0.972,
+              "s": 2159,
+              "e": 2469,
+              "w": "started"
+            },
+            {
+              "p": 8,
+              "c": 0.303,
+              "s": 2479,
+              "e": 2600,
+              "w": "that"
+            },
+            {
+              "p": 9,
+              "c": 0.885,
+              "s": 2610,
+              "e": 2969,
+              "w": "work"
+            },
+            {
+              "p": 10,
+              "c": 0.27,
+              "s": 3180,
+              "e": 3310,
+              "w": "we"
+            },
+            {
+              "p": 11,
+              "c": 0.896,
+              "s": 3320,
+              "e": 3539,
+              "w": "asked"
+            },
+            {
+              "p": 12,
+              "c": 0.9,
+              "s": 3550,
+              "e": 3820,
+              "w": "people"
+            },
+            {
+              "p": 13,
+              "c": 0.951,
+              "s": 3830,
+              "e": 3969,
+              "w": "to"
+            },
+            {
+              "p": 14,
+              "c": 0.773,
+              "s": 3979,
+              "e": 4520,
+              "w": "identify"
+            },
+            {
+              "p": 15,
+              "c": 0.955,
+              "s": 4530,
+              "e": 4670,
+              "w": "who"
+            },
+            {
+              "p": 16,
+              "c": 0.929,
+              "s": 4679,
+              "e": 4790,
+              "w": "they"
+            },
+            {
+              "p": 17,
+              "c": 0.863,
+              "s": 4800,
+              "e": 5110,
+              "w": "thought"
+            },
+            {
+              "p": 18,
+              "c": 0.954,
+              "s": 5119,
+              "e": 5220,
+              "w": "were"
+            },
+            {
+              "p": 19,
+              "c": 0.737,
+              "s": 5230,
+              "e": 5300,
+              "w": "the"
+            },
+            {
+              "p": 20,
+              "c": 0.869,
+              "s": 5310,
+              "e": 5570,
+              "w": "most"
+            },
+            {
+              "p": 21,
+              "c": 0.701,
+              "s": 5580,
+              "e": 6020,
+              "w": "effective"
+            },
+            {
+              "p": 22,
+              "c": 0.976,
+              "s": 6030,
+              "e": 6560,
+              "w": "colleagues"
+            },
+            {
+              "p": 23,
+              "c": 0.941,
+              "s": 6570,
+              "e": 6679,
+              "w": "in"
+            },
+            {
+              "p": 24,
+              "c": 0.937,
+              "s": 6690,
+              "e": 7159,
+              "w": "fact"
+            },
+            {
+              "p": 25,
+              "c": 0.313,
+              "s": 7750,
+              "e": 7940,
+              "w": "over"
+            },
+            {
+              "p": 26,
+              "c": 0.833,
+              "s": 7949,
+              "e": 8009,
+              "w": "the"
+            },
+            {
+              "p": 27,
+              "c": 0.718,
+              "s": 8020,
+              "e": 8290,
+              "w": "past"
+            },
+            {
+              "p": 28,
+              "c": 0.95,
+              "s": 8300,
+              "e": 8790,
+              "w": "25"
+            },
+            {
+              "p": 29,
+              "c": 0.912,
+              "s": 8800,
+              "e": 9090,
+              "w": "years"
+            },
+            {
+              "p": 30,
+              "c": 0.575,
+              "s": 9100,
+              "e": 9280,
+              "w": "we've"
+            },
+            {
+              "p": 31,
+              "c": 0.909,
+              "s": 9290,
+              "e": 9550,
+              "w": "asked"
+            },
+            {
+              "p": 32,
+              "c": 0.97,
+              "s": 9560,
+              "e": 9769,
+              "w": "over"
+            },
+            {
+              "p": 33,
+              "c": 0.95,
+              "s": 9780,
+              "e": 10390,
+              "w": "201000"
+            },
+            {
+              "p": 34,
+              "c": 0.947,
+              "s": 10399,
+              "e": 10689,
+              "w": "people"
+            },
+            {
+              "p": 35,
+              "c": 0.61,
+              "s": 10700,
+              "e": 10820,
+              "w": "to"
+            },
+            {
+              "p": 36,
+              "c": 0.955,
+              "s": 10830,
+              "e": 11300,
+              "w": "identify"
+            },
+            {
+              "p": 37,
+              "c": 0.95,
+              "s": 11309,
+              "e": 11420,
+              "w": "the"
+            },
+            {
+              "p": 38,
+              "c": 0.968,
+              "s": 11430,
+              "e": 12019,
+              "w": "individuals"
+            },
+            {
+              "p": 39,
+              "c": 0.929,
+              "s": 12030,
+              "e": 12140,
+              "w": "and"
+            },
+            {
+              "p": 40,
+              "c": 0.63,
+              "s": 12149,
+              "e": 12269,
+              "w": "their"
+            },
+            {
+              "p": 41,
+              "c": 0.967,
+              "s": 12280,
+              "e": 13070,
+              "w": "organizations"
+            },
+            {
+              "p": 42,
+              "c": 0.764,
+              "s": 13080,
+              "e": 13229,
+              "w": "who"
+            },
+            {
+              "p": 43,
+              "c": 0.952,
+              "s": 13240,
+              "e": 13399,
+              "w": "could"
+            },
+            {
+              "p": 44,
+              "c": 0.917,
+              "s": 13410,
+              "e": 13649,
+              "w": "really"
+            },
+            {
+              "p": 45,
+              "c": 0.958,
+              "s": 13660,
+              "e": 13870,
+              "w": "get"
+            },
+            {
+              "p": 46,
+              "c": 0.766,
+              "s": 13880,
+              "e": 14130,
+              "w": "things"
+            },
+            {
+              "p": 47,
+              "c": 0.917,
+              "s": 14139,
+              "e": 14410,
+              "w": "done"
+            },
+            {
+              "p": 48,
+              "c": 0.0,
+              "s": 14410,
+              "e": 14410,
+              "m": "punc",
+              "w": "."
+            }
+          ],
+          "alternateFormats": [
+            {
+              "format": "srt",
+              "contentType": "text/srt",
+              "contentEncoding": "Base64",
+              "charset": "utf-8",
+              "data": "MQowMDowMDowMCw2MiAtLT4gMDA6MDA6MDQsNjcKVG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZAp0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobwoKMgowMDowMDowNCw2OCAtLT4gMDA6MDA6MDksMDkKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LDEwIC0tPiAwMDowMDoxMywwNwp3ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnkKdGhlIGluZGl2aWR1YWxzIGFuZCB0aGVpciBvcmdhbml6YXRpb25zCgo0CjAwOjAwOjEzLDA4IC0tPiAwMDowMDoxNCw0MQp3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4KCg=="
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "properties": {
+        "_links": {
+          "description": "",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "formatVersion": {
+          "description": "",
+          "type": "string"
+        },
+        "mediaId": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "string"
+        },
+        "dateCreated": {
+          "description": "",
+          "type": "string"
+        },
+        "metadata": {
+          "description": "",
+          "type": "object"
+        },
+        "mediaContentType": {
+          "description": "",
+          "type": "string"
+        },
+        "length": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "transcript": {
+          "$ref": "#/definitions/Transcript"
+        }
+      },
+      "required": [
+        "_links",
+        "formatVersion",
+        "mediaId",
+        "status",
+        "dateCreated",
+        "metadata",
+        "mediaContentType",
+        "length",
+        "transcript"
+      ]
+    },
+    "Transcript": {
+      "title": "Transcript",
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "words": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Word"
+          }
+        },
+        "alternateFormats": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AlternateFormat"
+          }
+        }
+      },
+      "required": [
+        "confidence",
+        "words",
+        "alternateFormats"
+      ]
+    },
+    "Word": {
+      "title": "Word",
+      "type": "object",
+      "properties": {
+        "p": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "c": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "s": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "e": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "w": {
+          "description": "",
+          "type": "string"
+        },
+        "m": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p",
+        "c",
+        "s",
+        "e",
+        "w"
+      ]
+    },
+    "AlternateFormat": {
+      "title": "AlternateFormat",
+      "type": "object",
+      "properties": {
+        "format": {
+          "description": "",
+          "type": "string"
+        },
+        "contentType": {
+          "description": "",
+          "type": "string"
+        },
+        "contentEncoding": {
+          "description": "",
+          "type": "string"
+        },
+        "charset": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "format",
+        "contentType",
+        "contentEncoding",
+        "charset",
+        "data"
       ]
     },
     "/media/{{mediaid}}/progressresponse": {
@@ -1981,47 +3091,86 @@
     "/media/{{mediaid}}/transcriptresponse": {
       "title": "/media/{{mediaId}}/transcriptResponse",
       "example": {
-        "confidence": 0.13112181253112917,
-        "words": [
-          {
-            "p": 1,
-            "c": 0.1,
-            "s": 2200,
-            "e": 2350,
-            "w": "agent: ",
-            "m": "turn"
-          },
-          {
-            "p": 2,
-            "c": 0.537,
-            "s": 2200,
-            "e": 2300,
-            "w": "Hello"
-          },
-          {
-            "p": 52,
-            "c": 0.1,
-            "s": 2400,
-            "e": 2550,
-            "w": "caller: ",
-            "m": "turn"
-          },
-          {
-            "p": 53,
-            "c": 0.975,
-            "s": 2400,
-            "e": 2500,
-            "w": "Hi"
-          }
-        ]
+        "mediaId": "bc14632d-e81b-4673-992d-5c5fb6573fb8",
+        "status": "finished",
+        "dateCreated": "2017-06-22T19:18:49Z",
+        "mediaContentType": "audio/x-wav",
+        "length": 10031,
+        "transcript": {
+          "words": [
+            {
+              "p": 1,
+              "c": 0.1,
+              "s": 2200,
+              "e": 2350,
+              "w": "agent: ",
+              "m": "turn"
+            },
+            {
+              "p": 2,
+              "c": 0.537,
+              "s": 2200,
+              "e": 2300,
+              "w": "Hello"
+            },
+            {
+              "p": 52,
+              "c": 0.1,
+              "s": 2400,
+              "e": 2550,
+              "w": "caller: ",
+              "m": "turn"
+            },
+            {
+              "p": 53,
+              "c": 0.975,
+              "s": 2400,
+              "e": 2500,
+              "w": "Hi"
+            }
+          ]
+        }
       },
       "type": "object",
       "properties": {
-        "confidence": {
+        "mediaId": {
           "description": "",
-          "type": "number",
-          "format": "double"
+          "type": "string"
         },
+        "status": {
+          "description": "",
+          "type": "string"
+        },
+        "dateCreated": {
+          "description": "",
+          "type": "string"
+        },
+        "mediaContentType": {
+          "description": "",
+          "type": "string"
+        },
+        "length": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "transcript": {
+          "$ref": "#/definitions/Transcript9"
+        }
+      },
+      "required": [
+        "mediaId",
+        "status",
+        "dateCreated",
+        "mediaContentType",
+        "length",
+        "transcript"
+      ]
+    },
+    "Transcript9": {
+      "title": "Transcript9",
+      "type": "object",
+      "properties": {
         "words": {
           "description": "",
           "type": "array",
@@ -2031,49 +3180,7 @@
         }
       },
       "required": [
-        "confidence",
         "words"
-      ]
-    },
-    "Word": {
-      "title": "Word",
-      "type": "object",
-      "properties": {
-        "p": {
-          "description": "",
-          "type": "integer",
-          "format": "int32"
-        },
-        "c": {
-          "description": "",
-          "type": "number",
-          "format": "double"
-        },
-        "s": {
-          "description": "",
-          "type": "integer",
-          "format": "int32"
-        },
-        "e": {
-          "description": "",
-          "type": "integer",
-          "format": "int32"
-        },
-        "w": {
-          "description": "",
-          "type": "string"
-        },
-        "m": {
-          "description": "",
-          "type": "string"
-        }
-      },
-      "required": [
-        "p",
-        "c",
-        "s",
-        "e",
-        "w"
       ]
     },
     "/media/{{mediaid}}/streamsresponse": {
@@ -2136,7 +3243,9 @@
       "example": {
         "groupName": "testGroup",
         "keywords": [
-          "Keyword Spotting Group definition"
+          "array",
+          "of",
+          "keywords"
         ]
       },
       "type": "object",
@@ -2156,6 +3265,48 @@
       "required": [
         "groupName",
         "keywords"
+      ]
+    },
+    "/definition/spotting/groups/{{groupid}}  create or updateresponse": {
+      "title": "/definition/spotting/groups/{{groupId}} - Create or UpdateResponse",
+      "example": {
+        "groupName": "testGroup",
+        "keywords": [
+          "array",
+          "of",
+          "keywords"
+        ],
+        "_links": {
+          "self": {
+            "href": "https://apis.voicebase.com/v3/definition/spotting/groups/testGroup"
+          }
+        }
+      },
+      "type": "object",
+      "properties": {
+        "groupName": {
+          "description": "",
+          "type": "string"
+        },
+        "keywords": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "_links": {
+          "description": "",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "groupName",
+        "keywords",
+        "_links"
       ]
     }
   }
