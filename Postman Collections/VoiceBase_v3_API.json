@@ -31,7 +31,7 @@
   "paths": {
     "/media": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Retrieve a list of media previously uploaded that match a criteria",
         "summary": "/media&query={{query}}",
         "tags": [
           "/media collection"
@@ -138,7 +138,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "/media&query={{query}}",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "Retrieve a list of media previously uploaded that match a criteria"
           }
         ],
         "x-operation-settings": {
@@ -149,7 +149,7 @@
         }
       },
       "post": {
-        "description": "TODO: Add Description",
+        "description": "# Using local media\nTo upload a recording for transcription and analysis, attach the named media in the body of the request in the form field: media\n\n# Using a remote media URL\nVoiceBase can also fetch media from a remote URL using the mediaURL form field in the request body.",
         "summary": "/media - Upload a media file for transcription",
         "tags": [
           "/media collection"
@@ -256,7 +256,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "/media - Upload a media file for transcription",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "# Using local media\nTo upload a recording for transcription and analysis, attach the named media in the body of the request in the form field: media\n\n# Using a remote media URL\nVoiceBase can also fetch media from a remote URL using the mediaURL form field in the request body."
           }
         ],
         "x-operation-settings": {
@@ -269,7 +269,7 @@
     },
     "/media/{mediaId}": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Retrieve analytical results from a previously uploaded media",
         "summary": "/media/{{mediaId}}",
         "tags": [
           "/media item"
@@ -717,7 +717,7 @@
         }
       },
       "delete": {
-        "description": "TODO: Add Description",
+        "description": "Delete this media",
         "summary": "/media/{{mediaId}}",
         "tags": [
           "/media item"
@@ -759,7 +759,7 @@
     },
     "/media/{mediaId}/progress": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "You may use this endpoint to poll and monitor progress after submission. Use the Media ID you received in the response from your media POST. VoiceBase also supports callbacks, and may call your server with a range of transcript formats and/or media by using setting up callbacks in your configuration.\n",
         "summary": "/media/{{mediaId}}/progress",
         "tags": [
           "/media item"
@@ -940,7 +940,7 @@
     },
     "/media/{mediaId}/transcript": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "# Example with Stereo\nIn this example, the agent spoke first, and said \"Hello\" and the caller spoke second and said \"Hi\".\nSpeaker identification is enabled by multi-channel audio, where each channel is associated with a specific speaker. For more information on how to use multi-speaker audio, see the [stereo](stereo.md) section.\n\n# How to read it:\n* \"p\" = Position (word # in the transcript)\n* \"c\" = Confidence (A value between 0-1 that relates to the confidence percent ex: 0.88 = 88%.  When the metadata flag is present confidence contains an arbireary value.)\n* \"s\" = Start time (milliseconds)\n* \"e\" = End time (milliseconds)\n* \"w\" = The word itself (When the metadata flag is present \"w\" refers to the speaker)\n* \"m\" = metadata (In this case when \"m\": \"turn\" it is detecting a change in speaker)",
         "summary": "/media/{{mediaId}}/transcript",
         "tags": [
           "/media item"
@@ -1028,7 +1028,7 @@
     },
     "/media/{mediaId}/transcript/text": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Retrieve the transcript from a given media in plain text format",
         "summary": "/media/{{mediaId}}/transcript/text",
         "tags": [
           "/media item"
@@ -1074,7 +1074,7 @@
     },
     "/media/{mediaId}/transcript/webvtt": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Retrieve the transcript from a given media in WEBVTT format",
         "summary": "/media/{{mediaId}}/transcript/webvtt",
         "tags": [
           "/media item"
@@ -1120,7 +1120,7 @@
     },
     "/media/{mediaId}/transcript/srt": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "VoiceBase can generate subtitles or closed captions for your video project, by allowing you to retrieve the transcript of your audio or video file using the WebVTT or SubRip Text (SRT) format.\n\nRetrieve the transcript from a given media in SRT (subtitles) format by using this resource.",
         "summary": "/media/{{mediaId}}/transcript/srt",
         "tags": [
           "/media item"
@@ -1166,7 +1166,7 @@
     },
     "/media/{mediaId}/transcript/dfxp": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Retrieve the transcript from a given media in DFXP format",
         "summary": "/media/{{mediaId}}/transcript/dfxp",
         "tags": [
           "/media item"
@@ -1212,7 +1212,7 @@
     },
     "/media/{mediaId}/streams": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Get list of available media URLs",
         "summary": "/media/{{mediaId}}/streams",
         "tags": [
           "/media item"
@@ -1272,7 +1272,7 @@
     },
     "/media/{mediaId}/streams/original": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Redirects to the original version of the file",
         "summary": "/media/{{mediaId}}/streams/original",
         "tags": [
           "/media item"
@@ -1314,7 +1314,7 @@
     },
     "/media/{mediaId}/metadata": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Retrieve the media metadata",
         "summary": "/media/{{mediaId}}/metadata",
         "tags": [
           "/media item"
@@ -1361,7 +1361,7 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
+        "description": "Set or update the media metadata",
         "summary": "/media/{{mediaId}}/metadata",
         "tags": [
           "/media item"
@@ -1417,7 +1417,7 @@
     },
     "/definition/vocabularies": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "List all defined custom vocabularies. Custom vocabularies are used to improve accurary of transcription",
         "summary": "/definiton/vocabularies - List keyword spotting groups",
         "tags": [
           "/definition/vocabularies"
@@ -1469,7 +1469,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "/definiton/vocabularies - List keyword spotting groups",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "List all defined custom vocabularies. Custom vocabularies are used to improve accurary of transcription"
           }
         ],
         "x-operation-settings": {
@@ -1482,7 +1482,7 @@
     },
     "/definition/vocabularies/{vocabularyId}": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Retrieve a custom vocabulary",
         "summary": "/definiton/vocabularies/{{vocabularyId}} - Retreive a custom vocabulary",
         "tags": [
           "/definition/vocabularies"
@@ -1529,7 +1529,7 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
+        "description": "Create or update a custom vocabulary. Custom vocabularies are used to improve accurary of transcription",
         "summary": "/definiton/vocabularies/{{vocabularyId}} - Define a custom vocabulary",
         "tags": [
           "/definition/vocabularies"
@@ -1576,7 +1576,7 @@
         }
       },
       "delete": {
-        "description": "TODO: Add Description",
+        "description": "Delete a custom vocabulary",
         "summary": "/definiton/vocabularies/{{vocabularyId}} - Delete a custom vocabulary",
         "tags": [
           "/definition/vocabularies"
@@ -1625,7 +1625,7 @@
     },
     "/definition/spotting/groups": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Get all defined keyword spotting groups",
         "summary": "/definition/spotting/groups - List Phrase Spotting Groups",
         "tags": [
           "/definition/spotting"
@@ -1677,7 +1677,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "/definition/spotting/groups - List Phrase Spotting Groups",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "Get all defined keyword spotting groups"
           }
         ],
         "x-operation-settings": {
@@ -1690,7 +1690,7 @@
     },
     "/definition/spotting/groups/{groupId}": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Retrieve a keyword spotting group with its keywords",
         "summary": "/definiton/spotting/groups/{{groupId}} - Retreive a Phrase Spotting Group",
         "tags": [
           "/definition/spotting"
@@ -1737,7 +1737,7 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
+        "description": "Create or update a keyword spotting group with a set of keywords",
         "summary": "/definition/spotting/groups/{{groupId}} - Create or Update",
         "tags": [
           "/definition/spotting"
@@ -1820,7 +1820,7 @@
     },
     "/definition/spotting/groups/{testGroupId}": {
       "delete": {
-        "description": "TODO: Add Description",
+        "description": "Delete the keyword spotting group",
         "summary": "/definiton/spotting/groups/{{testGroupId}} - Delete a Phrase Spotting Group",
         "tags": [
           "/definition/spotting"
@@ -1869,7 +1869,7 @@
     },
     "/definition/media/search": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Get searchable fields",
         "summary": "/definition/media/search - Retreive the list of extended metadata seatchable fields",
         "tags": [
           "/definition/media/search"
@@ -1921,7 +1921,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "/definition/media/search - Retreive the list of extended metadata seatchable fields",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "Get searchable fields"
           }
         ],
         "x-operation-settings": {
@@ -1932,7 +1932,7 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
+        "description": "Create or update custom parameters of metadata for search",
         "summary": "/definiton/media/search - Define extended metadata searchable fields",
         "tags": [
           "/definition/media/search"
@@ -1984,7 +1984,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "/definiton/media/search - Define extended metadata searchable fields",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "Create or update custom parameters of metadata for search"
           }
         ],
         "x-operation-settings": {
@@ -1997,7 +1997,7 @@
     },
     "/profile/keys": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Returns all current API keys for current user",
         "summary": "/profile/keys - List API keys",
         "tags": [
           "/profile"
@@ -2049,7 +2049,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "/profile/keys - List API keys",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "Returns all current API keys for current user"
           }
         ],
         "x-operation-settings": {
@@ -2060,7 +2060,7 @@
         }
       },
       "post": {
-        "description": "TODO: Add Description",
+        "description": "Create a new API key for the current user",
         "summary": "/profile/keys - Create a API key",
         "tags": [
           "/profile"
@@ -2112,7 +2112,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "/profile/keys - Create a API key",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "Create a new API key for the current user"
           }
         ],
         "x-operation-settings": {
@@ -2125,7 +2125,7 @@
     },
     "/profile/keys/{keyId}": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "Get information about this API key",
         "summary": "/profile/keys/{{keyId}} - Retreive details about an API key",
         "tags": [
           "/profile"
@@ -2172,7 +2172,7 @@
         }
       },
       "delete": {
-        "description": "TODO: Add Description",
+        "description": "Delete and revoke this API key",
         "summary": "/profile/keys/{{keyId}} - Delete a API key",
         "tags": [
           "/profile"
