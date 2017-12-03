@@ -16,7 +16,8 @@
       "type": "oauth2",
       "flow": "implicit",
       "authorizationUrl": "https://apis.voicebase.com/v3",
-      "scopes": {}
+      "scopes": {},
+      "x-skip-client-authentication": false
     }
   },
   "schemes": [
