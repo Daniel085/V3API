@@ -37,7 +37,7 @@
         "tags": [
           "/media collection"
         ],
-        "operationId": "/media&query={{query}}",
+        "operationId": "MediaGet2",
         "produces": [
           "application/json"
         ],
@@ -155,7 +155,7 @@
         "tags": [
           "/media collection"
         ],
-        "operationId": "/media - Upload a media file for transcription",
+        "operationId": "MediaPost",
         "produces": [
           "application/json"
         ],
@@ -275,7 +275,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}",
+        "operationId": "MediaByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -723,7 +723,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}1",
+        "operationId": "MediaByMediaIdDelete",
         "produces": [
           "application/json"
         ],
@@ -765,7 +765,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/progress",
+        "operationId": "MediaProgressByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -946,7 +946,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/transcript",
+        "operationId": "MediaTranscriptByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -1034,7 +1034,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/transcript/text",
+        "operationId": "MediaTranscriptTextByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -1080,7 +1080,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/transcript/webvtt",
+        "operationId": "MediaTranscriptWebvttByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -1126,7 +1126,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/transcript/srt",
+        "operationId": "MediaTranscriptSrtByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -1172,7 +1172,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/transcript/dfxp",
+        "operationId": "MediaTranscriptDfxpByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -1218,7 +1218,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/streams",
+        "operationId": "MediaStreamsByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -1278,7 +1278,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/streams/original",
+        "operationId": "MediaStreamsOriginalByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -1320,7 +1320,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/metadata1",
+        "operationId": "MediaMetadataByMediaIdGet",
         "produces": [
           "application/json"
         ],
@@ -1367,7 +1367,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "/media/{{mediaId}}/metadata",
+        "operationId": "MediaMetadataByMediaIdPut",
         "produces": [
           "application/json"
         ],
@@ -1423,7 +1423,7 @@
         "tags": [
           "/definition/vocabularies"
         ],
-        "operationId": "/definiton/vocabularies - List keyword spotting groups",
+        "operationId": "DefinitionVocabulariesGet",
         "produces": [
           "application/json"
         ],
@@ -1488,7 +1488,7 @@
         "tags": [
           "/definition/vocabularies"
         ],
-        "operationId": "/definiton/vocabularies/{{vocabularyId}} - Retreive a custom vocabulary",
+        "operationId": "DefinitionVocabulariesByVocabularyIdGet",
         "produces": [
           "application/json"
         ],
@@ -1535,7 +1535,7 @@
         "tags": [
           "/definition/vocabularies"
         ],
-        "operationId": "/definiton/vocabularies/{{vocabularyId}} - Define a custom vocabulary",
+        "operationId": "DefinitionVocabulariesByVocabularyIdPut",
         "produces": [
           "application/json"
         ],
@@ -1582,7 +1582,7 @@
         "tags": [
           "/definition/vocabularies"
         ],
-        "operationId": "/definiton/vocabularies/{{vocabularyId}} - Delete a custom vocabulary",
+        "operationId": "DefinitionVocabulariesByVocabularyIdDelete",
         "produces": [
           "application/json"
         ],
@@ -1631,7 +1631,7 @@
         "tags": [
           "/definition/spotting"
         ],
-        "operationId": "/definition/spotting/groups - List Phrase Spotting Groups",
+        "operationId": "DefinitionSpottingGroupsGet",
         "produces": [
           "application/json"
         ],
@@ -1696,7 +1696,7 @@
         "tags": [
           "/definition/spotting"
         ],
-        "operationId": "/definiton/spotting/groups/{{groupId}} - Retreive a Phrase Spotting Group",
+        "operationId": "DefinitionSpottingGroupsByGroupIdGet",
         "produces": [
           "application/json"
         ],
@@ -1743,7 +1743,7 @@
         "tags": [
           "/definition/spotting"
         ],
-        "operationId": "/definition/spotting/groups/{{groupId}} - Create or Update",
+        "operationId": "DefinitionSpottingGroupsByGroupIdPut",
         "produces": [
           "application/json"
         ],
@@ -1826,7 +1826,7 @@
         "tags": [
           "/definition/spotting"
         ],
-        "operationId": "/definiton/spotting/groups/{{testGroupId}} - Delete a Phrase Spotting Group",
+        "operationId": "DefinitionSpottingGroupsByTestGroupIdDelete",
         "produces": [
           "application/json"
         ],
@@ -1875,7 +1875,7 @@
         "tags": [
           "/definition/media/search"
         ],
-        "operationId": "/definition/media/search - Retreive the list of extended metadata seatchable fields",
+        "operationId": "DefinitionMediaSearchGet",
         "produces": [
           "application/json"
         ],
@@ -1938,7 +1938,7 @@
         "tags": [
           "/definition/media/search"
         ],
-        "operationId": "/definiton/media/search - Define extended metadata searchable fields",
+        "operationId": "DefinitionMediaSearchPut",
         "produces": [
           "application/json"
         ],
@@ -2003,7 +2003,7 @@
         "tags": [
           "/profile"
         ],
-        "operationId": "/profile/keys - List API keys",
+        "operationId": "ProfileKeysGet",
         "produces": [
           "application/json"
         ],
@@ -2066,7 +2066,7 @@
         "tags": [
           "/profile"
         ],
-        "operationId": "/profile/keys - Create a API key",
+        "operationId": "ProfileKeysPost",
         "produces": [
           "application/json"
         ],
@@ -2131,7 +2131,7 @@
         "tags": [
           "/profile"
         ],
-        "operationId": "/profile/keys/{{keyId}} - Retreive details about an API key",
+        "operationId": "ProfileKeysByKeyIdGet",
         "produces": [
           "application/json"
         ],
@@ -2178,7 +2178,7 @@
         "tags": [
           "/profile"
         ],
-        "operationId": "/profile/keys/{{keyId}} - Delete a API key",
+        "operationId": "ProfileKeysByKeyIdDelete",
         "produces": [
           "application/json"
         ],
