@@ -2248,6 +2248,17 @@
       "properties": {
         "_links": {
           "description": "",
+          "example": {
+            "self": {
+              "href": "/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499"
+            },
+            "progress": {
+              "href": "/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/progress"
+            },
+            "metadata": {
+              "href": "/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/metadata"
+            }
+          },
           "type": "object",
           "additionalProperties": {
             "type": "object"
@@ -2255,30 +2266,37 @@
         },
         "formatVersion": {
           "description": "",
+          "example": "3.0.1",
           "type": "string"
         },
         "mediaId": {
           "description": "",
+          "example": "cfdeb667-2e7c-4d69-b5d5-dccd84d0f499",
           "type": "string"
         },
         "status": {
           "description": "",
+          "example": "accepted",
           "type": "string"
         },
         "dateCreated": {
           "description": "",
+          "example": "10/13/2017 10:35:48 PM",
           "type": "string"
         },
         "metadata": {
           "description": "",
+          "example": {},
           "type": "object"
         },
         "mediaContentType": {
           "description": "",
+          "example": "audio/x-wav",
           "type": "string"
         },
         "length": {
           "description": "",
+          "example": 10460,
           "type": "integer",
           "format": "int32"
         }
@@ -2696,6 +2714,35 @@
       "properties": {
         "_links": {
           "description": "",
+          "example": {
+            "self": {
+              "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179"
+            },
+            "progress": {
+              "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/progress"
+            },
+            "metadata": {
+              "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/metadata"
+            },
+            "transcript": {
+              "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript"
+            },
+            "text": {
+              "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/text"
+            },
+            "srt": {
+              "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/srt"
+            },
+            "dfxp": {
+              "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/dfxp"
+            },
+            "webvtt": {
+              "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/webvtt"
+            },
+            "streams": {
+              "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/streams"
+            }
+          },
           "type": "object",
           "additionalProperties": {
             "type": "object"
@@ -2703,35 +2750,400 @@
         },
         "formatVersion": {
           "description": "",
+          "example": "3.0.1",
           "type": "string"
         },
         "mediaId": {
           "description": "",
+          "example": "00251dbe-c769-4a9f-bb87-b3aeb0745179",
           "type": "string"
         },
         "status": {
           "description": "",
+          "example": "finished",
           "type": "string"
         },
         "dateCreated": {
           "description": "",
+          "example": "10/12/2017 10:16:13 PM",
           "type": "string"
         },
         "metadata": {
           "description": "",
+          "example": {},
           "type": "object"
         },
         "mediaContentType": {
           "description": "",
+          "example": "audio/x-aiff",
           "type": "string"
         },
         "length": {
           "description": "",
+          "example": 14965,
           "type": "integer",
           "format": "int32"
         },
         "transcript": {
-          "$ref": "#/definitions/Transcript"
+          "$ref": "#/definitions/Transcript",
+          "example": {
+            "confidence": 0.13038286891052212,
+            "words": [
+              {
+                "p": 0,
+                "c": 0.972,
+                "s": 620,
+                "e": 750,
+                "w": "To"
+              },
+              {
+                "p": 1,
+                "c": 0.964,
+                "s": 760,
+                "e": 1020,
+                "w": "find"
+              },
+              {
+                "p": 2,
+                "c": 0.901,
+                "s": 1030,
+                "e": 1080,
+                "w": "the"
+              },
+              {
+                "p": 3,
+                "c": 0.692,
+                "s": 1090,
+                "e": 1390,
+                "w": "source"
+              },
+              {
+                "p": 4,
+                "c": 0.962,
+                "s": 1400,
+                "e": 1470,
+                "w": "of"
+              },
+              {
+                "p": 5,
+                "c": 0.882,
+                "s": 1480,
+                "e": 2000,
+                "w": "success"
+              },
+              {
+                "p": 6,
+                "c": 0.974,
+                "s": 2010,
+                "e": 2150,
+                "w": "we"
+              },
+              {
+                "p": 7,
+                "c": 0.972,
+                "s": 2159,
+                "e": 2469,
+                "w": "started"
+              },
+              {
+                "p": 8,
+                "c": 0.303,
+                "s": 2479,
+                "e": 2600,
+                "w": "that"
+              },
+              {
+                "p": 9,
+                "c": 0.885,
+                "s": 2610,
+                "e": 2969,
+                "w": "work"
+              },
+              {
+                "p": 10,
+                "c": 0.27,
+                "s": 3180,
+                "e": 3310,
+                "w": "we"
+              },
+              {
+                "p": 11,
+                "c": 0.896,
+                "s": 3320,
+                "e": 3539,
+                "w": "asked"
+              },
+              {
+                "p": 12,
+                "c": 0.9,
+                "s": 3550,
+                "e": 3820,
+                "w": "people"
+              },
+              {
+                "p": 13,
+                "c": 0.951,
+                "s": 3830,
+                "e": 3969,
+                "w": "to"
+              },
+              {
+                "p": 14,
+                "c": 0.773,
+                "s": 3979,
+                "e": 4520,
+                "w": "identify"
+              },
+              {
+                "p": 15,
+                "c": 0.955,
+                "s": 4530,
+                "e": 4670,
+                "w": "who"
+              },
+              {
+                "p": 16,
+                "c": 0.929,
+                "s": 4679,
+                "e": 4790,
+                "w": "they"
+              },
+              {
+                "p": 17,
+                "c": 0.863,
+                "s": 4800,
+                "e": 5110,
+                "w": "thought"
+              },
+              {
+                "p": 18,
+                "c": 0.954,
+                "s": 5119,
+                "e": 5220,
+                "w": "were"
+              },
+              {
+                "p": 19,
+                "c": 0.737,
+                "s": 5230,
+                "e": 5300,
+                "w": "the"
+              },
+              {
+                "p": 20,
+                "c": 0.869,
+                "s": 5310,
+                "e": 5570,
+                "w": "most"
+              },
+              {
+                "p": 21,
+                "c": 0.701,
+                "s": 5580,
+                "e": 6020,
+                "w": "effective"
+              },
+              {
+                "p": 22,
+                "c": 0.976,
+                "s": 6030,
+                "e": 6560,
+                "w": "colleagues"
+              },
+              {
+                "p": 23,
+                "c": 0.941,
+                "s": 6570,
+                "e": 6679,
+                "w": "in"
+              },
+              {
+                "p": 24,
+                "c": 0.937,
+                "s": 6690,
+                "e": 7159,
+                "w": "fact"
+              },
+              {
+                "p": 25,
+                "c": 0.313,
+                "s": 7750,
+                "e": 7940,
+                "w": "over"
+              },
+              {
+                "p": 26,
+                "c": 0.833,
+                "s": 7949,
+                "e": 8009,
+                "w": "the"
+              },
+              {
+                "p": 27,
+                "c": 0.718,
+                "s": 8020,
+                "e": 8290,
+                "w": "past"
+              },
+              {
+                "p": 28,
+                "c": 0.95,
+                "s": 8300,
+                "e": 8790,
+                "w": "25"
+              },
+              {
+                "p": 29,
+                "c": 0.912,
+                "s": 8800,
+                "e": 9090,
+                "w": "years"
+              },
+              {
+                "p": 30,
+                "c": 0.575,
+                "s": 9100,
+                "e": 9280,
+                "w": "we've"
+              },
+              {
+                "p": 31,
+                "c": 0.909,
+                "s": 9290,
+                "e": 9550,
+                "w": "asked"
+              },
+              {
+                "p": 32,
+                "c": 0.97,
+                "s": 9560,
+                "e": 9769,
+                "w": "over"
+              },
+              {
+                "p": 33,
+                "c": 0.95,
+                "s": 9780,
+                "e": 10390,
+                "w": "201000"
+              },
+              {
+                "p": 34,
+                "c": 0.947,
+                "s": 10399,
+                "e": 10689,
+                "w": "people"
+              },
+              {
+                "p": 35,
+                "c": 0.61,
+                "s": 10700,
+                "e": 10820,
+                "w": "to"
+              },
+              {
+                "p": 36,
+                "c": 0.955,
+                "s": 10830,
+                "e": 11300,
+                "w": "identify"
+              },
+              {
+                "p": 37,
+                "c": 0.95,
+                "s": 11309,
+                "e": 11420,
+                "w": "the"
+              },
+              {
+                "p": 38,
+                "c": 0.968,
+                "s": 11430,
+                "e": 12019,
+                "w": "individuals"
+              },
+              {
+                "p": 39,
+                "c": 0.929,
+                "s": 12030,
+                "e": 12140,
+                "w": "and"
+              },
+              {
+                "p": 40,
+                "c": 0.63,
+                "s": 12149,
+                "e": 12269,
+                "w": "their"
+              },
+              {
+                "p": 41,
+                "c": 0.967,
+                "s": 12280,
+                "e": 13070,
+                "w": "organizations"
+              },
+              {
+                "p": 42,
+                "c": 0.764,
+                "s": 13080,
+                "e": 13229,
+                "w": "who"
+              },
+              {
+                "p": 43,
+                "c": 0.952,
+                "s": 13240,
+                "e": 13399,
+                "w": "could"
+              },
+              {
+                "p": 44,
+                "c": 0.917,
+                "s": 13410,
+                "e": 13649,
+                "w": "really"
+              },
+              {
+                "p": 45,
+                "c": 0.958,
+                "s": 13660,
+                "e": 13870,
+                "w": "get"
+              },
+              {
+                "p": 46,
+                "c": 0.766,
+                "s": 13880,
+                "e": 14130,
+                "w": "things"
+              },
+              {
+                "p": 47,
+                "c": 0.917,
+                "s": 14139,
+                "e": 14410,
+                "w": "done"
+              },
+              {
+                "p": 48,
+                "c": 0.0,
+                "s": 14410,
+                "e": 14410,
+                "m": "punc",
+                "w": "."
+              }
+            ],
+            "alternateFormats": [
+              {
+                "format": "srt",
+                "contentType": "text/srt",
+                "contentEncoding": "Base64",
+                "charset": "utf-8",
+                "data": "MQowMDowMDowMCw2MiAtLT4gMDA6MDA6MDQsNjcKVG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZAp0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobwoKMgowMDowMDowNCw2OCAtLT4gMDA6MDA6MDksMDkKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LDEwIC0tPiAwMDowMDoxMywwNwp3ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnkKdGhlIGluZGl2aWR1YWxzIGFuZCB0aGVpciBvcmdhbml6YXRpb25zCgo0CjAwOjAwOjEzLDA4IC0tPiAwMDowMDoxNCw0MQp3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4KCg=="
+              }
+            ]
+          }
         }
       },
       "required": [
@@ -2748,15 +3160,720 @@
     },
     "Transcript": {
       "title": "Transcript",
+      "example": {
+        "confidence": 0.13038286891052212,
+        "words": [
+          {
+            "p": 0,
+            "c": 0.972,
+            "s": 620,
+            "e": 750,
+            "w": "To"
+          },
+          {
+            "p": 1,
+            "c": 0.964,
+            "s": 760,
+            "e": 1020,
+            "w": "find"
+          },
+          {
+            "p": 2,
+            "c": 0.901,
+            "s": 1030,
+            "e": 1080,
+            "w": "the"
+          },
+          {
+            "p": 3,
+            "c": 0.692,
+            "s": 1090,
+            "e": 1390,
+            "w": "source"
+          },
+          {
+            "p": 4,
+            "c": 0.962,
+            "s": 1400,
+            "e": 1470,
+            "w": "of"
+          },
+          {
+            "p": 5,
+            "c": 0.882,
+            "s": 1480,
+            "e": 2000,
+            "w": "success"
+          },
+          {
+            "p": 6,
+            "c": 0.974,
+            "s": 2010,
+            "e": 2150,
+            "w": "we"
+          },
+          {
+            "p": 7,
+            "c": 0.972,
+            "s": 2159,
+            "e": 2469,
+            "w": "started"
+          },
+          {
+            "p": 8,
+            "c": 0.303,
+            "s": 2479,
+            "e": 2600,
+            "w": "that"
+          },
+          {
+            "p": 9,
+            "c": 0.885,
+            "s": 2610,
+            "e": 2969,
+            "w": "work"
+          },
+          {
+            "p": 10,
+            "c": 0.27,
+            "s": 3180,
+            "e": 3310,
+            "w": "we"
+          },
+          {
+            "p": 11,
+            "c": 0.896,
+            "s": 3320,
+            "e": 3539,
+            "w": "asked"
+          },
+          {
+            "p": 12,
+            "c": 0.9,
+            "s": 3550,
+            "e": 3820,
+            "w": "people"
+          },
+          {
+            "p": 13,
+            "c": 0.951,
+            "s": 3830,
+            "e": 3969,
+            "w": "to"
+          },
+          {
+            "p": 14,
+            "c": 0.773,
+            "s": 3979,
+            "e": 4520,
+            "w": "identify"
+          },
+          {
+            "p": 15,
+            "c": 0.955,
+            "s": 4530,
+            "e": 4670,
+            "w": "who"
+          },
+          {
+            "p": 16,
+            "c": 0.929,
+            "s": 4679,
+            "e": 4790,
+            "w": "they"
+          },
+          {
+            "p": 17,
+            "c": 0.863,
+            "s": 4800,
+            "e": 5110,
+            "w": "thought"
+          },
+          {
+            "p": 18,
+            "c": 0.954,
+            "s": 5119,
+            "e": 5220,
+            "w": "were"
+          },
+          {
+            "p": 19,
+            "c": 0.737,
+            "s": 5230,
+            "e": 5300,
+            "w": "the"
+          },
+          {
+            "p": 20,
+            "c": 0.869,
+            "s": 5310,
+            "e": 5570,
+            "w": "most"
+          },
+          {
+            "p": 21,
+            "c": 0.701,
+            "s": 5580,
+            "e": 6020,
+            "w": "effective"
+          },
+          {
+            "p": 22,
+            "c": 0.976,
+            "s": 6030,
+            "e": 6560,
+            "w": "colleagues"
+          },
+          {
+            "p": 23,
+            "c": 0.941,
+            "s": 6570,
+            "e": 6679,
+            "w": "in"
+          },
+          {
+            "p": 24,
+            "c": 0.937,
+            "s": 6690,
+            "e": 7159,
+            "w": "fact"
+          },
+          {
+            "p": 25,
+            "c": 0.313,
+            "s": 7750,
+            "e": 7940,
+            "w": "over"
+          },
+          {
+            "p": 26,
+            "c": 0.833,
+            "s": 7949,
+            "e": 8009,
+            "w": "the"
+          },
+          {
+            "p": 27,
+            "c": 0.718,
+            "s": 8020,
+            "e": 8290,
+            "w": "past"
+          },
+          {
+            "p": 28,
+            "c": 0.95,
+            "s": 8300,
+            "e": 8790,
+            "w": "25"
+          },
+          {
+            "p": 29,
+            "c": 0.912,
+            "s": 8800,
+            "e": 9090,
+            "w": "years"
+          },
+          {
+            "p": 30,
+            "c": 0.575,
+            "s": 9100,
+            "e": 9280,
+            "w": "we've"
+          },
+          {
+            "p": 31,
+            "c": 0.909,
+            "s": 9290,
+            "e": 9550,
+            "w": "asked"
+          },
+          {
+            "p": 32,
+            "c": 0.97,
+            "s": 9560,
+            "e": 9769,
+            "w": "over"
+          },
+          {
+            "p": 33,
+            "c": 0.95,
+            "s": 9780,
+            "e": 10390,
+            "w": "201000"
+          },
+          {
+            "p": 34,
+            "c": 0.947,
+            "s": 10399,
+            "e": 10689,
+            "w": "people"
+          },
+          {
+            "p": 35,
+            "c": 0.61,
+            "s": 10700,
+            "e": 10820,
+            "w": "to"
+          },
+          {
+            "p": 36,
+            "c": 0.955,
+            "s": 10830,
+            "e": 11300,
+            "w": "identify"
+          },
+          {
+            "p": 37,
+            "c": 0.95,
+            "s": 11309,
+            "e": 11420,
+            "w": "the"
+          },
+          {
+            "p": 38,
+            "c": 0.968,
+            "s": 11430,
+            "e": 12019,
+            "w": "individuals"
+          },
+          {
+            "p": 39,
+            "c": 0.929,
+            "s": 12030,
+            "e": 12140,
+            "w": "and"
+          },
+          {
+            "p": 40,
+            "c": 0.63,
+            "s": 12149,
+            "e": 12269,
+            "w": "their"
+          },
+          {
+            "p": 41,
+            "c": 0.967,
+            "s": 12280,
+            "e": 13070,
+            "w": "organizations"
+          },
+          {
+            "p": 42,
+            "c": 0.764,
+            "s": 13080,
+            "e": 13229,
+            "w": "who"
+          },
+          {
+            "p": 43,
+            "c": 0.952,
+            "s": 13240,
+            "e": 13399,
+            "w": "could"
+          },
+          {
+            "p": 44,
+            "c": 0.917,
+            "s": 13410,
+            "e": 13649,
+            "w": "really"
+          },
+          {
+            "p": 45,
+            "c": 0.958,
+            "s": 13660,
+            "e": 13870,
+            "w": "get"
+          },
+          {
+            "p": 46,
+            "c": 0.766,
+            "s": 13880,
+            "e": 14130,
+            "w": "things"
+          },
+          {
+            "p": 47,
+            "c": 0.917,
+            "s": 14139,
+            "e": 14410,
+            "w": "done"
+          },
+          {
+            "p": 48,
+            "c": 0.0,
+            "s": 14410,
+            "e": 14410,
+            "m": "punc",
+            "w": "."
+          }
+        ],
+        "alternateFormats": [
+          {
+            "format": "srt",
+            "contentType": "text/srt",
+            "contentEncoding": "Base64",
+            "charset": "utf-8",
+            "data": "MQowMDowMDowMCw2MiAtLT4gMDA6MDA6MDQsNjcKVG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZAp0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobwoKMgowMDowMDowNCw2OCAtLT4gMDA6MDA6MDksMDkKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LDEwIC0tPiAwMDowMDoxMywwNwp3ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnkKdGhlIGluZGl2aWR1YWxzIGFuZCB0aGVpciBvcmdhbml6YXRpb25zCgo0CjAwOjAwOjEzLDA4IC0tPiAwMDowMDoxNCw0MQp3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4KCg=="
+          }
+        ]
+      },
       "type": "object",
       "properties": {
         "confidence": {
           "description": "",
+          "example": 0.130382868910522,
           "type": "number",
           "format": "double"
         },
         "words": {
           "description": "",
+          "example": [
+            {
+              "p": 0,
+              "c": 0.972,
+              "s": 620,
+              "e": 750,
+              "w": "To"
+            },
+            {
+              "p": 1,
+              "c": 0.964,
+              "s": 760,
+              "e": 1020,
+              "w": "find"
+            },
+            {
+              "p": 2,
+              "c": 0.901,
+              "s": 1030,
+              "e": 1080,
+              "w": "the"
+            },
+            {
+              "p": 3,
+              "c": 0.692,
+              "s": 1090,
+              "e": 1390,
+              "w": "source"
+            },
+            {
+              "p": 4,
+              "c": 0.962,
+              "s": 1400,
+              "e": 1470,
+              "w": "of"
+            },
+            {
+              "p": 5,
+              "c": 0.882,
+              "s": 1480,
+              "e": 2000,
+              "w": "success"
+            },
+            {
+              "p": 6,
+              "c": 0.974,
+              "s": 2010,
+              "e": 2150,
+              "w": "we"
+            },
+            {
+              "p": 7,
+              "c": 0.972,
+              "s": 2159,
+              "e": 2469,
+              "w": "started"
+            },
+            {
+              "p": 8,
+              "c": 0.303,
+              "s": 2479,
+              "e": 2600,
+              "w": "that"
+            },
+            {
+              "p": 9,
+              "c": 0.885,
+              "s": 2610,
+              "e": 2969,
+              "w": "work"
+            },
+            {
+              "p": 10,
+              "c": 0.27,
+              "s": 3180,
+              "e": 3310,
+              "w": "we"
+            },
+            {
+              "p": 11,
+              "c": 0.896,
+              "s": 3320,
+              "e": 3539,
+              "w": "asked"
+            },
+            {
+              "p": 12,
+              "c": 0.9,
+              "s": 3550,
+              "e": 3820,
+              "w": "people"
+            },
+            {
+              "p": 13,
+              "c": 0.951,
+              "s": 3830,
+              "e": 3969,
+              "w": "to"
+            },
+            {
+              "p": 14,
+              "c": 0.773,
+              "s": 3979,
+              "e": 4520,
+              "w": "identify"
+            },
+            {
+              "p": 15,
+              "c": 0.955,
+              "s": 4530,
+              "e": 4670,
+              "w": "who"
+            },
+            {
+              "p": 16,
+              "c": 0.929,
+              "s": 4679,
+              "e": 4790,
+              "w": "they"
+            },
+            {
+              "p": 17,
+              "c": 0.863,
+              "s": 4800,
+              "e": 5110,
+              "w": "thought"
+            },
+            {
+              "p": 18,
+              "c": 0.954,
+              "s": 5119,
+              "e": 5220,
+              "w": "were"
+            },
+            {
+              "p": 19,
+              "c": 0.737,
+              "s": 5230,
+              "e": 5300,
+              "w": "the"
+            },
+            {
+              "p": 20,
+              "c": 0.869,
+              "s": 5310,
+              "e": 5570,
+              "w": "most"
+            },
+            {
+              "p": 21,
+              "c": 0.701,
+              "s": 5580,
+              "e": 6020,
+              "w": "effective"
+            },
+            {
+              "p": 22,
+              "c": 0.976,
+              "s": 6030,
+              "e": 6560,
+              "w": "colleagues"
+            },
+            {
+              "p": 23,
+              "c": 0.941,
+              "s": 6570,
+              "e": 6679,
+              "w": "in"
+            },
+            {
+              "p": 24,
+              "c": 0.937,
+              "s": 6690,
+              "e": 7159,
+              "w": "fact"
+            },
+            {
+              "p": 25,
+              "c": 0.313,
+              "s": 7750,
+              "e": 7940,
+              "w": "over"
+            },
+            {
+              "p": 26,
+              "c": 0.833,
+              "s": 7949,
+              "e": 8009,
+              "w": "the"
+            },
+            {
+              "p": 27,
+              "c": 0.718,
+              "s": 8020,
+              "e": 8290,
+              "w": "past"
+            },
+            {
+              "p": 28,
+              "c": 0.95,
+              "s": 8300,
+              "e": 8790,
+              "w": "25"
+            },
+            {
+              "p": 29,
+              "c": 0.912,
+              "s": 8800,
+              "e": 9090,
+              "w": "years"
+            },
+            {
+              "p": 30,
+              "c": 0.575,
+              "s": 9100,
+              "e": 9280,
+              "w": "we've"
+            },
+            {
+              "p": 31,
+              "c": 0.909,
+              "s": 9290,
+              "e": 9550,
+              "w": "asked"
+            },
+            {
+              "p": 32,
+              "c": 0.97,
+              "s": 9560,
+              "e": 9769,
+              "w": "over"
+            },
+            {
+              "p": 33,
+              "c": 0.95,
+              "s": 9780,
+              "e": 10390,
+              "w": "201000"
+            },
+            {
+              "p": 34,
+              "c": 0.947,
+              "s": 10399,
+              "e": 10689,
+              "w": "people"
+            },
+            {
+              "p": 35,
+              "c": 0.61,
+              "s": 10700,
+              "e": 10820,
+              "w": "to"
+            },
+            {
+              "p": 36,
+              "c": 0.955,
+              "s": 10830,
+              "e": 11300,
+              "w": "identify"
+            },
+            {
+              "p": 37,
+              "c": 0.95,
+              "s": 11309,
+              "e": 11420,
+              "w": "the"
+            },
+            {
+              "p": 38,
+              "c": 0.968,
+              "s": 11430,
+              "e": 12019,
+              "w": "individuals"
+            },
+            {
+              "p": 39,
+              "c": 0.929,
+              "s": 12030,
+              "e": 12140,
+              "w": "and"
+            },
+            {
+              "p": 40,
+              "c": 0.63,
+              "s": 12149,
+              "e": 12269,
+              "w": "their"
+            },
+            {
+              "p": 41,
+              "c": 0.967,
+              "s": 12280,
+              "e": 13070,
+              "w": "organizations"
+            },
+            {
+              "p": 42,
+              "c": 0.764,
+              "s": 13080,
+              "e": 13229,
+              "w": "who"
+            },
+            {
+              "p": 43,
+              "c": 0.952,
+              "s": 13240,
+              "e": 13399,
+              "w": "could"
+            },
+            {
+              "p": 44,
+              "c": 0.917,
+              "s": 13410,
+              "e": 13649,
+              "w": "really"
+            },
+            {
+              "p": 45,
+              "c": 0.958,
+              "s": 13660,
+              "e": 13870,
+              "w": "get"
+            },
+            {
+              "p": 46,
+              "c": 0.766,
+              "s": 13880,
+              "e": 14130,
+              "w": "things"
+            },
+            {
+              "p": 47,
+              "c": 0.917,
+              "s": 14139,
+              "e": 14410,
+              "w": "done"
+            },
+            {
+              "p": 48,
+              "c": 0.0,
+              "s": 14410,
+              "e": 14410,
+              "m": "punc",
+              "w": "."
+            }
+          ],
           "type": "array",
           "items": {
             "$ref": "#/definitions/Word"
@@ -2764,6 +3881,15 @@
         },
         "alternateFormats": {
           "description": "",
+          "example": [
+            {
+              "format": "srt",
+              "contentType": "text/srt",
+              "contentEncoding": "Base64",
+              "charset": "utf-8",
+              "data": "MQowMDowMDowMCw2MiAtLT4gMDA6MDA6MDQsNjcKVG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZAp0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobwoKMgowMDowMDowNCw2OCAtLT4gMDA6MDA6MDksMDkKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LDEwIC0tPiAwMDowMDoxMywwNwp3ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnkKdGhlIGluZGl2aWR1YWxzIGFuZCB0aGVpciBvcmdhbml6YXRpb25zCgo0CjAwOjAwOjEzLDA4IC0tPiAwMDowMDoxNCw0MQp3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4KCg=="
+            }
+          ],
           "type": "array",
           "items": {
             "$ref": "#/definitions/AlternateFormat"
@@ -2778,34 +3904,47 @@
     },
     "Word": {
       "title": "Word",
+      "example": {
+        "p": 0,
+        "c": 0.972,
+        "s": 620,
+        "e": 750,
+        "w": "To"
+      },
       "type": "object",
       "properties": {
         "p": {
           "description": "",
+          "example": 0,
           "type": "integer",
           "format": "int32"
         },
         "c": {
           "description": "",
+          "example": 0.972,
           "type": "number",
           "format": "double"
         },
         "s": {
           "description": "",
+          "example": 620,
           "type": "integer",
           "format": "int32"
         },
         "e": {
           "description": "",
+          "example": 750,
           "type": "integer",
           "format": "int32"
         },
         "w": {
           "description": "",
+          "example": "To",
           "type": "string"
         },
         "m": {
           "description": "",
+          "example": "punc",
           "type": "string"
         }
       },
@@ -2819,26 +3958,38 @@
     },
     "AlternateFormat": {
       "title": "AlternateFormat",
+      "example": {
+        "format": "srt",
+        "contentType": "text/srt",
+        "contentEncoding": "Base64",
+        "charset": "utf-8",
+        "data": "MQowMDowMDowMCw2MiAtLT4gMDA6MDA6MDQsNjcKVG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZAp0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobwoKMgowMDowMDowNCw2OCAtLT4gMDA6MDA6MDksMDkKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LDEwIC0tPiAwMDowMDoxMywwNwp3ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnkKdGhlIGluZGl2aWR1YWxzIGFuZCB0aGVpciBvcmdhbml6YXRpb25zCgo0CjAwOjAwOjEzLDA4IC0tPiAwMDowMDoxNCw0MQp3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4KCg=="
+      },
       "type": "object",
       "properties": {
         "format": {
           "description": "",
+          "example": "srt",
           "type": "string"
         },
         "contentType": {
           "description": "",
+          "example": "text/srt",
           "type": "string"
         },
         "contentEncoding": {
           "description": "",
+          "example": "Base64",
           "type": "string"
         },
         "charset": {
           "description": "",
+          "example": "utf-8",
           "type": "string"
         },
         "data": {
           "description": "",
+          "example": "MQowMDowMDowMCw2MiAtLT4gMDA6MDA6MDQsNjcKVG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZAp0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobwoKMgowMDowMDowNCw2OCAtLT4gMDA6MDA6MDksMDkKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LDEwIC0tPiAwMDowMDoxMywwNwp3ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnkKdGhlIGluZGl2aWR1YWxzIGFuZCB0aGVpciBvcmdhbml6YXRpb25zCgo0CjAwOjAwOjEzLDA4IC0tPiAwMDowMDoxNCw0MQp3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4KCg==",
           "type": "string"
         }
       },
@@ -2990,17 +4141,149 @@
       "properties": {
         "mediaId": {
           "description": "",
+          "example": "6291d2b7-ad67-465c-a23e-e2f201b65a82",
           "type": "string"
         },
         "jobId": {
           "description": "",
+          "example": "cc834531-7af0-4251-86c5-aae490343947",
           "type": "string"
         },
         "progress": {
-          "$ref": "#/definitions/Progress"
+          "$ref": "#/definitions/Progress",
+          "example": {
+            "finish": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
+            "start": "b17251a3-7e16-407e-8c71-dc0266614b93",
+            "status": "completed",
+            "tasks": [
+              {
+                "taskId": "b17251a3-7e16-407e-8c71-dc0266614b93",
+                "display": "Ingest",
+                "phase": "ingest",
+                "status": "finished",
+                "dependencies": [],
+                "dependents": [
+                  "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                  "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+                ]
+              },
+              {
+                "taskId": "737373fa-2620-47cd-bb07-4293071259ac",
+                "display": "Transcripts",
+                "phase": "transcripts",
+                "status": "finished",
+                "dependencies": [
+                  "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                  "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+                ],
+                "dependents": [
+                  "645bb0ce-b856-4020-bc54-995062af6bdd"
+                ]
+              },
+              {
+                "taskId": "645bb0ce-b856-4020-bc54-995062af6bdd",
+                "display": "Transcripts",
+                "phase": "transcripts",
+                "status": "finished",
+                "dependencies": [
+                  "737373fa-2620-47cd-bb07-4293071259ac"
+                ],
+                "dependents": [
+                  "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+                ]
+              },
+              {
+                "taskId": "92c1c0ac-94ea-4cb5-a8d1-689369d375b1",
+                "display": "Transcripts",
+                "phase": "transcripts",
+                "status": "finished",
+                "dependencies": [
+                  "645bb0ce-b856-4020-bc54-995062af6bdd"
+                ],
+                "dependents": [
+                  "cd35d958-1375-4313-8f88-42b5e350e5d4"
+                ]
+              },
+              {
+                "taskId": "cd35d958-1375-4313-8f88-42b5e350e5d4",
+                "display": "Transcripts",
+                "phase": "transcripts",
+                "status": "finished",
+                "dependencies": [
+                  "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+                ],
+                "dependents": [
+                  "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+                ]
+              },
+              {
+                "taskId": "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd",
+                "display": "Transcripts",
+                "phase": "transcripts",
+                "status": "finished",
+                "dependencies": [
+                  "cd35d958-1375-4313-8f88-42b5e350e5d4"
+                ],
+                "dependents": [
+                  "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+                ]
+              },
+              {
+                "taskId": "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80",
+                "display": "Publish",
+                "phase": "publish",
+                "status": "finished",
+                "dependencies": [
+                  "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+                ],
+                "dependents": [
+                  "318a76fd-ffe8-433b-aa6f-e24b876d9b7f"
+                ]
+              },
+              {
+                "taskId": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
+                "display": "Publish",
+                "phase": "publish",
+                "status": "finished",
+                "dependencies": [
+                  "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+                ],
+                "dependents": []
+              },
+              {
+                "taskId": "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                "display": "Transcripts",
+                "phase": "transcripts",
+                "status": "finished",
+                "dependencies": [
+                  "b17251a3-7e16-407e-8c71-dc0266614b93"
+                ],
+                "dependents": [
+                  "737373fa-2620-47cd-bb07-4293071259ac"
+                ]
+              },
+              {
+                "taskId": "e19d1c17-7920-4c55-94cf-d4790485a3a6",
+                "display": "Transcripts",
+                "phase": "transcripts",
+                "status": "finished",
+                "dependencies": [
+                  "b17251a3-7e16-407e-8c71-dc0266614b93"
+                ],
+                "dependents": [
+                  "737373fa-2620-47cd-bb07-4293071259ac"
+                ]
+              }
+            ]
+          }
         },
         "_links": {
           "description": "",
+          "example": {
+            "self": {
+              "href": "https://apis.voicebase.com/v3/media/6291d2b7-ad67-465c-a23e-e2f201b65a82/progress"
+            }
+          },
           "type": "object",
           "additionalProperties": {
             "type": "object"
@@ -3016,22 +4299,270 @@
     },
     "Progress": {
       "title": "Progress",
+      "example": {
+        "finish": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
+        "start": "b17251a3-7e16-407e-8c71-dc0266614b93",
+        "status": "completed",
+        "tasks": [
+          {
+            "taskId": "b17251a3-7e16-407e-8c71-dc0266614b93",
+            "display": "Ingest",
+            "phase": "ingest",
+            "status": "finished",
+            "dependencies": [],
+            "dependents": [
+              "70ff6791-a318-4d78-ac55-378ee691ffb2",
+              "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+            ]
+          },
+          {
+            "taskId": "737373fa-2620-47cd-bb07-4293071259ac",
+            "display": "Transcripts",
+            "phase": "transcripts",
+            "status": "finished",
+            "dependencies": [
+              "70ff6791-a318-4d78-ac55-378ee691ffb2",
+              "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+            ],
+            "dependents": [
+              "645bb0ce-b856-4020-bc54-995062af6bdd"
+            ]
+          },
+          {
+            "taskId": "645bb0ce-b856-4020-bc54-995062af6bdd",
+            "display": "Transcripts",
+            "phase": "transcripts",
+            "status": "finished",
+            "dependencies": [
+              "737373fa-2620-47cd-bb07-4293071259ac"
+            ],
+            "dependents": [
+              "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+            ]
+          },
+          {
+            "taskId": "92c1c0ac-94ea-4cb5-a8d1-689369d375b1",
+            "display": "Transcripts",
+            "phase": "transcripts",
+            "status": "finished",
+            "dependencies": [
+              "645bb0ce-b856-4020-bc54-995062af6bdd"
+            ],
+            "dependents": [
+              "cd35d958-1375-4313-8f88-42b5e350e5d4"
+            ]
+          },
+          {
+            "taskId": "cd35d958-1375-4313-8f88-42b5e350e5d4",
+            "display": "Transcripts",
+            "phase": "transcripts",
+            "status": "finished",
+            "dependencies": [
+              "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+            ],
+            "dependents": [
+              "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+            ]
+          },
+          {
+            "taskId": "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd",
+            "display": "Transcripts",
+            "phase": "transcripts",
+            "status": "finished",
+            "dependencies": [
+              "cd35d958-1375-4313-8f88-42b5e350e5d4"
+            ],
+            "dependents": [
+              "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+            ]
+          },
+          {
+            "taskId": "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80",
+            "display": "Publish",
+            "phase": "publish",
+            "status": "finished",
+            "dependencies": [
+              "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+            ],
+            "dependents": [
+              "318a76fd-ffe8-433b-aa6f-e24b876d9b7f"
+            ]
+          },
+          {
+            "taskId": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
+            "display": "Publish",
+            "phase": "publish",
+            "status": "finished",
+            "dependencies": [
+              "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+            ],
+            "dependents": []
+          },
+          {
+            "taskId": "70ff6791-a318-4d78-ac55-378ee691ffb2",
+            "display": "Transcripts",
+            "phase": "transcripts",
+            "status": "finished",
+            "dependencies": [
+              "b17251a3-7e16-407e-8c71-dc0266614b93"
+            ],
+            "dependents": [
+              "737373fa-2620-47cd-bb07-4293071259ac"
+            ]
+          },
+          {
+            "taskId": "e19d1c17-7920-4c55-94cf-d4790485a3a6",
+            "display": "Transcripts",
+            "phase": "transcripts",
+            "status": "finished",
+            "dependencies": [
+              "b17251a3-7e16-407e-8c71-dc0266614b93"
+            ],
+            "dependents": [
+              "737373fa-2620-47cd-bb07-4293071259ac"
+            ]
+          }
+        ]
+      },
       "type": "object",
       "properties": {
         "finish": {
           "description": "",
+          "example": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
           "type": "string"
         },
         "start": {
           "description": "",
+          "example": "b17251a3-7e16-407e-8c71-dc0266614b93",
           "type": "string"
         },
         "status": {
           "description": "",
+          "example": "completed",
           "type": "string"
         },
         "tasks": {
           "description": "",
+          "example": [
+            {
+              "taskId": "b17251a3-7e16-407e-8c71-dc0266614b93",
+              "display": "Ingest",
+              "phase": "ingest",
+              "status": "finished",
+              "dependencies": [],
+              "dependents": [
+                "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+              ]
+            },
+            {
+              "taskId": "737373fa-2620-47cd-bb07-4293071259ac",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "70ff6791-a318-4d78-ac55-378ee691ffb2",
+                "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+              ],
+              "dependents": [
+                "645bb0ce-b856-4020-bc54-995062af6bdd"
+              ]
+            },
+            {
+              "taskId": "645bb0ce-b856-4020-bc54-995062af6bdd",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "737373fa-2620-47cd-bb07-4293071259ac"
+              ],
+              "dependents": [
+                "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+              ]
+            },
+            {
+              "taskId": "92c1c0ac-94ea-4cb5-a8d1-689369d375b1",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "645bb0ce-b856-4020-bc54-995062af6bdd"
+              ],
+              "dependents": [
+                "cd35d958-1375-4313-8f88-42b5e350e5d4"
+              ]
+            },
+            {
+              "taskId": "cd35d958-1375-4313-8f88-42b5e350e5d4",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "92c1c0ac-94ea-4cb5-a8d1-689369d375b1"
+              ],
+              "dependents": [
+                "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+              ]
+            },
+            {
+              "taskId": "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "cd35d958-1375-4313-8f88-42b5e350e5d4"
+              ],
+              "dependents": [
+                "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+              ]
+            },
+            {
+              "taskId": "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80",
+              "display": "Publish",
+              "phase": "publish",
+              "status": "finished",
+              "dependencies": [
+                "5e1030b2-4eb7-41e2-81f1-fa261df3b4cd"
+              ],
+              "dependents": [
+                "318a76fd-ffe8-433b-aa6f-e24b876d9b7f"
+              ]
+            },
+            {
+              "taskId": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
+              "display": "Publish",
+              "phase": "publish",
+              "status": "finished",
+              "dependencies": [
+                "ced5a3f0-31e2-49e4-9e34-7829c5e5fa80"
+              ],
+              "dependents": []
+            },
+            {
+              "taskId": "70ff6791-a318-4d78-ac55-378ee691ffb2",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "b17251a3-7e16-407e-8c71-dc0266614b93"
+              ],
+              "dependents": [
+                "737373fa-2620-47cd-bb07-4293071259ac"
+              ]
+            },
+            {
+              "taskId": "e19d1c17-7920-4c55-94cf-d4790485a3a6",
+              "display": "Transcripts",
+              "phase": "transcripts",
+              "status": "finished",
+              "dependencies": [
+                "b17251a3-7e16-407e-8c71-dc0266614b93"
+              ],
+              "dependents": [
+                "737373fa-2620-47cd-bb07-4293071259ac"
+              ]
+            }
+          ],
           "type": "array",
           "items": {
             "$ref": "#/definitions/Task"
@@ -3047,26 +4578,42 @@
     },
     "Task": {
       "title": "Task",
+      "example": {
+        "taskId": "b17251a3-7e16-407e-8c71-dc0266614b93",
+        "display": "Ingest",
+        "phase": "ingest",
+        "status": "finished",
+        "dependencies": [],
+        "dependents": [
+          "70ff6791-a318-4d78-ac55-378ee691ffb2",
+          "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+        ]
+      },
       "type": "object",
       "properties": {
         "taskId": {
           "description": "",
+          "example": "b17251a3-7e16-407e-8c71-dc0266614b93",
           "type": "string"
         },
         "display": {
           "description": "",
+          "example": "Ingest",
           "type": "string"
         },
         "phase": {
           "description": "",
+          "example": "ingest",
           "type": "string"
         },
         "status": {
           "description": "",
+          "example": "finished",
           "type": "string"
         },
         "dependencies": {
           "description": "",
+          "example": [],
           "type": "array",
           "items": {
             "type": "string"
@@ -3074,6 +4621,10 @@
         },
         "dependents": {
           "description": "",
+          "example": [
+            "70ff6791-a318-4d78-ac55-378ee691ffb2",
+            "e19d1c17-7920-4c55-94cf-d4790485a3a6"
+          ],
           "type": "array",
           "items": {
             "type": "string"
@@ -3136,27 +4687,66 @@
       "properties": {
         "mediaId": {
           "description": "",
+          "example": "bc14632d-e81b-4673-992d-5c5fb6573fb8",
           "type": "string"
         },
         "status": {
           "description": "",
+          "example": "finished",
           "type": "string"
         },
         "dateCreated": {
           "description": "",
+          "example": "6/22/2017 7:18:49 PM",
           "type": "string"
         },
         "mediaContentType": {
           "description": "",
+          "example": "audio/x-wav",
           "type": "string"
         },
         "length": {
           "description": "",
+          "example": 10031,
           "type": "integer",
           "format": "int32"
         },
         "transcript": {
-          "$ref": "#/definitions/Transcript9"
+          "$ref": "#/definitions/Transcript9",
+          "example": {
+            "words": [
+              {
+                "p": 1,
+                "c": 0.1,
+                "s": 2200,
+                "e": 2350,
+                "w": "agent: ",
+                "m": "turn"
+              },
+              {
+                "p": 2,
+                "c": 0.537,
+                "s": 2200,
+                "e": 2300,
+                "w": "Hello"
+              },
+              {
+                "p": 52,
+                "c": 0.1,
+                "s": 2400,
+                "e": 2550,
+                "w": "caller: ",
+                "m": "turn"
+              },
+              {
+                "p": 53,
+                "c": 0.975,
+                "s": 2400,
+                "e": 2500,
+                "w": "Hi"
+              }
+            ]
+          }
         }
       },
       "required": [
@@ -3170,10 +4760,76 @@
     },
     "Transcript9": {
       "title": "Transcript9",
+      "example": {
+        "words": [
+          {
+            "p": 1,
+            "c": 0.1,
+            "s": 2200,
+            "e": 2350,
+            "w": "agent: ",
+            "m": "turn"
+          },
+          {
+            "p": 2,
+            "c": 0.537,
+            "s": 2200,
+            "e": 2300,
+            "w": "Hello"
+          },
+          {
+            "p": 52,
+            "c": 0.1,
+            "s": 2400,
+            "e": 2550,
+            "w": "caller: ",
+            "m": "turn"
+          },
+          {
+            "p": 53,
+            "c": 0.975,
+            "s": 2400,
+            "e": 2500,
+            "w": "Hi"
+          }
+        ]
+      },
       "type": "object",
       "properties": {
         "words": {
           "description": "",
+          "example": [
+            {
+              "p": 1,
+              "c": 0.1,
+              "s": 2200,
+              "e": 2350,
+              "w": "agent: ",
+              "m": "turn"
+            },
+            {
+              "p": 2,
+              "c": 0.537,
+              "s": 2200,
+              "e": 2300,
+              "w": "Hello"
+            },
+            {
+              "p": 52,
+              "c": 0.1,
+              "s": 2400,
+              "e": 2550,
+              "w": "caller: ",
+              "m": "turn"
+            },
+            {
+              "p": 53,
+              "c": 0.975,
+              "s": 2400,
+              "e": 2500,
+              "w": "Hi"
+            }
+          ],
           "type": "array",
           "items": {
             "$ref": "#/definitions/Word"
@@ -3203,6 +4859,12 @@
       "properties": {
         "streams": {
           "description": "",
+          "example": [
+            {
+              "streamName": "redacted",
+              "streamLocation": "https://media.voicebase.com/20ccef07-a807-5ec4-7e72-9b0e96cd04be/6291d2b7-ad67-465c-a23e-e2f201b65a82.mp3"
+            }
+          ],
           "type": "array",
           "items": {
             "$ref": "#/definitions/Stream"
@@ -3210,6 +4872,11 @@
         },
         "_links": {
           "description": "",
+          "example": {
+            "self": {
+              "href": "https://apis.voicebase.com/v3/media/6291d2b7-ad67-465c-a23e-e2f201b65a82/streams"
+            }
+          },
           "type": "object",
           "additionalProperties": {
             "type": "object"
@@ -3223,14 +4890,20 @@
     },
     "Stream": {
       "title": "Stream",
+      "example": {
+        "streamName": "redacted",
+        "streamLocation": "https://media.voicebase.com/20ccef07-a807-5ec4-7e72-9b0e96cd04be/6291d2b7-ad67-465c-a23e-e2f201b65a82.mp3"
+      },
       "type": "object",
       "properties": {
         "streamName": {
           "description": "",
+          "example": "redacted",
           "type": "string"
         },
         "streamLocation": {
           "description": "",
+          "example": "https://media.voicebase.com/20ccef07-a807-5ec4-7e72-9b0e96cd04be/6291d2b7-ad67-465c-a23e-e2f201b65a82.mp3",
           "type": "string"
         }
       },
@@ -3253,10 +4926,16 @@
       "properties": {
         "groupName": {
           "description": "",
+          "example": "testGroup",
           "type": "string"
         },
         "keywords": {
           "description": "",
+          "example": [
+            "array",
+            "of",
+            "keywords"
+          ],
           "type": "array",
           "items": {
             "type": "string"
@@ -3287,10 +4966,16 @@
       "properties": {
         "groupName": {
           "description": "",
+          "example": "testGroup",
           "type": "string"
         },
         "keywords": {
           "description": "",
+          "example": [
+            "array",
+            "of",
+            "keywords"
+          ],
           "type": "array",
           "items": {
             "type": "string"
@@ -3298,6 +4983,11 @@
         },
         "_links": {
           "description": "",
+          "example": {
+            "self": {
+              "href": "https://apis.voicebase.com/v3/definition/spotting/groups/testGroup"
+            }
+          },
           "type": "object",
           "additionalProperties": {
             "type": "object"
