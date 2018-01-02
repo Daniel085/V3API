@@ -220,46 +220,7 @@
             "auth": []
           }
         ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/media",
-              "headers": {
-                "Content-Type": "application/x-www-form-urlencoded",
-                "Authorization": "Bearer {{bearer-token}}"
-              },
-              "body": "mediaUrl={{mediaUrl}}&configuration={{configuration}}"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "RAW",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {
-                "Access-Control-Allow-Credentials": "true",
-                "Access-Control-Allow-Headers": "accept, authorization, content-type",
-                "Access-Control-Allow-Methods": "DELETE, GET, HEAD, OPTIONS, POST, PUT",
-                "Access-Control-Allow-Origin": "*",
-                "Content-Type": "application/json;charset=UTF-8",
-                "Date": "Fri, 13 Oct 2017 22:35:47 GMT",
-                "Server": "Apache",
-                "Set-Cookie": "SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; Secure",
-                "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
-                "Transfer-Encoding": "chunked",
-                "X-Application-Context": "application",
-                "X-Frame-Options": "SAMEORIGIN",
-                "X-Trace-ID": "9D82C4D6%3A970E_0A40E1F1%3A01BB_59E13FC3_FC5AC%3A1DE6"
-              },
-              "body": "{\"_links\":{\"self\":{\"href\":\"/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499\"},\"progress\":{\"href\":\"/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/progress\"},\"metadata\":{\"href\":\"/v3/media/cfdeb667-2e7c-4d69-b5d5-dccd84d0f499/metadata\"}},\"formatVersion\":\"3.0.1\",\"mediaId\":\"cfdeb667-2e7c-4d69-b5d5-dccd84d0f499\",\"status\":\"accepted\",\"dateCreated\":\"2017-10-13T22:35:48.346Z\",\"metadata\":{},\"mediaContentType\":\"audio/x-wav\",\"length\":10460}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "/media - Upload a media file for transcription",
-            "x-testDescription": "# Using local media\nTo upload a recording for transcription and analysis, attach the named media in the body of the request in the form field: media\n\n# Using a remote media URL\nVoiceBase can also fetch media from a remote URL using the mediaURL form field in the request body."
-          }
-        ],
+        "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
