@@ -178,6 +178,13 @@
             "description": "(Required) JSON object or file specifying the configuration VoiceBase should use when processing your media file."
           },
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
