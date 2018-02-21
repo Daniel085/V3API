@@ -185,7 +185,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/~1media  upload a media file for transcriptionresponse"
+              "$ref": "#/definitions/ExampleWithMultipleCallbackTypes"
             },
             "examples": {
               "application/json": {
@@ -302,7 +302,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/~1media~1{{mediaid}}response"
+              "$ref": "#/definitions/RetrieveTranscript(keywordsAndTopicsEnabled)"
             },
             "examples": {
               "application/json": {
@@ -5402,7 +5402,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/~1media~1{{mediaid}}~1progressresponse"
+              "$ref": "#/definitions/GetMediaProgressExample"
             },
             "examples": {
               "application/json": {
@@ -5583,7 +5583,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/~1media~1{{mediaid}}~1transcriptresponse"
+              "$ref": "#/definitions/RetrieveTranscript"
             },
             "examples": {
               "application/json": {
@@ -5632,7 +5632,7 @@
           "404": {
             "description": "Not Found",
             "schema": {
-              "$ref": "#/definitions/~1media~1{{mediaid}}~1transcripterrorresponse"
+              "$ref": "#/definitions/BadMediaIdSubmitted"
             },
             "examples": {
               "application/json": {
@@ -5873,7 +5873,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/~1media~1{{mediaid}}~1streamsresponse"
+              "$ref": "#/definitions/RedactedMediaStream"
             },
             "examples": {
               "application/json": {
@@ -6204,7 +6204,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/~1definiton~1vocabularies~1{{vocabularyid}}  define a custom vocabularyresponse"
+              "$ref": "#/definitions/CreateACustomVocabularyList:\"earningscalls\""
             },
             "examples": {
               "application/json": {
@@ -6461,7 +6461,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/~1definition~1spotting~1groups~1{{groupid}}  create or updateresponse"
+              "$ref": "#/definitions/CreateOrUpdateKeywordSpottingGroup"
             },
             "examples": {
               "application/json": {
@@ -6893,8 +6893,8 @@
     }
   },
   "definitions": {
-    "/media  upload a media file for transcriptionresponse": {
-      "title": "/media - Upload a media file for transcriptionResponse",
+    "ExampleWithMultipleCallbackTypes": {
+      "title": "Example with Multiple Callback Types",
       "example": {
         "_links": {
           "self": {
@@ -6983,8 +6983,8 @@
         "length"
       ]
     },
-    "/media/{{mediaid}}response": {
-      "title": "/media/{{mediaId}}Response",
+    "RetrieveTranscript(keywordsAndTopicsEnabled)": {
+      "title": "Retrieve transcript (Keywords and Topics Enabled)",
       "example": {
         "_links": {
           "self": {
@@ -22574,8 +22574,8 @@
         "data"
       ]
     },
-    "/media/{{mediaid}}/progressresponse": {
-      "title": "/media/{{mediaId}}/progressResponse",
+    "GetMediaProgressExample": {
+      "title": "Get Media Progress Example",
       "example": {
         "mediaId": "6291d2b7-ad67-465c-a23e-e2f201b65a82",
         "jobId": "cc834531-7af0-4251-86c5-aae490343947",
@@ -23088,8 +23088,8 @@
         "dependents"
       ]
     },
-    "/media/{{mediaid}}/transcripterrorresponse": {
-      "title": "/media/{{mediaId}}/transcriptErrorResponse",
+    "BadMediaIdSubmitted": {
+      "title": "Bad Media ID Submitted",
       "example": {
         "status": 404,
         "errors": [
@@ -23158,8 +23158,8 @@
         "error"
       ]
     },
-    "/media/{{mediaid}}/transcriptresponse": {
-      "title": "/media/{{mediaId}}/transcriptResponse",
+    "RetrieveTranscript": {
+      "title": "Retrieve transcript",
       "example": {
         "mediaId": "bc14632d-e81b-4673-992d-5c5fb6573fb8",
         "status": "finished",
@@ -23324,8 +23324,8 @@
         "words"
       ]
     },
-    "/media/{{mediaid}}/streamsresponse": {
-      "title": "/media/{{mediaId}}/streamsResponse",
+    "RedactedMediaStream": {
+      "title": "Redacted Media Stream",
       "example": {
         "streams": [
           {
@@ -23396,8 +23396,8 @@
         "streamLocation"
       ]
     },
-    "/definiton/vocabularies/{{vocabularyid}}  define a custom vocabularyresponse": {
-      "title": "/definiton/vocabularies/{{vocabularyId}} - Define a custom vocabularyResponse",
+    "CreateACustomVocabularyList:\"earningscalls\"": {
+      "title": "Create a custom vocabulary list: \"earningsCalls\"",
       "example": {
         "vocabularyName": "earningsCalls",
         "vocabularyType": "terms",
@@ -23556,8 +23556,8 @@
         "keywords"
       ]
     },
-    "/definition/spotting/groups/{{groupid}}  create or updateresponse": {
-      "title": "/definition/spotting/groups/{{groupId}} - Create or UpdateResponse",
+    "CreateOrUpdateKeywordSpottingGroup": {
+      "title": "Create or update keyword spotting group",
       "example": {
         "groupName": "testGroup",
         "keywords": [
