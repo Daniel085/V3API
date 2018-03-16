@@ -225,7 +225,7 @@
                 "Content-Type": "application/x-www-form-urlencoded",
                 "Authorization": "Bearer {{bearer-token}}"
               },
-              "body": "configuration={\n  \"speechModel\": {\n    \"language\": \"en-US\"\n  }\n}"
+              "body": "configuration={\"speechModel\":{\"language\":\"en-US\"}}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
