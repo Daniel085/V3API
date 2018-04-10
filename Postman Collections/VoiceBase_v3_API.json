@@ -100,13 +100,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -114,15 +107,16 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/media?query={{query}}&externalId={{externalId}}&before={{before}}&after={{after}}&extendedFilter={{extendedFilter}}&onOrAfterDate={{onOrAfterDate}}&onOrBeforeDate={{onOrBeforeDate}}&sortOrder={{sortOrder}}&limit={{limit}}",
-              "headers": {
-                "Authorization": "Bearer {{bearer-token}}"
-              }
+              "uri": "/media?query={{query}}&externalId={{externalId}}&before={{before}}&after={{after}}&extendedFilter={{extendedFilter}}&onOrAfterDate={{onOrAfterDate}}&onOrBeforeDate={{onOrBeforeDate}}&sortOrder={{sortOrder}}&limit={{limit}}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -172,13 +166,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -222,8 +209,7 @@
               "method": "POST",
               "uri": "/media",
               "headers": {
-                "Content-Type": "application/x-www-form-urlencoded",
-                "Authorization": "Bearer {{bearer-token}}"
+                "Content-Type": "application/x-www-form-urlencoded"
               },
               "body": "configuration={\"speechModel\":{\"language\":\"en-US\"}}"
             },
@@ -279,13 +265,6 @@
           {
             "name": "includeAlternateFormat",
             "in": "query",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
             "required": true,
             "type": "string",
             "description": ""
@@ -5321,7 +5300,11 @@
             }
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5342,13 +5325,6 @@
         ],
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5361,7 +5337,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5383,13 +5363,6 @@
           "application/json"
         ],
         "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
           {
             "name": "mediaId",
             "in": "path",
@@ -5542,7 +5515,11 @@
             }
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5564,13 +5541,6 @@
           "application/json"
         ],
         "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
           {
             "name": "mediaId",
             "in": "path",
@@ -5648,7 +5618,11 @@
             }
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5671,13 +5645,6 @@
         ],
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5694,7 +5661,11 @@
             "examples": {}
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5717,13 +5688,6 @@
         ],
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5740,7 +5704,11 @@
             "examples": {}
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5763,13 +5731,6 @@
         ],
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5786,7 +5747,11 @@
             "examples": {}
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5809,13 +5774,6 @@
         ],
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5832,7 +5790,11 @@
             "examples": {}
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5854,13 +5816,6 @@
           "application/json"
         ],
         "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
           {
             "name": "mediaId",
             "in": "path",
@@ -5892,7 +5847,11 @@
             }
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5915,13 +5874,6 @@
         ],
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5934,7 +5886,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -5964,13 +5920,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5983,7 +5932,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -6011,13 +5964,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -6037,7 +5983,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -6065,13 +6015,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -6079,15 +6022,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
               "uri": "/definition/vocabularies",
               "headers": {
-                "Accept": "application/json",
-                "Authorization": "Bearer {{bearer-token}}"
+                "Accept": "application/json"
               }
             },
             "expectedResponse": {
@@ -6132,13 +6078,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "vocabularyId",
             "in": "path",
             "required": true,
@@ -6151,7 +6090,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -6173,13 +6116,6 @@
         "parameters": [
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -6238,7 +6174,11 @@
             }
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -6266,13 +6206,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "vocabularyId",
             "in": "path",
             "required": true,
@@ -6285,7 +6218,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -6313,13 +6250,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -6327,15 +6257,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
               "uri": "/definition/spotting/groups",
               "headers": {
-                "Accept": "application/json",
-                "Authorization": "Bearer {{bearer-token}}"
+                "Accept": "application/json"
               }
             },
             "expectedResponse": {
@@ -6380,13 +6313,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "groupId",
             "in": "path",
             "required": true,
@@ -6399,7 +6325,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -6430,13 +6360,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -6480,7 +6403,11 @@
             }
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -6510,13 +6437,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "testGroupId",
             "in": "path",
             "required": true,
@@ -6529,7 +6449,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -6557,13 +6481,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -6571,15 +6488,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
               "uri": "/definition/media/search",
               "headers": {
-                "Accept": "application/json",
-                "Authorization": "Bearer {{bearer-token}}"
+                "Accept": "application/json"
               }
             },
             "expectedResponse": {
@@ -6620,13 +6540,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -6634,15 +6547,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "PUT",
               "uri": "/definition/media/search",
               "headers": {
-                "Accept": "application/json",
-                "Authorization": "Bearer {{bearer-token}}"
+                "Accept": "application/json"
               }
             },
             "expectedResponse": {
@@ -6685,13 +6601,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -6699,15 +6608,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
               "uri": "/profile/keys",
               "headers": {
-                "Accept": "application/json",
-                "Authorization": "Bearer {{bearer-token}}"
+                "Accept": "application/json"
               }
             },
             "expectedResponse": {
@@ -6748,13 +6660,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -6762,15 +6667,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "POST",
               "uri": "/profile/keys",
               "headers": {
-                "Accept": "application/json",
-                "Authorization": "Bearer {{bearer-token}}"
+                "Accept": "application/json"
               }
             },
             "expectedResponse": {
@@ -6815,13 +6723,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "keyId",
             "in": "path",
             "required": true,
@@ -6834,7 +6735,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -6862,13 +6767,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "keyId",
             "in": "path",
             "required": true,
@@ -6881,7 +6779,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
