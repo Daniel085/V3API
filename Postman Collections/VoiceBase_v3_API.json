@@ -196,6 +196,24 @@
                 "length": 14965
               }
             }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/NoMediaUploaded"
+            },
+            "examples": {
+              "application/json": {
+                "status": 400,
+                "errors": [
+                  {
+                    "code": 10202,
+                    "error": "The request included neither a media attachment nor a mediaUrl.  One of these two is required for us to process your request."
+                  }
+                ],
+                "reference": "9D82C4D6:E8FE_0A40E32A:01BB_59A6F8FE_1E772C:2C17"
+              }
+            }
           }
         },
         "security": [
@@ -6883,6 +6901,76 @@
         "metadata",
         "mediaContentType",
         "length"
+      ]
+    },
+    "NoMediaUploaded": {
+      "title": "No Media Uploaded",
+      "example": {
+        "status": 400,
+        "errors": [
+          {
+            "code": 10202,
+            "error": "The request included neither a media attachment nor a mediaUrl.  One of these two is required for us to process your request."
+          }
+        ],
+        "reference": "9D82C4D6:E8FE_0A40E32A:01BB_59A6F8FE_1E772C:2C17"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "example": 400,
+          "type": "integer",
+          "format": "int32"
+        },
+        "errors": {
+          "description": "",
+          "example": [
+            {
+              "code": 10202,
+              "error": "The request included neither a media attachment nor a mediaUrl.  One of these two is required for us to process your request."
+            }
+          ],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Error"
+          }
+        },
+        "reference": {
+          "description": "",
+          "example": "9D82C4D6:E8FE_0A40E32A:01BB_59A6F8FE_1E772C:2C17",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "errors",
+        "reference"
+      ]
+    },
+    "Error": {
+      "title": "Error",
+      "example": {
+        "code": 10202,
+        "error": "The request included neither a media attachment nor a mediaUrl.  One of these two is required for us to process your request."
+      },
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "",
+          "example": 10202,
+          "type": "integer",
+          "format": "int32"
+        },
+        "error": {
+          "description": "",
+          "example": "The request included neither a media attachment nor a mediaUrl.  One of these two is required for us to process your request.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "error"
       ]
     },
     "RetrieveTranscript(keywordsAndTopicsEnabled)": {
@@ -23035,31 +23123,6 @@
         "reference"
       ]
     },
-    "Error": {
-      "title": "Error",
-      "example": {
-        "code": 10205,
-        "error": "Requested resource not found"
-      },
-      "type": "object",
-      "properties": {
-        "code": {
-          "description": "",
-          "example": 10205,
-          "type": "integer",
-          "format": "int32"
-        },
-        "error": {
-          "description": "",
-          "example": "Requested resource not found",
-          "type": "string"
-        }
-      },
-      "required": [
-        "code",
-        "error"
-      ]
-    },
     "RetrieveTranscript": {
       "title": "Retrieve transcript",
       "example": {
@@ -23132,7 +23195,7 @@
           "format": "int32"
         },
         "transcript": {
-          "$ref": "#/definitions/Transcript19"
+          "$ref": "#/definitions/Transcript21"
         }
       },
       "required": [
@@ -23144,8 +23207,8 @@
         "transcript"
       ]
     },
-    "Transcript19": {
-      "title": "Transcript19",
+    "Transcript21": {
+      "title": "Transcript21",
       "example": {
         "words": [
           {
