@@ -5675,8 +5675,7 @@
             "description": "",
             "schema": {
               "type": "object"
-            },
-            "examples": {}
+            }
           }
         },
         "security": [
@@ -5718,8 +5717,7 @@
             "description": "",
             "schema": {
               "type": "object"
-            },
-            "examples": {}
+            }
           }
         },
         "security": [
@@ -5761,8 +5759,7 @@
             "description": "",
             "schema": {
               "type": "object"
-            },
-            "examples": {}
+            }
           }
         },
         "security": [
@@ -5804,8 +5801,7 @@
             "description": "",
             "schema": {
               "type": "object"
-            },
-            "examples": {}
+            }
           }
         },
         "security": [
