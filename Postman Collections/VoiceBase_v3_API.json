@@ -7,17 +7,12 @@
   },
   "item": [
     {
-      "_postman_id": "1758449-1b06a475-b616-7dcb-87eb-b01f7ad22af6",
       "name": "/media",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1758449-463dd592-66c2-aa61-379c-f610c91517b8",
           "name": "/media collection",
-          "description": "",
           "item": [
             {
-              "_postman_id": "1758449-972e6612-86b1-8924-3c31-e5e3ed744679",
               "name": "/media - Upload a media file for transcription",
               "event": [
                 {
@@ -50,6 +45,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-972e6612-86b1-8924-3c31-e5e3ed744679",
               "request": {
                 "method": "POST",
                 "header": [
@@ -1173,8 +1169,8 @@
               ]
             },
             {
-              "_postman_id": "1758449-55de2108-e182-bdcd-413d-1d2dc0ce8f5c",
               "name": "/media - List Media Records",
+              "_postman_id": "1758449-55de2108-e182-bdcd-413d-1d2dc0ce8f5c",
               "request": {
                 "method": "GET",
                 "header": [
@@ -1198,8 +1194,8 @@
               "response": []
             },
             {
-              "_postman_id": "1758449-83c804e9-cf25-cbae-26ee-65cfda1fb6f1",
               "name": "/media&query={{query}}",
+              "_postman_id": "1758449-83c804e9-cf25-cbae-26ee-65cfda1fb6f1",
               "request": {
                 "method": "GET",
                 "header": [
@@ -1232,48 +1228,39 @@
                   "query": [
                     {
                       "key": "query",
-                      "value": "{{query}}",
-                      "equals": true
+                      "value": "{{query}}"
                     },
                     {
                       "key": "externalId",
-                      "value": "{{externalId}}",
-                      "equals": true
+                      "value": "{{externalId}}"
                     },
                     {
                       "key": "before",
-                      "value": "{{before}}",
-                      "equals": true
+                      "value": "{{before}}"
                     },
                     {
                       "key": "after",
-                      "value": "{{after}}",
-                      "equals": true
+                      "value": "{{after}}"
                     },
                     {
                       "key": "extendedFilter",
-                      "value": "{{extendedFilter}}",
-                      "equals": true
+                      "value": "{{extendedFilter}}"
                     },
                     {
                       "key": "onOrAfterDate",
-                      "value": "{{onOrAfterDate}}",
-                      "equals": true
+                      "value": "{{onOrAfterDate}}"
                     },
                     {
                       "key": "onOrBeforeDate",
-                      "value": "{{onOrBeforeDate}}",
-                      "equals": true
+                      "value": "{{onOrBeforeDate}}"
                     },
                     {
                       "key": "sortOrder",
-                      "value": "{{sortOrder}}",
-                      "equals": true
+                      "value": "{{sortOrder}}"
                     },
                     {
                       "key": "limit",
-                      "value": "{{limit}}",
-                      "equals": true
+                      "value": "{{limit}}"
                     }
                   ]
                 },
@@ -1282,15 +1269,13 @@
               "response": []
             }
           ],
+          "_postman_id": "1758449-463dd592-66c2-aa61-379c-f610c91517b8",
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "1758449-9a20a5ba-011e-403f-07d9-8e0e3c9d7bcd",
           "name": "/media item",
-          "description": "",
           "item": [
             {
-              "_postman_id": "1758449-9d4d4236-1d1a-e764-353e-ead80f3c6a9e",
               "name": "/media/{{mediaId}}",
               "event": [
                 {
@@ -1311,6 +1296,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-9d4d4236-1d1a-e764-353e-ead80f3c6a9e",
               "request": {
                 "method": "GET",
                 "header": [
@@ -1344,8 +1330,7 @@
                   "query": [
                     {
                       "key": "includeAlternateFormat",
-                      "value": "{{includeAlternateFormat}}",
-                      "equals": true
+                      "value": "{{includeAlternateFormat}}"
                     }
                   ]
                 },
@@ -1577,23 +1562,19 @@
                       "query": [
                         {
                           "key": "includeAlternateFormat",
-                          "value": "dfxp",
-                          "equals": true
+                          "value": "dfxp"
                         },
                         {
                           "key": "includeAlternateFormat",
-                          "value": "text",
-                          "equals": true
+                          "value": "text"
                         },
                         {
                           "key": "includeAlternateFormat",
-                          "value": "webvtt",
-                          "equals": true
+                          "value": "webvtt"
                         },
                         {
                           "key": "includeAlternateFormat",
-                          "value": "SRT",
-                          "equals": true
+                          "value": "SRT"
                         }
                       ]
                     }
@@ -1737,8 +1718,7 @@
                       "query": [
                         {
                           "key": "includeAlternateFormat",
-                          "value": "dfxp",
-                          "equals": true
+                          "value": "dfxp"
                         }
                       ]
                     }
@@ -2007,8 +1987,7 @@
                       "query": [
                         {
                           "key": "includeAlternateFormat",
-                          "value": "text",
-                          "equals": true
+                          "value": "text"
                         }
                       ]
                     }
@@ -2152,8 +2131,7 @@
                       "query": [
                         {
                           "key": "includeAlternateFormat",
-                          "value": "SRT",
-                          "equals": true
+                          "value": "SRT"
                         }
                       ]
                     }
@@ -2264,7 +2242,6 @@
               ]
             },
             {
-              "_postman_id": "1758449-b8b8c48a-5cfc-753f-c25d-8fabe044dd88",
               "name": "/media/{{mediaId}}/progress",
               "event": [
                 {
@@ -2299,6 +2276,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-b8b8c48a-5cfc-753f-c25d-8fabe044dd88",
               "request": {
                 "method": "GET",
                 "header": [
@@ -2447,7 +2425,6 @@
               ]
             },
             {
-              "_postman_id": "1758449-c87cbbe3-5f4a-7f75-a980-a6a854ca516d",
               "name": "/media/{{mediaId}}/transcript",
               "event": [
                 {
@@ -2464,6 +2441,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-c87cbbe3-5f4a-7f75-a980-a6a854ca516d",
               "request": {
                 "method": "GET",
                 "header": [
@@ -2980,7 +2958,6 @@
               ]
             },
             {
-              "_postman_id": "1758449-7636b9e6-f33f-89de-73d4-4f350fb096c0",
               "name": "/media/{{mediaId}}/transcript/text",
               "event": [
                 {
@@ -2995,6 +2972,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-7636b9e6-f33f-89de-73d4-4f350fb096c0",
               "request": {
                 "method": "GET",
                 "header": [
@@ -3156,7 +3134,6 @@
               ]
             },
             {
-              "_postman_id": "1758449-8f20c3ee-0d05-da94-8e95-519170b3c2f1",
               "name": "/media/{{mediaId}}/transcript/webvtt",
               "event": [
                 {
@@ -3171,6 +3148,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-8f20c3ee-0d05-da94-8e95-519170b3c2f1",
               "request": {
                 "method": "GET",
                 "header": [
@@ -3320,7 +3298,6 @@
               ]
             },
             {
-              "_postman_id": "1758449-df0a26f9-fba1-9a0d-14cc-fb28163b3149",
               "name": "/media/{{mediaId}}/transcript/srt",
               "event": [
                 {
@@ -3335,6 +3312,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-df0a26f9-fba1-9a0d-14cc-fb28163b3149",
               "request": {
                 "method": "GET",
                 "header": [
@@ -3484,7 +3462,6 @@
               ]
             },
             {
-              "_postman_id": "1758449-c29634e7-21a7-fb10-ed08-80370cb1e031",
               "name": "/media/{{mediaId}}/transcript/dfxp",
               "event": [
                 {
@@ -3499,6 +3476,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-c29634e7-21a7-fb10-ed08-80370cb1e031",
               "request": {
                 "method": "GET",
                 "header": [
@@ -3648,7 +3626,6 @@
               ]
             },
             {
-              "_postman_id": "1758449-639fe1a9-286e-5035-ac1c-7113d80daf59",
               "name": "/media/{{mediaId}}/streams",
               "event": [
                 {
@@ -3664,6 +3641,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-639fe1a9-286e-5035-ac1c-7113d80daf59",
               "request": {
                 "method": "GET",
                 "header": [
@@ -3812,7 +3790,6 @@
               ]
             },
             {
-              "_postman_id": "1758449-1aa31080-f23c-a879-54ae-d8618950bf60",
               "name": "/media/{{mediaId}}/streams/original",
               "event": [
                 {
@@ -3827,6 +3804,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-1aa31080-f23c-a879-54ae-d8618950bf60",
               "request": {
                 "method": "GET",
                 "header": [
@@ -3850,7 +3828,6 @@
               "response": []
             },
             {
-              "_postman_id": "1758449-7355ed4d-6366-92ca-8102-f2cf575fb77e",
               "name": "/media/{{mediaId}}/metadata",
               "event": [
                 {
@@ -3865,6 +3842,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-7355ed4d-6366-92ca-8102-f2cf575fb77e",
               "request": {
                 "method": "PUT",
                 "header": [
@@ -3891,7 +3869,6 @@
               "response": []
             },
             {
-              "_postman_id": "1758449-55dcf839-d428-b2d2-5197-4a3cb2c089e7",
               "name": "/media/{{mediaId}}/metadata",
               "event": [
                 {
@@ -3904,6 +3881,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-55dcf839-d428-b2d2-5197-4a3cb2c089e7",
               "request": {
                 "method": "GET",
                 "header": [
@@ -3926,7 +3904,6 @@
               "response": []
             },
             {
-              "_postman_id": "1758449-a3fcb24b-41bc-94c9-070d-39fd857da226",
               "name": "/media/{{mediaId}}",
               "event": [
                 {
@@ -3941,6 +3918,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-a3fcb24b-41bc-94c9-070d-39fd857da226",
               "request": {
                 "method": "DELETE",
                 "header": [
@@ -3964,22 +3942,19 @@
               "response": []
             }
           ],
+          "_postman_id": "1758449-9a20a5ba-011e-403f-07d9-8e0e3c9d7bcd",
           "_postman_isSubFolder": true
         }
-      ]
+      ],
+      "_postman_id": "1758449-1b06a475-b616-7dcb-87eb-b01f7ad22af6"
     },
     {
-      "_postman_id": "1758449-cf7bdf10-9bfe-ec95-62b5-127ab5141e02",
       "name": "/definition",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1758449-a9c0087f-8ae3-c438-b023-3de9af0c551f",
           "name": "/definition/vocabularies",
-          "description": "",
           "item": [
             {
-              "_postman_id": "1758449-a5ca4971-ac2a-c504-8fec-5bbb3d17ac7e",
               "name": "/definiton/vocabularies - List keyword spotting groups",
               "event": [
                 {
@@ -3995,6 +3970,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-a5ca4971-ac2a-c504-8fec-5bbb3d17ac7e",
               "request": {
                 "method": "GET",
                 "header": [
@@ -4017,8 +3993,8 @@
               "response": []
             },
             {
-              "_postman_id": "1758449-9e0881a3-6fe9-cc3a-6a77-6bc2a7073d82",
               "name": "/definiton/vocabularies/{{vocabularyId}} - Retreive a custom vocabulary",
+              "_postman_id": "1758449-9e0881a3-6fe9-cc3a-6a77-6bc2a7073d82",
               "request": {
                 "method": "GET",
                 "header": [
@@ -4041,8 +4017,8 @@
               "response": []
             },
             {
-              "_postman_id": "1758449-5aa66af9-09d2-37b2-9007-1de21279a904",
               "name": "/definiton/vocabularies/{{vocabularyId}} - Define a custom vocabulary",
+              "_postman_id": "1758449-5aa66af9-09d2-37b2-9007-1de21279a904",
               "request": {
                 "method": "PUT",
                 "header": [
@@ -4199,8 +4175,8 @@
               ]
             },
             {
-              "_postman_id": "1758449-2a331191-c85b-227d-ce3f-105b686c0f88",
               "name": "/definiton/vocabularies/{{vocabularyId}} - Delete a custom vocabulary",
+              "_postman_id": "1758449-2a331191-c85b-227d-ce3f-105b686c0f88",
               "request": {
                 "method": "DELETE",
                 "header": [
@@ -4223,15 +4199,13 @@
               "response": []
             }
           ],
+          "_postman_id": "1758449-a9c0087f-8ae3-c438-b023-3de9af0c551f",
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "1758449-68c087fc-ea9a-227e-1871-d139fb2f7cda",
           "name": "/definition/spotting",
-          "description": "",
           "item": [
             {
-              "_postman_id": "1758449-18dabd4b-6a28-1c99-bc46-081274916aac",
               "name": "/definition/spotting/groups - List Phrase Spotting Groups",
               "event": [
                 {
@@ -4249,6 +4223,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-18dabd4b-6a28-1c99-bc46-081274916aac",
               "request": {
                 "method": "GET",
                 "header": [
@@ -4271,7 +4246,6 @@
               "response": []
             },
             {
-              "_postman_id": "1758449-bab20eeb-c6a9-c519-6ce9-fe7d4d11f27c",
               "name": "/definition/spotting/groups/{{groupId}} - Create or Update",
               "event": [
                 {
@@ -4299,6 +4273,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-bab20eeb-c6a9-c519-6ce9-fe7d4d11f27c",
               "request": {
                 "method": "PUT",
                 "header": [
@@ -4455,7 +4430,6 @@
               ]
             },
             {
-              "_postman_id": "1758449-93156251-8d16-bbb6-f073-c247af160f07",
               "name": "/definiton/spotting/groups/{{groupId}} - Retreive a Phrase Spotting Group",
               "event": [
                 {
@@ -4472,6 +4446,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-93156251-8d16-bbb6-f073-c247af160f07",
               "request": {
                 "method": "GET",
                 "header": [
@@ -4494,7 +4469,6 @@
               "response": []
             },
             {
-              "_postman_id": "1758449-2abec214-a94d-7055-d9f0-984b1e04ddba",
               "name": "/definiton/spotting/groups/{{testGroupId}} - Delete a Phrase Spotting Group",
               "event": [
                 {
@@ -4507,6 +4481,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-2abec214-a94d-7055-d9f0-984b1e04ddba",
               "request": {
                 "method": "DELETE",
                 "header": [
@@ -4529,15 +4504,13 @@
               "response": []
             }
           ],
+          "_postman_id": "1758449-68c087fc-ea9a-227e-1871-d139fb2f7cda",
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "1758449-590ef36c-31dc-f1c1-fbd3-dad9ad58b884",
           "name": "/definition/media/search",
-          "description": "",
           "item": [
             {
-              "_postman_id": "1758449-a2d36679-d3b9-8e3b-0f33-09171817479b",
               "name": "/definition/media/search - Retreive the list of extended metadata seatchable fields",
               "event": [
                 {
@@ -4550,6 +4523,7 @@
                   }
                 }
               ],
+              "_postman_id": "1758449-a2d36679-d3b9-8e3b-0f33-09171817479b",
               "request": {
                 "method": "GET",
                 "header": [
@@ -4572,8 +4546,8 @@
               "response": []
             },
             {
-              "_postman_id": "1758449-2b63570c-aabb-0edc-7b60-874e26f14cb6",
               "name": "/definiton/media/search - Define extended metadata searchable fields",
+              "_postman_id": "1758449-2b63570c-aabb-0edc-7b60-874e26f14cb6",
               "request": {
                 "method": "PUT",
                 "header": [
@@ -4596,18 +4570,18 @@
               "response": []
             }
           ],
+          "_postman_id": "1758449-590ef36c-31dc-f1c1-fbd3-dad9ad58b884",
           "_postman_isSubFolder": true
         }
-      ]
+      ],
+      "_postman_id": "1758449-cf7bdf10-9bfe-ec95-62b5-127ab5141e02"
     },
     {
-      "_postman_id": "1758449-4b8c2bd5-a6ae-33dc-1060-6be67bd16e25",
       "name": "/profile",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1758449-8ab78445-1c75-72a9-f5f2-1f9143db4657",
           "name": "/profile/keys - Create a API key",
+          "_postman_id": "1758449-8ab78445-1c75-72a9-f5f2-1f9143db4657",
           "request": {
             "method": "POST",
             "header": [
@@ -4630,8 +4604,8 @@
           "response": []
         },
         {
-          "_postman_id": "1758449-70ce3d47-763c-ff74-f4d7-d4df62186d63",
           "name": "/profile/keys - List API keys",
+          "_postman_id": "1758449-70ce3d47-763c-ff74-f4d7-d4df62186d63",
           "request": {
             "method": "GET",
             "header": [
@@ -4654,8 +4628,8 @@
           "response": []
         },
         {
-          "_postman_id": "1758449-4188cbb7-da67-c672-1126-c9b4f956d9a9",
           "name": "/profile/keys/{{keyId}} - Retreive details about an API key",
+          "_postman_id": "1758449-4188cbb7-da67-c672-1126-c9b4f956d9a9",
           "request": {
             "method": "GET",
             "header": [
@@ -4678,8 +4652,8 @@
           "response": []
         },
         {
-          "_postman_id": "1758449-a55cab6a-4d3b-59c5-d696-bcd58d596c58",
           "name": "/profile/keys/{{keyId}} - Delete a API key",
+          "_postman_id": "1758449-a55cab6a-4d3b-59c5-d696-bcd58d596c58",
           "request": {
             "method": "DELETE",
             "header": [
@@ -4701,7 +4675,8 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1758449-4b8c2bd5-a6ae-33dc-1060-6be67bd16e25"
     }
   ]
 }
