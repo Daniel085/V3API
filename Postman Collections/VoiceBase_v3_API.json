@@ -174,13 +174,6 @@
             "required": false,
             "default": "Bearer {token}",
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -214,13 +207,6 @@
           {
             "name": "includeAlternateFormat",
             "in": "query",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
             "required": true,
             "type": "string",
             "description": ""
@@ -5331,13 +5317,6 @@
             "type": "string"
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5372,13 +5351,6 @@
             "required": false,
             "default": "Bearer {token}",
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           },
           {
             "name": "mediaId",
@@ -5609,13 +5581,6 @@
             "type": "string"
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5769,13 +5734,6 @@
             "type": "string"
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5879,13 +5837,6 @@
             "type": "string"
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -5979,13 +5930,6 @@
             "required": false,
             "default": "Bearer {token}",
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           },
           {
             "name": "mediaId",
@@ -6083,13 +6027,6 @@
             "type": "string"
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -6183,13 +6120,6 @@
             "required": false,
             "default": "Bearer {token}",
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           },
           {
             "name": "mediaId",
@@ -6299,13 +6229,6 @@
             "type": "string"
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -6343,13 +6266,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -6413,13 +6329,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "mediaId",
             "in": "path",
             "required": true,
@@ -6457,13 +6366,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -6506,13 +6408,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "vocabularyId",
             "in": "path",
             "required": true,
@@ -6548,13 +6443,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -6704,13 +6592,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "vocabularyId",
             "in": "path",
             "required": true,
@@ -6752,13 +6633,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -6791,13 +6665,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -6932,13 +6799,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "groupId",
             "in": "path",
             "required": true,
@@ -6976,13 +6836,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -7030,13 +6883,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -7067,13 +6913,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -7125,13 +6964,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -7169,13 +7001,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -7218,13 +7043,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "keyId",
             "in": "path",
             "required": true,
@@ -7260,13 +7078,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
