@@ -26,7 +26,7 @@
         "tags": [
           "/media collection"
         ],
-        "operationId": "MediaPost",
+        "operationId": "/media-Uploadamediafilefortranscription",
         "deprecated": false,
         "produces": [
           "application/json;charset=UTF-8"
@@ -162,7 +162,7 @@
         "tags": [
           "/media collection"
         ],
-        "operationId": "MediaGet",
+        "operationId": "/media-ListMediaRecords",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -191,7 +191,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaByMediaIdGet",
+        "operationId": "/media/{{mediaId}}",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -5303,7 +5303,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaByMediaIdDelete",
+        "operationId": "Delete/media/{{mediaId}}",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -5339,7 +5339,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaProgressByMediaIdGet",
+        "operationId": "/media/{{mediaId}}/progress",
         "deprecated": false,
         "produces": [
           "application/json;charset=UTF-8"
@@ -5567,7 +5567,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaTranscriptByMediaIdGet",
+        "operationId": "/media/{{mediaId}}/transcript",
         "deprecated": false,
         "produces": [
           "application/json;charset=UTF-8"
@@ -5720,7 +5720,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaTranscriptTextByMediaIdGet",
+        "operationId": "/media/{{mediaId}}/transcript/text",
         "deprecated": false,
         "produces": [
           "text/plain;charset=UTF-8"
@@ -5823,7 +5823,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaTranscriptWebvttByMediaIdGet",
+        "operationId": "/media/{{mediaId}}/transcript/webvtt",
         "deprecated": false,
         "produces": [
           "text/vtt;charset=UTF-8"
@@ -5918,7 +5918,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaTranscriptSrtByMediaIdGet",
+        "operationId": "/media/{{mediaId}}/transcript/srt",
         "deprecated": false,
         "produces": [
           "text/srt;charset=UTF-8"
@@ -6013,7 +6013,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaTranscriptDfxpByMediaIdGet",
+        "operationId": "/media/{{mediaId}}/transcript/dfxp",
         "deprecated": false,
         "produces": [
           "application/ttml+xml;charset=UTF-8"
@@ -6108,7 +6108,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaStreamsByMediaIdGet",
+        "operationId": "/media/{{mediaId}}/streams",
         "deprecated": false,
         "produces": [
           "application/json;charset=UTF-8"
@@ -6215,7 +6215,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaStreamsOriginalByMediaIdGet",
+        "operationId": "/media/{{mediaId}}/streams/original",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6251,7 +6251,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaMetadataByMediaIdPut",
+        "operationId": "/media/{{mediaId}}/metadata",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6308,7 +6308,7 @@
         "tags": [
           "/media item"
         ],
-        "operationId": "MediaMetadataByMediaIdGet",
+        "operationId": "Get/media/{{mediaId}}/metadata",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6351,7 +6351,7 @@
         "tags": [
           "/definition/vocabularies"
         ],
-        "operationId": "DefinitionVocabulariesGet",
+        "operationId": "/definiton/vocabularies-Listkeywordspottinggroups",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6387,7 +6387,7 @@
         "tags": [
           "/definition/vocabularies"
         ],
-        "operationId": "DefinitionVocabulariesByVocabularyIdGet",
+        "operationId": "/definiton/vocabularies/{{vocabularyId}}-Retreiveacustomvocabulary",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6428,7 +6428,7 @@
         "tags": [
           "/definition/vocabularies"
         ],
-        "operationId": "DefinitionVocabulariesByVocabularyIdPut",
+        "operationId": "/definiton/vocabularies/{{vocabularyId}}-Defineacustomvocabulary",
         "deprecated": false,
         "produces": [
           "application/json;charset=UTF-8"
@@ -6571,7 +6571,7 @@
         "tags": [
           "/definition/vocabularies"
         ],
-        "operationId": "DefinitionVocabulariesByVocabularyIdDelete",
+        "operationId": "/definiton/vocabularies/{{vocabularyId}}-Deleteacustomvocabulary",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6614,7 +6614,7 @@
         "tags": [
           "/definition/spotting"
         ],
-        "operationId": "DefinitionSpottingGroupsGet",
+        "operationId": "/definition/spotting/groups-ListPhraseSpottingGroups",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6650,7 +6650,7 @@
         "tags": [
           "/definition/spotting"
         ],
-        "operationId": "DefinitionSpottingGroupsByGroupIdPut",
+        "operationId": "/definition/spotting/groups/{{groupId}}-CreateorUpdate",
         "deprecated": false,
         "produces": [
           "application/json;charset=UTF-8"
@@ -6778,7 +6778,7 @@
         "tags": [
           "/definition/spotting"
         ],
-        "operationId": "DefinitionSpottingGroupsByGroupIdGet",
+        "operationId": "/definiton/spotting/groups/{{groupId}}-RetreiveaPhraseSpottingGroup",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6821,7 +6821,7 @@
         "tags": [
           "/definition/spotting"
         ],
-        "operationId": "DefinitionSpottingGroupsByTestGroupIdDelete",
+        "operationId": "/definiton/spotting/groups/{{testGroupId}}-DeleteaPhraseSpottingGroup",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6864,7 +6864,7 @@
         "tags": [
           "/definition/media/search"
         ],
-        "operationId": "DefinitionMediaSearchGet",
+        "operationId": "/definition/media/search-Retreivethelistofextendedmetadataseatchablefields",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6898,7 +6898,7 @@
         "tags": [
           "/definition/media/search"
         ],
-        "operationId": "DefinitionMediaSearchPut",
+        "operationId": "/definiton/media/search-Defineextendedmetadatasearchablefields",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6943,7 +6943,7 @@
         "tags": [
           "/profile"
         ],
-        "operationId": "ProfileKeysPost",
+        "operationId": "/profile/keys-CreateaAPIkey",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -6986,7 +6986,7 @@
         "tags": [
           "/profile"
         ],
-        "operationId": "ProfileKeysGet",
+        "operationId": "/profile/keys-ListAPIkeys",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -7022,7 +7022,7 @@
         "tags": [
           "/profile"
         ],
-        "operationId": "ProfileKeysByKeyIdGet",
+        "operationId": "/profile/keys/{{keyId}}-RetreivedetailsaboutanAPIkey",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -7063,7 +7063,7 @@
         "tags": [
           "/profile"
         ],
-        "operationId": "ProfileKeysByKeyIdDelete",
+        "operationId": "/profile/keys/{{keyId}}-DeleteaAPIkey",
         "deprecated": false,
         "produces": [
           "application/json"
