@@ -6038,10 +6038,7 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "string"
-            },
-            "examples": {
-              "application/ttml+xml;charset=UTF-8": "<tt xmlns=\"http://www.w3.org/2006/04/ttaf1\" xmlns:tts=\"http://www.w3.org/2006/04/ttaf1#styling\">\n    <head>\n        <styling>\n            <style id=\"defaultCaption\" tts:backgroundColor=\"black\" tts:color=\"white\" tts:fontFamily=\"SansSerif\" tts:fontSize=\"12\" tts:fontStyle=\"normal\" tts:fontWeight=\"normal\" tts:textAlign=\"left\" tts:textDecoration=\"none\"/>\n        </styling>\n    </head>\n    <body id=\"thebody\">\n        <div style=\"defaultCaption\" xml:lang=\"en\">\n            <p begin=\"00:00:00.62\" end=\"00:00:04.67\">To find the source of success we started\n                <br/>at work we asked people to identify who\n            </p>\n            <p begin=\"00:00:04.68\" end=\"00:00:09.09\">they thought were the most effective\n                <br/>colleagues in fact over the past 25 years\n            </p>\n            <p begin=\"00:00:09.10\" end=\"00:00:13.07\">we've asked over 20000 people to identify\n                <br/>the individuals and their organizations\n            </p>\n            <p begin=\"00:00:13.08\" end=\"00:00:14.41\">who could really get things done.</p>\n        </div>\n    </body>\n</tt>"
+              "$ref": "#/definitions/tt"
             },
             "headers": {
               "Access-Control-Allow-Credentials": {
@@ -6284,6 +6281,7 @@
             "required": true,
             "description": "",
             "schema": {
+              "example": "{\n    \"title\" : \"Gathering Leaves by Robert Frost\",\n    \"externalId\" : \"A12345\n}",
               "type": "string"
             }
           },
@@ -6461,6 +6459,7 @@
             "required": true,
             "description": "",
             "schema": {
+              "example": "Key config.",
               "type": "string"
             }
           },
@@ -6924,6 +6923,7 @@
             "required": true,
             "description": "",
             "schema": {
+              "example": "Key config.",
               "type": "string"
             }
           }
@@ -6969,6 +6969,7 @@
             "required": true,
             "description": "",
             "schema": {
+              "example": "Key config.",
               "type": "string"
             }
           }
@@ -18379,6 +18380,274 @@
       },
       "required": [
         "words"
+      ]
+    },
+    "tt": {
+      "title": "tt",
+      "xml": {
+        "name": "tt",
+        "namespace": "http://www.w3.org/2006/04/ttaf1",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "head": {
+          "$ref": "#/definitions/head"
+        },
+        "body": {
+          "$ref": "#/definitions/body"
+        }
+      },
+      "required": [
+        "head",
+        "body"
+      ]
+    },
+    "head": {
+      "title": "head",
+      "xml": {
+        "name": "head",
+        "namespace": "http://www.w3.org/2006/04/ttaf1",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "styling": {
+          "$ref": "#/definitions/styling"
+        }
+      },
+      "required": [
+        "styling"
+      ]
+    },
+    "styling": {
+      "title": "styling",
+      "xml": {
+        "name": "styling",
+        "namespace": "http://www.w3.org/2006/04/ttaf1",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "style": {
+          "$ref": "#/definitions/style"
+        }
+      },
+      "required": [
+        "style"
+      ]
+    },
+    "style": {
+      "title": "style",
+      "xml": {
+        "name": "style",
+        "namespace": "http://www.w3.org/2006/04/ttaf1",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "xml": {
+            "name": "id",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "{http://www.w3.org/2006/04/ttaf1#styling}backgroundColor": {
+          "xml": {
+            "name": "backgroundColor",
+            "prefix": "tts",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "{http://www.w3.org/2006/04/ttaf1#styling}color": {
+          "xml": {
+            "name": "color",
+            "prefix": "tts",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "{http://www.w3.org/2006/04/ttaf1#styling}fontFamily": {
+          "xml": {
+            "name": "fontFamily",
+            "prefix": "tts",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "{http://www.w3.org/2006/04/ttaf1#styling}fontSize": {
+          "xml": {
+            "name": "fontSize",
+            "prefix": "tts",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "{http://www.w3.org/2006/04/ttaf1#styling}fontStyle": {
+          "xml": {
+            "name": "fontStyle",
+            "prefix": "tts",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "{http://www.w3.org/2006/04/ttaf1#styling}fontWeight": {
+          "xml": {
+            "name": "fontWeight",
+            "prefix": "tts",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "{http://www.w3.org/2006/04/ttaf1#styling}textAlign": {
+          "xml": {
+            "name": "textAlign",
+            "prefix": "tts",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "{http://www.w3.org/2006/04/ttaf1#styling}textDecoration": {
+          "xml": {
+            "name": "textDecoration",
+            "prefix": "tts",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "{http://www.w3.org/2006/04/ttaf1#styling}backgroundColor",
+        "{http://www.w3.org/2006/04/ttaf1#styling}color",
+        "{http://www.w3.org/2006/04/ttaf1#styling}fontFamily",
+        "{http://www.w3.org/2006/04/ttaf1#styling}fontSize",
+        "{http://www.w3.org/2006/04/ttaf1#styling}fontStyle",
+        "{http://www.w3.org/2006/04/ttaf1#styling}fontWeight",
+        "{http://www.w3.org/2006/04/ttaf1#styling}textAlign",
+        "{http://www.w3.org/2006/04/ttaf1#styling}textDecoration"
+      ]
+    },
+    "body": {
+      "title": "body",
+      "xml": {
+        "name": "body",
+        "namespace": "http://www.w3.org/2006/04/ttaf1",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "xml": {
+            "name": "id",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "div": {
+          "$ref": "#/definitions/div"
+        }
+      },
+      "required": [
+        "id",
+        "div"
+      ]
+    },
+    "div": {
+      "title": "div",
+      "xml": {
+        "name": "div",
+        "namespace": "http://www.w3.org/2006/04/ttaf1",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "style": {
+          "xml": {
+            "name": "style",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "lang": {
+          "xml": {
+            "name": "lang",
+            "prefix": "xml",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "p": {
+          "xml": {
+            "namespace": "http://www.w3.org/2006/04/ttaf1",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/p"
+          }
+        }
+      },
+      "required": [
+        "style",
+        "lang",
+        "p"
+      ]
+    },
+    "p": {
+      "title": "p",
+      "xml": {
+        "name": "p",
+        "namespace": "http://www.w3.org/2006/04/ttaf1",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "begin": {
+          "xml": {
+            "name": "begin",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "xml": {
+            "name": "end",
+            "attribute": true,
+            "wrapped": false
+          },
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "begin",
+        "end"
       ]
     },
     "RedactedMediaStream": {
