@@ -18644,11 +18644,7 @@
           "type": "string",
           "format": "date-time"
         }
-      },
-      "required": [
-        "begin",
-        "end"
-      ]
+      }
     },
     "RedactedMediaStream": {
       "title": "RedactedMediaStream",
