@@ -6040,6 +6040,9 @@
             "schema": {
               "$ref": "#/definitions/tt"
             },
+            "examples": {
+              "application/ttml+xml;charset=UTF-8": "<tt>\r\n  <head>\r\n    <styling>\r\n      <style id=\"defaultCaption\" tts:backgroundColor=\"black\" tts:color=\"white\" tts:fontFamily=\"SansSerif\" tts:fontSize=\"12\" tts:fontStyle=\"normal\" tts:fontWeight=\"normal\" tts:textAlign=\"left\" tts:textDecoration=\"none\" xmlns:tts=\"http://www.w3.org/2006/04/ttaf1\" />\r\n    </styling>\r\n  </head>\r\n  <body id=\"thebody\">\r\n    <div style=\"defaultCaption\" xml:lang=\"en\">\r\n      <p begin=\"00:00:00.62\" end=\"00:00:04.67\" />\r\n      <p begin=\"00:00:04.68\" end=\"00:00:09.09\" />\r\n      <p begin=\"00:00:09.10\" end=\"00:00:13.07\" />\r\n      <p begin=\"00:00:13.08\" end=\"00:00:14.41\" />\r\n    </div>\r\n  </body>\r\n</tt>"
+            },
             "headers": {
               "Access-Control-Allow-Credentials": {
                 "type": "string",
@@ -18632,8 +18635,7 @@
             "attribute": true,
             "wrapped": false
           },
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "end": {
           "xml": {
@@ -18641,8 +18643,7 @@
             "attribute": true,
             "wrapped": false
           },
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         }
       }
     },
