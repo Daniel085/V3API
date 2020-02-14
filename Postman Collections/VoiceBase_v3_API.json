@@ -32,7 +32,7 @@
           "application/json;charset=UTF-8"
         ],
         "consumes": [
-          "application/x-www-form-urlencoded"
+          "multipart/form-data"
         ],
         "parameters": [
           {
@@ -6256,6 +6256,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Authorization",
@@ -6433,6 +6436,9 @@
         "deprecated": false,
         "produces": [
           "application/json;charset=UTF-8"
+        ],
+        "consumes": [
+          "application/json"
         ],
         "parameters": [
           {
@@ -6656,6 +6662,9 @@
         "deprecated": false,
         "produces": [
           "application/json;charset=UTF-8"
+        ],
+        "consumes": [
+          "application/json"
         ],
         "parameters": [
           {
