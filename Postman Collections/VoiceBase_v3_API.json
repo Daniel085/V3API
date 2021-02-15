@@ -29,7 +29,8 @@
         "operationId": "/media-Uploadamediafilefortranscription",
         "deprecated": false,
         "produces": [
-          "application/json;charset=UTF-8"
+          "application/json;charset=UTF-8",
+          "application/json"
         ],
         "consumes": [
           "multipart/form-data"
@@ -59,7 +60,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/ExamplewithMultipleCallbackTypes"
             },
@@ -83,6 +84,26 @@
                 "metadata": {},
                 "mediaContentType": "audio/x-aiff",
                 "length": 14965
+              },
+              "application/json": {
+                "_links": {
+                  "self": {
+                    "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6"
+                  },
+                  "progress": {
+                    "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/progress"
+                  },
+                  "metadata": {
+                    "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/metadata"
+                  }
+                },
+                "formatVersion": "3.0.1",
+                "mediaId": "0b9d9c4b-c127-4b84-a00c-9202bc097ae6",
+                "status": "accepted",
+                "dateCreated": "2017-09-08T22:52:05.147Z",
+                "metadata": {},
+                "mediaContentType": "video/quicktime",
+                "length": 46608
               }
             },
             "headers": {
@@ -133,16 +154,64 @@
               "X-Trace-ID": {
                 "type": "string",
                 "default": "9D82C4D6%3AEA6B_0A40E1F1%3A01BB_59E12683_E292B%3A1DE6"
+              },
+              "access-control-allow-credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "access-control-allow-headers": {
+                "type": "string",
+                "default": "accept, authorization, content-type"
+              },
+              "access-control-allow-methods": {
+                "type": "string",
+                "default": "DELETE, GET, HEAD, OPTIONS, POST, PUT"
+              },
+              "access-control-allow-origin": {
+                "type": "string",
+                "default": "*"
+              },
+              "content-type": {
+                "type": "string",
+                "default": "application/json;charset=UTF-8"
+              },
+              "date": {
+                "type": "string",
+                "default": "Wed, 11 Oct 2017 22:38:16 GMT"
+              },
+              "server": {
+                "type": "string",
+                "default": "Apache"
+              },
+              "strict-transport-security": {
+                "type": "string",
+                "default": "max-age=31536000; includeSubDomains"
+              },
+              "transfer-encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "x-application-context": {
+                "type": "string",
+                "default": "application"
+              },
+              "x-frame-options": {
+                "type": "string",
+                "default": "SAMEORIGIN"
+              },
+              "x-trace-id": {
+                "type": "string",
+                "default": "49CA4433%3ACBDB_0A40E1F1%3A01BB_59DE9D51_7A8B80%3A6B2D"
               }
             }
           },
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/BadMediaIDSubmitted"
+              "$ref": "#/definitions/NoMediaUploaded1"
             },
             "examples": {
-              "application/json": {
+              "application/json;charset=UTF-8": {
                 "status": 400,
                 "errors": [
                   {
@@ -151,6 +220,56 @@
                   }
                 ],
                 "reference": "9D82C4D6:E8FE_0A40E32A:01BB_59A6F8FE_1E772C:2C17"
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "accept, authorization, content-type"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "DELETE, GET, HEAD, OPTIONS, POST, PUT"
+              },
+              "Access-Control-Allow-Origin": {
+                "type": "string",
+                "default": "*"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Wed, 30 Aug 2017 17:42:22 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "Apache"
+              },
+              "Set-Cookie": {
+                "type": "string",
+                "default": "SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; Secure"
+              },
+              "Strict-Transport-Security": {
+                "type": "string",
+                "default": "max-age=31536000; includeSubDomains"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "X-Application-Context": {
+                "type": "string",
+                "default": "application"
+              },
+              "X-Frame-Options": {
+                "type": "string",
+                "default": "SAMEORIGIN"
+              },
+              "X-Trace-ID": {
+                "type": "string",
+                "default": "9D82C4D6%3AE8FE_0A40E32A%3A01BB_59A6F8FE_1E772C%3A2C17"
               }
             }
           }
@@ -194,7 +313,8 @@
         "operationId": "/media/{{mediaId}}",
         "deprecated": false,
         "produces": [
-          "application/json"
+          "application/json",
+          "application/json;charset=UTF-8"
         ],
         "parameters": [
           {
@@ -221,7 +341,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/Retrievetranscript%28KeywordsandTopicsEnabled%29"
             },
@@ -5238,6 +5358,423 @@
                     }
                   ]
                 }
+              },
+              "application/json;charset=UTF-8": {
+                "_links": {
+                  "self": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179"
+                  },
+                  "progress": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/progress"
+                  },
+                  "metadata": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/metadata"
+                  },
+                  "transcript": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript"
+                  },
+                  "text": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/text"
+                  },
+                  "srt": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/srt"
+                  },
+                  "dfxp": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/dfxp"
+                  },
+                  "webvtt": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/webvtt"
+                  },
+                  "streams": {
+                    "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/streams"
+                  }
+                },
+                "formatVersion": "3.0.1",
+                "mediaId": "00251dbe-c769-4a9f-bb87-b3aeb0745179",
+                "status": "finished",
+                "dateCreated": "2017-10-12T22:16:13.98Z",
+                "metadata": {},
+                "mediaContentType": "audio/x-aiff",
+                "length": 14965,
+                "transcript": {
+                  "confidence": 0.13038286891052212,
+                  "words": [
+                    {
+                      "p": 0,
+                      "c": 0.972,
+                      "s": 620,
+                      "e": 750,
+                      "w": "To"
+                    },
+                    {
+                      "p": 1,
+                      "c": 0.964,
+                      "s": 760,
+                      "e": 1020,
+                      "w": "find"
+                    },
+                    {
+                      "p": 2,
+                      "c": 0.901,
+                      "s": 1030,
+                      "e": 1080,
+                      "w": "the"
+                    },
+                    {
+                      "p": 3,
+                      "c": 0.692,
+                      "s": 1090,
+                      "e": 1390,
+                      "w": "source"
+                    },
+                    {
+                      "p": 4,
+                      "c": 0.962,
+                      "s": 1400,
+                      "e": 1470,
+                      "w": "of"
+                    },
+                    {
+                      "p": 5,
+                      "c": 0.882,
+                      "s": 1480,
+                      "e": 2000,
+                      "w": "success"
+                    },
+                    {
+                      "p": 6,
+                      "c": 0.974,
+                      "s": 2010,
+                      "e": 2150,
+                      "w": "we"
+                    },
+                    {
+                      "p": 7,
+                      "c": 0.972,
+                      "s": 2159,
+                      "e": 2469,
+                      "w": "started"
+                    },
+                    {
+                      "p": 8,
+                      "c": 0.303,
+                      "s": 2479,
+                      "e": 2600,
+                      "w": "that"
+                    },
+                    {
+                      "p": 9,
+                      "c": 0.885,
+                      "s": 2610,
+                      "e": 2969,
+                      "w": "work"
+                    },
+                    {
+                      "p": 10,
+                      "c": 0.27,
+                      "s": 3180,
+                      "e": 3310,
+                      "w": "we"
+                    },
+                    {
+                      "p": 11,
+                      "c": 0.896,
+                      "s": 3320,
+                      "e": 3539,
+                      "w": "asked"
+                    },
+                    {
+                      "p": 12,
+                      "c": 0.9,
+                      "s": 3550,
+                      "e": 3820,
+                      "w": "people"
+                    },
+                    {
+                      "p": 13,
+                      "c": 0.951,
+                      "s": 3830,
+                      "e": 3969,
+                      "w": "to"
+                    },
+                    {
+                      "p": 14,
+                      "c": 0.773,
+                      "s": 3979,
+                      "e": 4520,
+                      "w": "identify"
+                    },
+                    {
+                      "p": 15,
+                      "c": 0.955,
+                      "s": 4530,
+                      "e": 4670,
+                      "w": "who"
+                    },
+                    {
+                      "p": 16,
+                      "c": 0.929,
+                      "s": 4679,
+                      "e": 4790,
+                      "w": "they"
+                    },
+                    {
+                      "p": 17,
+                      "c": 0.863,
+                      "s": 4800,
+                      "e": 5110,
+                      "w": "thought"
+                    },
+                    {
+                      "p": 18,
+                      "c": 0.954,
+                      "s": 5119,
+                      "e": 5220,
+                      "w": "were"
+                    },
+                    {
+                      "p": 19,
+                      "c": 0.737,
+                      "s": 5230,
+                      "e": 5300,
+                      "w": "the"
+                    },
+                    {
+                      "p": 20,
+                      "c": 0.869,
+                      "s": 5310,
+                      "e": 5570,
+                      "w": "most"
+                    },
+                    {
+                      "p": 21,
+                      "c": 0.701,
+                      "s": 5580,
+                      "e": 6020,
+                      "w": "effective"
+                    },
+                    {
+                      "p": 22,
+                      "c": 0.976,
+                      "s": 6030,
+                      "e": 6560,
+                      "w": "colleagues"
+                    },
+                    {
+                      "p": 23,
+                      "c": 0.941,
+                      "s": 6570,
+                      "e": 6679,
+                      "w": "in"
+                    },
+                    {
+                      "p": 24,
+                      "c": 0.937,
+                      "s": 6690,
+                      "e": 7159,
+                      "w": "fact"
+                    },
+                    {
+                      "p": 25,
+                      "c": 0.313,
+                      "s": 7750,
+                      "e": 7940,
+                      "w": "over"
+                    },
+                    {
+                      "p": 26,
+                      "c": 0.833,
+                      "s": 7949,
+                      "e": 8009,
+                      "w": "the"
+                    },
+                    {
+                      "p": 27,
+                      "c": 0.718,
+                      "s": 8020,
+                      "e": 8290,
+                      "w": "past"
+                    },
+                    {
+                      "p": 28,
+                      "c": 0.95,
+                      "s": 8300,
+                      "e": 8790,
+                      "w": "25"
+                    },
+                    {
+                      "p": 29,
+                      "c": 0.912,
+                      "s": 8800,
+                      "e": 9090,
+                      "w": "years"
+                    },
+                    {
+                      "p": 30,
+                      "c": 0.575,
+                      "s": 9100,
+                      "e": 9280,
+                      "w": "we've"
+                    },
+                    {
+                      "p": 31,
+                      "c": 0.909,
+                      "s": 9290,
+                      "e": 9550,
+                      "w": "asked"
+                    },
+                    {
+                      "p": 32,
+                      "c": 0.97,
+                      "s": 9560,
+                      "e": 9769,
+                      "w": "over"
+                    },
+                    {
+                      "p": 33,
+                      "c": 0.95,
+                      "s": 9780,
+                      "e": 10390,
+                      "w": "201000"
+                    },
+                    {
+                      "p": 34,
+                      "c": 0.947,
+                      "s": 10399,
+                      "e": 10689,
+                      "w": "people"
+                    },
+                    {
+                      "p": 35,
+                      "c": 0.61,
+                      "s": 10700,
+                      "e": 10820,
+                      "w": "to"
+                    },
+                    {
+                      "p": 36,
+                      "c": 0.955,
+                      "s": 10830,
+                      "e": 11300,
+                      "w": "identify"
+                    },
+                    {
+                      "p": 37,
+                      "c": 0.95,
+                      "s": 11309,
+                      "e": 11420,
+                      "w": "the"
+                    },
+                    {
+                      "p": 38,
+                      "c": 0.968,
+                      "s": 11430,
+                      "e": 12019,
+                      "w": "individuals"
+                    },
+                    {
+                      "p": 39,
+                      "c": 0.929,
+                      "s": 12030,
+                      "e": 12140,
+                      "w": "and"
+                    },
+                    {
+                      "p": 40,
+                      "c": 0.63,
+                      "s": 12149,
+                      "e": 12269,
+                      "w": "their"
+                    },
+                    {
+                      "p": 41,
+                      "c": 0.967,
+                      "s": 12280,
+                      "e": 13070,
+                      "w": "organizations"
+                    },
+                    {
+                      "p": 42,
+                      "c": 0.764,
+                      "s": 13080,
+                      "e": 13229,
+                      "w": "who"
+                    },
+                    {
+                      "p": 43,
+                      "c": 0.952,
+                      "s": 13240,
+                      "e": 13399,
+                      "w": "could"
+                    },
+                    {
+                      "p": 44,
+                      "c": 0.917,
+                      "s": 13410,
+                      "e": 13649,
+                      "w": "really"
+                    },
+                    {
+                      "p": 45,
+                      "c": 0.958,
+                      "s": 13660,
+                      "e": 13870,
+                      "w": "get"
+                    },
+                    {
+                      "p": 46,
+                      "c": 0.766,
+                      "s": 13880,
+                      "e": 14130,
+                      "w": "things"
+                    },
+                    {
+                      "p": 47,
+                      "c": 0.917,
+                      "s": 14139,
+                      "e": 14410,
+                      "w": "done"
+                    },
+                    {
+                      "p": 48,
+                      "c": 0.0,
+                      "s": 14410,
+                      "e": 14410,
+                      "m": "punc",
+                      "w": "."
+                    }
+                  ],
+                  "alternateFormats": [
+                    {
+                      "format": "dfxp",
+                      "contentType": "application/ttaf+xml",
+                      "contentEncoding": "Base64",
+                      "charset": "utf-8",
+                      "data": "PHR0IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDA2LzA0L3R0YWYxIiB4bWxuczp0dHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDYvMDQvdHRhZjEjc3R5bGluZyI+PGhlYWQ+PHN0eWxpbmc+PHN0eWxlIGlkPSJkZWZhdWx0Q2FwdGlvbiIgdHRzOmJhY2tncm91bmRDb2xvcj0iYmxhY2siIHR0czpjb2xvcj0id2hpdGUiIHR0czpmb250RmFtaWx5PSJTYW5zU2VyaWYiIHR0czpmb250U2l6ZT0iMTIiIHR0czpmb250U3R5bGU9Im5vcm1hbCIgdHRzOmZvbnRXZWlnaHQ9Im5vcm1hbCIgdHRzOnRleHRBbGlnbj0ibGVmdCIgdHRzOnRleHREZWNvcmF0aW9uPSJub25lIi8+PC9zdHlsaW5nPjwvaGVhZD48Ym9keSBpZD0idGhlYm9keSI+PGRpdiBzdHlsZT0iZGVmYXVsdENhcHRpb24iIHhtbDpsYW5nPSJlbiI+PHAgYmVnaW49IjAwOjAwOjAwLjYyIiBlbmQ9IjAwOjAwOjA0LjY3Ij5UbyBmaW5kIHRoZSBzb3VyY2Ugb2Ygc3VjY2VzcyB3ZSBzdGFydGVkPGJyLz50aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobzwvcD48cCBiZWdpbj0iMDA6MDA6MDQuNjgiIGVuZD0iMDA6MDA6MDkuMDkiPnRoZXkgdGhvdWdodCB3ZXJlIHRoZSBtb3N0IGVmZmVjdGl2ZTxici8+Y29sbGVhZ3VlcyBpbiBmYWN0IG92ZXIgdGhlIHBhc3QgMjUgeWVhcnM8L3A+PHAgYmVnaW49IjAwOjAwOjA5LjEwIiBlbmQ9IjAwOjAwOjEzLjA3Ij53ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnk8YnIvPnRoZSBpbmRpdmlkdWFscyBhbmQgdGhlaXIgb3JnYW5pemF0aW9uczwvcD48cCBiZWdpbj0iMDA6MDA6MTMuMDgiIGVuZD0iMDA6MDA6MTQuNDEiPndobyBjb3VsZCByZWFsbHkgZ2V0IHRoaW5ncyBkb25lLjwvcD48L2Rpdj48L2JvZHk+PC90dD4="
+                    },
+                    {
+                      "format": "webvtt",
+                      "contentType": "text/vtt",
+                      "contentEncoding": "Base64",
+                      "charset": "utf-8",
+                      "data": "V0VCVlRUCgoxCjAwOjAwOjAwLjYyMCAtLT4gMDA6MDA6MDQuNjcwClRvIGZpbmQgdGhlIHNvdXJjZSBvZiBzdWNjZXNzIHdlIHN0YXJ0ZWQKdGhhdCB3b3JrIHdlIGFza2VkIHBlb3BsZSB0byBpZGVudGlmeSB3aG8KCjIKMDA6MDA6MDQuNjc5IC0tPiAwMDowMDowOS4wOTAKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LjEwMCAtLT4gMDA6MDA6MTMuMDcwCndlJ3ZlIGFza2VkIG92ZXIgMjAxMDAwIHBlb3BsZSB0byBpZGVudGlmeQp0aGUgaW5kaXZpZHVhbHMgYW5kIHRoZWlyIG9yZ2FuaXphdGlvbnMKCjQKMDA6MDA6MTMuMDgwIC0tPiAwMDowMDoxNC40MTAKd2hvIGNvdWxkIHJlYWxseSBnZXQgdGhpbmdzIGRvbmUuCgo="
+                    },
+                    {
+                      "format": "srt",
+                      "contentType": "text/srt",
+                      "contentEncoding": "Base64",
+                      "charset": "utf-8",
+                      "data": "MQowMDowMDowMCw2MiAtLT4gMDA6MDA6MDQsNjcKVG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZAp0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobwoKMgowMDowMDowNCw2OCAtLT4gMDA6MDA6MDksMDkKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LDEwIC0tPiAwMDowMDoxMywwNwp3ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnkKdGhlIGluZGl2aWR1YWxzIGFuZCB0aGVpciBvcmdhbml6YXRpb25zCgo0CjAwOjAwOjEzLDA4IC0tPiAwMDowMDoxNCw0MQp3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4KCg=="
+                    },
+                    {
+                      "format": "text",
+                      "contentType": "text/plain",
+                      "contentEncoding": "Base64",
+                      "charset": "utf-8",
+                      "data": "VG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZCB0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobyB0aGV5IHRob3VnaHQgd2VyZSB0aGUgbW9zdCBlZmZlY3RpdmUgY29sbGVhZ3VlcyBpbiBmYWN0IG92ZXIgdGhlIHBhc3QgMjUgeWVhcnMgd2UndmUgYXNrZWQgb3ZlciAyMDEwMDAgcGVvcGxlIHRvIGlkZW50aWZ5IHRoZSBpbmRpdmlkdWFscyBhbmQgdGhlaXIgb3JnYW5pemF0aW9ucyB3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4="
+                    }
+                  ]
+                }
               }
             },
             "headers": {
@@ -5292,6 +5829,58 @@
               "x-trace-id": {
                 "type": "string",
                 "default": "49CA4433%3ACBF0_0A40E1F1%3A01BB_59DE9D9F_7A8FF2%3A6B2D"
+              },
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "accept, authorization, content-type"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "DELETE, GET, HEAD, OPTIONS, POST, PUT"
+              },
+              "Access-Control-Allow-Origin": {
+                "type": "string",
+                "default": "*"
+              },
+              "Cache-control": {
+                "type": "string",
+                "default": "private"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Thu, 12 Oct 2017 23:25:18 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "Apache"
+              },
+              "Set-Cookie": {
+                "type": "string",
+                "default": "SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; Secure"
+              },
+              "Strict-Transport-Security": {
+                "type": "string",
+                "default": "max-age=31536000; includeSubDomains"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "X-Application-Context": {
+                "type": "string",
+                "default": "application"
+              },
+              "X-Frame-Options": {
+                "type": "string",
+                "default": "SAMEORIGIN"
+              },
+              "X-Trace-ID": {
+                "type": "string",
+                "default": "9D82C4D6%3AAD4C_0A40E1F1%3A01BB_59DFF9DE_8D8EB2%3A6B2D"
               }
             }
           }
@@ -5362,7 +5951,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/GetMediaProgressExample"
             },
@@ -5589,8 +6178,76 @@
           }
         ],
         "responses": {
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/BadMediaIDSubmitted1"
+            },
+            "examples": {
+              "application/json;charset=UTF-8": {
+                "status": 404,
+                "errors": [
+                  {
+                    "code": 10205,
+                    "error": "Requested resource not found"
+                  }
+                ],
+                "reference": "9D82C4D6:A5E3_0A40E32A:01BB_59DFF26F_A0DF18:2916"
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "accept, authorization, content-type"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "DELETE, GET, HEAD, OPTIONS, POST, PUT"
+              },
+              "Access-Control-Allow-Origin": {
+                "type": "string",
+                "default": "*"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Thu, 12 Oct 2017 22:53:34 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "Apache"
+              },
+              "Set-Cookie": {
+                "type": "string",
+                "default": "SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; Secure"
+              },
+              "Strict-Transport-Security": {
+                "type": "string",
+                "default": "max-age=31536000; includeSubDomains"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "X-Application-Context": {
+                "type": "string",
+                "default": "application"
+              },
+              "X-Frame-Options": {
+                "type": "string",
+                "default": "SAMEORIGIN"
+              },
+              "X-Trace-ID": {
+                "type": "string",
+                "default": "9D82C4D6%3AA5E3_0A40E32A%3A01BB_59DFF26F_A0DF18%3A2916"
+              }
+            }
+          },
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/Retrievetranscript"
             },
@@ -5691,24 +6348,6 @@
                 "default": "41CB8407%3AF11C_0A40E32A%3A01BB_59B9CF5D_1C524B%3A7A7B"
               }
             }
-          },
-          "404": {
-            "description": "Not Found",
-            "schema": {
-              "$ref": "#/definitions/BadMediaIDSubmitted"
-            },
-            "examples": {
-              "application/json": {
-                "status": 404,
-                "errors": [
-                  {
-                    "code": 10205,
-                    "error": "Requested resource not found"
-                  }
-                ],
-                "reference": "9D82C4D6:A5E3_0A40E32A:01BB_59DFF26F_A0DF18:2916"
-              }
-            }
           }
         }
       }
@@ -5743,7 +6382,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "type": "string"
             },
@@ -5846,7 +6485,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "type": "string"
             },
@@ -5941,7 +6580,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "type": "string"
             },
@@ -6036,7 +6675,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/tt"
             },
@@ -6131,7 +6770,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/RedactedMediaStream"
             },
@@ -6482,7 +7121,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/Createacustomvocabularylist%3A%22earningsCalls%22"
             },
@@ -6707,7 +7346,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/Createorupdatekeywordspottinggroup"
             },
@@ -7283,6 +7922,67 @@
         "href"
       ]
     },
+    "PCIRedaction": {
+      "title": "PCIRedaction",
+      "example": {
+        "_links": {
+          "self": {
+            "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6"
+          },
+          "progress": {
+            "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/progress"
+          },
+          "metadata": {
+            "href": "/v3/media/0b9d9c4b-c127-4b84-a00c-9202bc097ae6/metadata"
+          }
+        },
+        "formatVersion": "3.0.1",
+        "mediaId": "0b9d9c4b-c127-4b84-a00c-9202bc097ae6",
+        "status": "accepted",
+        "dateCreated": "2017-09-08T22:52:05.147Z",
+        "metadata": {},
+        "mediaContentType": "video/quicktime",
+        "length": 46608
+      },
+      "type": "object",
+      "properties": {
+        "_links": {
+          "$ref": "#/definitions/Links"
+        },
+        "formatVersion": {
+          "type": "string"
+        },
+        "mediaId": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "dateCreated": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "mediaContentType": {
+          "type": "string"
+        },
+        "length": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "_links",
+        "formatVersion",
+        "mediaId",
+        "status",
+        "dateCreated",
+        "metadata",
+        "mediaContentType",
+        "length"
+      ]
+    },
     "Error": {
       "title": "Error",
       "example": {
@@ -7302,6 +8002,60 @@
       "required": [
         "code",
         "error"
+      ]
+    },
+    "NoMediaUploaded1": {
+      "title": "NoMediaUploaded1",
+      "example": {
+        "status": 400,
+        "errors": [
+          {
+            "code": 10202,
+            "error": "The request included neither a media attachment nor a mediaUrl.  One of these two is required for us to process your request."
+          }
+        ],
+        "reference": "9D82C4D6:E8FE_0A40E32A:01BB_59A6F8FE_1E772C:2C17"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Error"
+          }
+        },
+        "reference": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "errors",
+        "reference"
+      ]
+    },
+    "Metadata4": {
+      "title": "Metadata4",
+      "example": {
+        "title": "Gathering Leaves by Robert Frost",
+        "externalId": "A12345"
+      },
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "externalId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "externalId"
       ]
     },
     "Retrievetranscript(KeywordsandTopicsEnabled)": {
@@ -12322,7 +13076,7 @@
       "type": "object",
       "properties": {
         "_links": {
-          "$ref": "#/definitions/Links1"
+          "$ref": "#/definitions/Links6"
         },
         "formatVersion": {
           "type": "string"
@@ -12366,8 +13120,8 @@
         "transcript"
       ]
     },
-    "Links1": {
-      "title": "Links1",
+    "Links6": {
+      "title": "Links6",
       "example": {
         "self": {
           "href": "/v3/media/ecccf6fd-0f8e-4c71-b8a5-916ae9c7fe31"
@@ -17861,6 +18615,837 @@
         "data"
       ]
     },
+    "Transcript&AnalyticResultsw/MultipleAlternateFormats": {
+      "title": "Transcript&AnalyticResultsw/MultipleAlternateFormats",
+      "example": {
+        "_links": {
+          "self": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179"
+          },
+          "progress": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/progress"
+          },
+          "metadata": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/metadata"
+          },
+          "transcript": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript"
+          },
+          "text": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/text"
+          },
+          "srt": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/srt"
+          },
+          "dfxp": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/dfxp"
+          },
+          "webvtt": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/transcript/webvtt"
+          },
+          "streams": {
+            "href": "/v3/media/00251dbe-c769-4a9f-bb87-b3aeb0745179/streams"
+          }
+        },
+        "formatVersion": "3.0.1",
+        "mediaId": "00251dbe-c769-4a9f-bb87-b3aeb0745179",
+        "status": "finished",
+        "dateCreated": "2017-10-12T22:16:13.98Z",
+        "metadata": {},
+        "mediaContentType": "audio/x-aiff",
+        "length": 14965,
+        "transcript": {
+          "confidence": 0.13038286891052212,
+          "words": [
+            {
+              "p": 0,
+              "c": 0.972,
+              "s": 620,
+              "e": 750,
+              "w": "To"
+            },
+            {
+              "p": 1,
+              "c": 0.964,
+              "s": 760,
+              "e": 1020,
+              "w": "find"
+            },
+            {
+              "p": 2,
+              "c": 0.901,
+              "s": 1030,
+              "e": 1080,
+              "w": "the"
+            },
+            {
+              "p": 3,
+              "c": 0.692,
+              "s": 1090,
+              "e": 1390,
+              "w": "source"
+            },
+            {
+              "p": 4,
+              "c": 0.962,
+              "s": 1400,
+              "e": 1470,
+              "w": "of"
+            },
+            {
+              "p": 5,
+              "c": 0.882,
+              "s": 1480,
+              "e": 2000,
+              "w": "success"
+            },
+            {
+              "p": 6,
+              "c": 0.974,
+              "s": 2010,
+              "e": 2150,
+              "w": "we"
+            },
+            {
+              "p": 7,
+              "c": 0.972,
+              "s": 2159,
+              "e": 2469,
+              "w": "started"
+            },
+            {
+              "p": 8,
+              "c": 0.303,
+              "s": 2479,
+              "e": 2600,
+              "w": "that"
+            },
+            {
+              "p": 9,
+              "c": 0.885,
+              "s": 2610,
+              "e": 2969,
+              "w": "work"
+            },
+            {
+              "p": 10,
+              "c": 0.27,
+              "s": 3180,
+              "e": 3310,
+              "w": "we"
+            },
+            {
+              "p": 11,
+              "c": 0.896,
+              "s": 3320,
+              "e": 3539,
+              "w": "asked"
+            },
+            {
+              "p": 12,
+              "c": 0.9,
+              "s": 3550,
+              "e": 3820,
+              "w": "people"
+            },
+            {
+              "p": 13,
+              "c": 0.951,
+              "s": 3830,
+              "e": 3969,
+              "w": "to"
+            },
+            {
+              "p": 14,
+              "c": 0.773,
+              "s": 3979,
+              "e": 4520,
+              "w": "identify"
+            },
+            {
+              "p": 15,
+              "c": 0.955,
+              "s": 4530,
+              "e": 4670,
+              "w": "who"
+            },
+            {
+              "p": 16,
+              "c": 0.929,
+              "s": 4679,
+              "e": 4790,
+              "w": "they"
+            },
+            {
+              "p": 17,
+              "c": 0.863,
+              "s": 4800,
+              "e": 5110,
+              "w": "thought"
+            },
+            {
+              "p": 18,
+              "c": 0.954,
+              "s": 5119,
+              "e": 5220,
+              "w": "were"
+            },
+            {
+              "p": 19,
+              "c": 0.737,
+              "s": 5230,
+              "e": 5300,
+              "w": "the"
+            },
+            {
+              "p": 20,
+              "c": 0.869,
+              "s": 5310,
+              "e": 5570,
+              "w": "most"
+            },
+            {
+              "p": 21,
+              "c": 0.701,
+              "s": 5580,
+              "e": 6020,
+              "w": "effective"
+            },
+            {
+              "p": 22,
+              "c": 0.976,
+              "s": 6030,
+              "e": 6560,
+              "w": "colleagues"
+            },
+            {
+              "p": 23,
+              "c": 0.941,
+              "s": 6570,
+              "e": 6679,
+              "w": "in"
+            },
+            {
+              "p": 24,
+              "c": 0.937,
+              "s": 6690,
+              "e": 7159,
+              "w": "fact"
+            },
+            {
+              "p": 25,
+              "c": 0.313,
+              "s": 7750,
+              "e": 7940,
+              "w": "over"
+            },
+            {
+              "p": 26,
+              "c": 0.833,
+              "s": 7949,
+              "e": 8009,
+              "w": "the"
+            },
+            {
+              "p": 27,
+              "c": 0.718,
+              "s": 8020,
+              "e": 8290,
+              "w": "past"
+            },
+            {
+              "p": 28,
+              "c": 0.95,
+              "s": 8300,
+              "e": 8790,
+              "w": "25"
+            },
+            {
+              "p": 29,
+              "c": 0.912,
+              "s": 8800,
+              "e": 9090,
+              "w": "years"
+            },
+            {
+              "p": 30,
+              "c": 0.575,
+              "s": 9100,
+              "e": 9280,
+              "w": "we've"
+            },
+            {
+              "p": 31,
+              "c": 0.909,
+              "s": 9290,
+              "e": 9550,
+              "w": "asked"
+            },
+            {
+              "p": 32,
+              "c": 0.97,
+              "s": 9560,
+              "e": 9769,
+              "w": "over"
+            },
+            {
+              "p": 33,
+              "c": 0.95,
+              "s": 9780,
+              "e": 10390,
+              "w": "201000"
+            },
+            {
+              "p": 34,
+              "c": 0.947,
+              "s": 10399,
+              "e": 10689,
+              "w": "people"
+            },
+            {
+              "p": 35,
+              "c": 0.61,
+              "s": 10700,
+              "e": 10820,
+              "w": "to"
+            },
+            {
+              "p": 36,
+              "c": 0.955,
+              "s": 10830,
+              "e": 11300,
+              "w": "identify"
+            },
+            {
+              "p": 37,
+              "c": 0.95,
+              "s": 11309,
+              "e": 11420,
+              "w": "the"
+            },
+            {
+              "p": 38,
+              "c": 0.968,
+              "s": 11430,
+              "e": 12019,
+              "w": "individuals"
+            },
+            {
+              "p": 39,
+              "c": 0.929,
+              "s": 12030,
+              "e": 12140,
+              "w": "and"
+            },
+            {
+              "p": 40,
+              "c": 0.63,
+              "s": 12149,
+              "e": 12269,
+              "w": "their"
+            },
+            {
+              "p": 41,
+              "c": 0.967,
+              "s": 12280,
+              "e": 13070,
+              "w": "organizations"
+            },
+            {
+              "p": 42,
+              "c": 0.764,
+              "s": 13080,
+              "e": 13229,
+              "w": "who"
+            },
+            {
+              "p": 43,
+              "c": 0.952,
+              "s": 13240,
+              "e": 13399,
+              "w": "could"
+            },
+            {
+              "p": 44,
+              "c": 0.917,
+              "s": 13410,
+              "e": 13649,
+              "w": "really"
+            },
+            {
+              "p": 45,
+              "c": 0.958,
+              "s": 13660,
+              "e": 13870,
+              "w": "get"
+            },
+            {
+              "p": 46,
+              "c": 0.766,
+              "s": 13880,
+              "e": 14130,
+              "w": "things"
+            },
+            {
+              "p": 47,
+              "c": 0.917,
+              "s": 14139,
+              "e": 14410,
+              "w": "done"
+            },
+            {
+              "p": 48,
+              "c": 0.0,
+              "s": 14410,
+              "e": 14410,
+              "m": "punc",
+              "w": "."
+            }
+          ],
+          "alternateFormats": [
+            {
+              "format": "dfxp",
+              "contentType": "application/ttaf+xml",
+              "contentEncoding": "Base64",
+              "charset": "utf-8",
+              "data": "PHR0IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDA2LzA0L3R0YWYxIiB4bWxuczp0dHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDYvMDQvdHRhZjEjc3R5bGluZyI+PGhlYWQ+PHN0eWxpbmc+PHN0eWxlIGlkPSJkZWZhdWx0Q2FwdGlvbiIgdHRzOmJhY2tncm91bmRDb2xvcj0iYmxhY2siIHR0czpjb2xvcj0id2hpdGUiIHR0czpmb250RmFtaWx5PSJTYW5zU2VyaWYiIHR0czpmb250U2l6ZT0iMTIiIHR0czpmb250U3R5bGU9Im5vcm1hbCIgdHRzOmZvbnRXZWlnaHQ9Im5vcm1hbCIgdHRzOnRleHRBbGlnbj0ibGVmdCIgdHRzOnRleHREZWNvcmF0aW9uPSJub25lIi8+PC9zdHlsaW5nPjwvaGVhZD48Ym9keSBpZD0idGhlYm9keSI+PGRpdiBzdHlsZT0iZGVmYXVsdENhcHRpb24iIHhtbDpsYW5nPSJlbiI+PHAgYmVnaW49IjAwOjAwOjAwLjYyIiBlbmQ9IjAwOjAwOjA0LjY3Ij5UbyBmaW5kIHRoZSBzb3VyY2Ugb2Ygc3VjY2VzcyB3ZSBzdGFydGVkPGJyLz50aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobzwvcD48cCBiZWdpbj0iMDA6MDA6MDQuNjgiIGVuZD0iMDA6MDA6MDkuMDkiPnRoZXkgdGhvdWdodCB3ZXJlIHRoZSBtb3N0IGVmZmVjdGl2ZTxici8+Y29sbGVhZ3VlcyBpbiBmYWN0IG92ZXIgdGhlIHBhc3QgMjUgeWVhcnM8L3A+PHAgYmVnaW49IjAwOjAwOjA5LjEwIiBlbmQ9IjAwOjAwOjEzLjA3Ij53ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnk8YnIvPnRoZSBpbmRpdmlkdWFscyBhbmQgdGhlaXIgb3JnYW5pemF0aW9uczwvcD48cCBiZWdpbj0iMDA6MDA6MTMuMDgiIGVuZD0iMDA6MDA6MTQuNDEiPndobyBjb3VsZCByZWFsbHkgZ2V0IHRoaW5ncyBkb25lLjwvcD48L2Rpdj48L2JvZHk+PC90dD4="
+            },
+            {
+              "format": "webvtt",
+              "contentType": "text/vtt",
+              "contentEncoding": "Base64",
+              "charset": "utf-8",
+              "data": "V0VCVlRUCgoxCjAwOjAwOjAwLjYyMCAtLT4gMDA6MDA6MDQuNjcwClRvIGZpbmQgdGhlIHNvdXJjZSBvZiBzdWNjZXNzIHdlIHN0YXJ0ZWQKdGhhdCB3b3JrIHdlIGFza2VkIHBlb3BsZSB0byBpZGVudGlmeSB3aG8KCjIKMDA6MDA6MDQuNjc5IC0tPiAwMDowMDowOS4wOTAKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LjEwMCAtLT4gMDA6MDA6MTMuMDcwCndlJ3ZlIGFza2VkIG92ZXIgMjAxMDAwIHBlb3BsZSB0byBpZGVudGlmeQp0aGUgaW5kaXZpZHVhbHMgYW5kIHRoZWlyIG9yZ2FuaXphdGlvbnMKCjQKMDA6MDA6MTMuMDgwIC0tPiAwMDowMDoxNC40MTAKd2hvIGNvdWxkIHJlYWxseSBnZXQgdGhpbmdzIGRvbmUuCgo="
+            },
+            {
+              "format": "srt",
+              "contentType": "text/srt",
+              "contentEncoding": "Base64",
+              "charset": "utf-8",
+              "data": "MQowMDowMDowMCw2MiAtLT4gMDA6MDA6MDQsNjcKVG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZAp0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobwoKMgowMDowMDowNCw2OCAtLT4gMDA6MDA6MDksMDkKdGhleSB0aG91Z2h0IHdlcmUgdGhlIG1vc3QgZWZmZWN0aXZlCmNvbGxlYWd1ZXMgaW4gZmFjdCBvdmVyIHRoZSBwYXN0IDI1IHllYXJzCgozCjAwOjAwOjA5LDEwIC0tPiAwMDowMDoxMywwNwp3ZSd2ZSBhc2tlZCBvdmVyIDIwMTAwMCBwZW9wbGUgdG8gaWRlbnRpZnkKdGhlIGluZGl2aWR1YWxzIGFuZCB0aGVpciBvcmdhbml6YXRpb25zCgo0CjAwOjAwOjEzLDA4IC0tPiAwMDowMDoxNCw0MQp3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4KCg=="
+            },
+            {
+              "format": "text",
+              "contentType": "text/plain",
+              "contentEncoding": "Base64",
+              "charset": "utf-8",
+              "data": "VG8gZmluZCB0aGUgc291cmNlIG9mIHN1Y2Nlc3Mgd2Ugc3RhcnRlZCB0aGF0IHdvcmsgd2UgYXNrZWQgcGVvcGxlIHRvIGlkZW50aWZ5IHdobyB0aGV5IHRob3VnaHQgd2VyZSB0aGUgbW9zdCBlZmZlY3RpdmUgY29sbGVhZ3VlcyBpbiBmYWN0IG92ZXIgdGhlIHBhc3QgMjUgeWVhcnMgd2UndmUgYXNrZWQgb3ZlciAyMDEwMDAgcGVvcGxlIHRvIGlkZW50aWZ5IHRoZSBpbmRpdmlkdWFscyBhbmQgdGhlaXIgb3JnYW5pemF0aW9ucyB3aG8gY291bGQgcmVhbGx5IGdldCB0aGluZ3MgZG9uZS4="
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "properties": {
+        "_links": {
+          "$ref": "#/definitions/Links6"
+        },
+        "formatVersion": {
+          "type": "string"
+        },
+        "mediaId": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "dateCreated": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "mediaContentType": {
+          "type": "string"
+        },
+        "length": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "transcript": {
+          "$ref": "#/definitions/Transcript1"
+        }
+      },
+      "required": [
+        "_links",
+        "formatVersion",
+        "mediaId",
+        "status",
+        "dateCreated",
+        "metadata",
+        "mediaContentType",
+        "length",
+        "transcript"
+      ]
+    },
+    "Transcript7": {
+      "title": "Transcript7",
+      "example": {
+        "confidence": 0.13038286891052212,
+        "words": [
+          {
+            "p": 0,
+            "c": 0.972,
+            "s": 620,
+            "e": 750,
+            "w": "To"
+          },
+          {
+            "p": 1,
+            "c": 0.964,
+            "s": 760,
+            "e": 1020,
+            "w": "find"
+          },
+          {
+            "p": 2,
+            "c": 0.901,
+            "s": 1030,
+            "e": 1080,
+            "w": "the"
+          },
+          {
+            "p": 3,
+            "c": 0.692,
+            "s": 1090,
+            "e": 1390,
+            "w": "source"
+          },
+          {
+            "p": 4,
+            "c": 0.962,
+            "s": 1400,
+            "e": 1470,
+            "w": "of"
+          },
+          {
+            "p": 5,
+            "c": 0.882,
+            "s": 1480,
+            "e": 2000,
+            "w": "success"
+          },
+          {
+            "p": 6,
+            "c": 0.974,
+            "s": 2010,
+            "e": 2150,
+            "w": "we"
+          },
+          {
+            "p": 7,
+            "c": 0.972,
+            "s": 2159,
+            "e": 2469,
+            "w": "started"
+          },
+          {
+            "p": 8,
+            "c": 0.303,
+            "s": 2479,
+            "e": 2600,
+            "w": "at"
+          },
+          {
+            "p": 9,
+            "c": 0.885,
+            "s": 2610,
+            "e": 2969,
+            "w": "work"
+          },
+          {
+            "p": 10,
+            "c": 0.27,
+            "s": 3180,
+            "e": 3310,
+            "w": "we"
+          },
+          {
+            "p": 11,
+            "c": 0.896,
+            "s": 3320,
+            "e": 3539,
+            "w": "asked"
+          },
+          {
+            "p": 12,
+            "c": 0.9,
+            "s": 3550,
+            "e": 3820,
+            "w": "people"
+          },
+          {
+            "p": 13,
+            "c": 0.951,
+            "s": 3830,
+            "e": 3969,
+            "w": "to"
+          },
+          {
+            "p": 14,
+            "c": 0.773,
+            "s": 3979,
+            "e": 4520,
+            "w": "identify"
+          },
+          {
+            "p": 15,
+            "c": 0.955,
+            "s": 4530,
+            "e": 4670,
+            "w": "who"
+          },
+          {
+            "p": 16,
+            "c": 0.929,
+            "s": 4679,
+            "e": 4790,
+            "w": "they"
+          },
+          {
+            "p": 17,
+            "c": 0.863,
+            "s": 4800,
+            "e": 5110,
+            "w": "thought"
+          },
+          {
+            "p": 18,
+            "c": 0.954,
+            "s": 5119,
+            "e": 5220,
+            "w": "were"
+          },
+          {
+            "p": 19,
+            "c": 0.737,
+            "s": 5230,
+            "e": 5300,
+            "w": "the"
+          },
+          {
+            "p": 20,
+            "c": 0.869,
+            "s": 5310,
+            "e": 5570,
+            "w": "most"
+          },
+          {
+            "p": 21,
+            "c": 0.701,
+            "s": 5580,
+            "e": 6020,
+            "w": "effective"
+          },
+          {
+            "p": 22,
+            "c": 0.976,
+            "s": 6030,
+            "e": 6560,
+            "w": "colleagues"
+          },
+          {
+            "p": 23,
+            "c": 0.941,
+            "s": 6570,
+            "e": 6679,
+            "w": "in"
+          },
+          {
+            "p": 24,
+            "c": 0.937,
+            "s": 6690,
+            "e": 7159,
+            "w": "fact"
+          },
+          {
+            "p": 25,
+            "c": 0.313,
+            "s": 7750,
+            "e": 7940,
+            "w": "over"
+          },
+          {
+            "p": 26,
+            "c": 0.833,
+            "s": 7949,
+            "e": 8009,
+            "w": "the"
+          },
+          {
+            "p": 27,
+            "c": 0.718,
+            "s": 8020,
+            "e": 8290,
+            "w": "past"
+          },
+          {
+            "p": 28,
+            "c": 0.95,
+            "s": 8300,
+            "e": 8790,
+            "w": "25"
+          },
+          {
+            "p": 29,
+            "c": 0.912,
+            "s": 8800,
+            "e": 9090,
+            "w": "years"
+          },
+          {
+            "p": 30,
+            "c": 0.575,
+            "s": 9100,
+            "e": 9280,
+            "w": "we've"
+          },
+          {
+            "p": 31,
+            "c": 0.909,
+            "s": 9290,
+            "e": 9550,
+            "w": "asked"
+          },
+          {
+            "p": 32,
+            "c": 0.97,
+            "s": 9560,
+            "e": 9769,
+            "w": "over"
+          },
+          {
+            "p": 33,
+            "c": 0.95,
+            "s": 9780,
+            "e": 10390,
+            "w": "20000"
+          },
+          {
+            "p": 34,
+            "c": 0.947,
+            "s": 10399,
+            "e": 10689,
+            "w": "people"
+          },
+          {
+            "p": 35,
+            "c": 0.61,
+            "s": 10700,
+            "e": 10820,
+            "w": "to"
+          },
+          {
+            "p": 36,
+            "c": 0.955,
+            "s": 10830,
+            "e": 11300,
+            "w": "identify"
+          },
+          {
+            "p": 37,
+            "c": 0.95,
+            "s": 11309,
+            "e": 11420,
+            "w": "the"
+          },
+          {
+            "p": 38,
+            "c": 0.968,
+            "s": 11430,
+            "e": 12019,
+            "w": "individuals"
+          },
+          {
+            "p": 39,
+            "c": 0.929,
+            "s": 12030,
+            "e": 12140,
+            "w": "and"
+          },
+          {
+            "p": 40,
+            "c": 0.63,
+            "s": 12149,
+            "e": 12269,
+            "w": "their"
+          },
+          {
+            "p": 41,
+            "c": 0.967,
+            "s": 12280,
+            "e": 13070,
+            "w": "organizations"
+          },
+          {
+            "p": 42,
+            "c": 0.764,
+            "s": 13080,
+            "e": 13229,
+            "w": "who"
+          },
+          {
+            "p": 43,
+            "c": 0.952,
+            "s": 13240,
+            "e": 13399,
+            "w": "could"
+          },
+          {
+            "p": 44,
+            "c": 0.917,
+            "s": 13410,
+            "e": 13649,
+            "w": "really"
+          },
+          {
+            "p": 45,
+            "c": 0.958,
+            "s": 13660,
+            "e": 13870,
+            "w": "get"
+          },
+          {
+            "p": 46,
+            "c": 0.766,
+            "s": 13880,
+            "e": 14130,
+            "w": "things"
+          },
+          {
+            "p": 47,
+            "c": 0.917,
+            "s": 14139,
+            "e": 14410,
+            "w": "done"
+          },
+          {
+            "p": 48,
+            "c": 0,
+            "s": 14410,
+            "e": 14410,
+            "m": "punc",
+            "w": "."
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "type": "number",
+          "format": "double"
+        },
+        "words": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Word"
+          }
+        }
+      },
+      "required": [
+        "confidence",
+        "words"
+      ]
+    },
     "GetMediaProgressExample": {
       "title": "GetMediaProgressExample",
       "example": {
@@ -18006,10 +19591,10 @@
           "type": "string"
         },
         "progress": {
-          "$ref": "#/definitions/Progress2"
+          "$ref": "#/definitions/Progress12"
         },
         "_links": {
-          "$ref": "#/definitions/Links2"
+          "$ref": "#/definitions/Links12"
         }
       },
       "required": [
@@ -18019,8 +19604,8 @@
         "_links"
       ]
     },
-    "Progress2": {
-      "title": "Progress2",
+    "Progress12": {
+      "title": "Progress12",
       "example": {
         "finish": "318a76fd-ffe8-433b-aa6f-e24b876d9b7f",
         "start": "b17251a3-7e16-407e-8c71-dc0266614b93",
@@ -18220,8 +19805,8 @@
         "dependents"
       ]
     },
-    "Links2": {
-      "title": "Links2",
+    "Links12": {
+      "title": "Links12",
       "example": {
         "self": {
           "href": "https://apis.voicebase.com/v3/media/6291d2b7-ad67-465c-a23e-e2f201b65a82/progress"
@@ -18237,8 +19822,8 @@
         "self"
       ]
     },
-    "BadMediaIDSubmitted": {
-      "title": "BadMediaIDSubmitted",
+    "BadMediaIDSubmitted1": {
+      "title": "BadMediaIDSubmitted1",
       "example": {
         "status": 404,
         "errors": [
@@ -18333,7 +19918,7 @@
           "format": "int32"
         },
         "transcript": {
-          "$ref": "#/definitions/Transcript2"
+          "$ref": "#/definitions/Transcript12"
         }
       },
       "required": [
@@ -18345,8 +19930,8 @@
         "transcript"
       ]
     },
-    "Transcript2": {
-      "title": "Transcript2",
+    "Transcript12": {
+      "title": "Transcript12",
       "example": {
         "words": [
           {
@@ -18676,11 +20261,11 @@
         "streams": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Streams1"
+            "$ref": "#/definitions/Streams6"
           }
         },
         "_links": {
-          "$ref": "#/definitions/Links2"
+          "$ref": "#/definitions/Links12"
         }
       },
       "required": [
@@ -18688,8 +20273,8 @@
         "_links"
       ]
     },
-    "Streams1": {
-      "title": "Streams1",
+    "Streams6": {
+      "title": "Streams6",
       "example": {
         "streamName": "redacted",
         "streamLocation": "https://media.voicebase.com/20ccef07-a807-5ec4-7e72-9b0e96cd04be/6291d2b7-ad67-465c-a23e-e2f201b65a82.mp3"
@@ -18753,7 +20338,7 @@
           }
         },
         "_links": {
-          "$ref": "#/definitions/Links2"
+          "$ref": "#/definitions/Links12"
         }
       },
       "required": [
@@ -18846,7 +20431,7 @@
           }
         },
         "_links": {
-          "$ref": "#/definitions/Links2"
+          "$ref": "#/definitions/Links12"
         }
       },
       "required": [
