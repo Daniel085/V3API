@@ -6384,7 +6384,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             },
             "examples": {
               "text/plain;charset=UTF-8": "To find the source of success we started at work we asked people to identify who they thought were the most effective colleagues in fact over the past 25 years we've asked over 20000 people to identify the individuals and their organizations who could really get things done."
@@ -6487,7 +6488,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             },
             "examples": {
               "text/vtt;charset=UTF-8": "WEBVTT\n\n1\n00:00:00.620 --> 00:00:04.670\nTo find the source of success we started\nat work we asked people to identify who\n\n2\n00:00:04.679 --> 00:00:09.090\nthey thought were the most effective\ncolleagues in fact over the past 25 years\n\n3\n00:00:09.100 --> 00:00:13.070\nwe've asked over 20000 people to identify\nthe individuals and their organizations\n\n4\n00:00:13.080 --> 00:00:14.410\nwho could really get things done.\n\n"
@@ -6582,7 +6584,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             },
             "examples": {
               "text/srt;charset=UTF-8": "1\n00:00:00,62 --> 00:00:04,67\nTo find the source of success we started\nat work we asked people to identify who\n\n2\n00:00:04,68 --> 00:00:09,09\nthey thought were the most effective\ncolleagues in fact over the past 25 years\n\n3\n00:00:09,10 --> 00:00:13,07\nwe've asked over 20000 people to identify\nthe individuals and their organizations\n\n4\n00:00:13,08 --> 00:00:14,41\nwho could really get things done.\n\n"
