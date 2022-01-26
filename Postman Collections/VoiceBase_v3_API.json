@@ -19850,9 +19850,7 @@
           "type": "integer",
           "format": "int32"
         },
-        "c": {
-          "type": "object"
-        },
+        "c": {},
         "s": {
           "type": "integer",
           "format": "int32"
